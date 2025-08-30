@@ -27,7 +27,7 @@ export default function DashboardPage() {
   return (
     <div>
      
-      <main className="flex-auto p-3 md:p-6 lg:p-8">
+      {/* <main className="flex-auto p-3 md:p-6 lg:p-8">
         
         <h1 className="text-sm font-semibold mb-6 p-5 -mt-10 md:hidden">Home / Dashboard </h1>
         <StatsCards />
@@ -36,7 +36,7 @@ export default function DashboardPage() {
           <QuickActions />
         </div>
         <TeamTable />
-      </main>
+      </main> */}
     </div>
   );
 }

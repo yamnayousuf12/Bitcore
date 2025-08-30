@@ -113,7 +113,7 @@ export default function MobileTopbar({ onMenuClick }: MobileTopbarProps) {
   };
 
   return (
-    <div className="flex items-center justify-between mb-6 border-white/35 border h-16 px-6 py-4 bg-[#101B31] mt-8 max-w-[calc(100%-1rem)] w-screen">
+    <div className="flex items-center justify-between mb-6 border-white/35 border h-16 px-6 py-4 bg-[#101B31] mt-8 max-w-[calc(100%-1rem)] w-full">
       {/* Hamburger Menu Button */}
       <button
         className="text-white mr-4 md:hidden"
