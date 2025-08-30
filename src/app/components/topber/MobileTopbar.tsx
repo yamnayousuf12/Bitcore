@@ -89,14 +89,12 @@
 //   );
 // }
 
-
-
 "use client";
 import { useState, ChangeEvent } from "react";
 import { ChevronDown, Settings, LogOut } from "lucide-react";
 
 type MobileTopbarProps = {
-  onMenuClick?: () => void; // ✅ Made optional
+  onMenuClick?: () => void; // Still optional, but not used now
 };
 
 export default function MobileTopbar({ onMenuClick }: MobileTopbarProps) {
@@ -113,17 +111,9 @@ export default function MobileTopbar({ onMenuClick }: MobileTopbarProps) {
   };
 
   return (
-    <div className="flex items-center justify-between mb-6 border-white/35 border h-16 px-6 py-4 bg-[#101B31] mt-8">
-      {/* Hamburger Menu Button */}
-      <button
-        className="text-white mr-4 md:hidden"
-        onClick={() => onMenuClick?.()} // ✅ Safe call
-      >
-        ☰
-      </button>
-
+    <div className="flex items-center justify-end mb-6 border-white/35 border h-16 px-6 py-4 bg-[#101B31] mt-8">
       {/* Profile */}
-      <div className="relative ml-auto">
+      <div className="relative">
         <div
           onClick={() => setShowMenu(!showMenu)}
           className="flex items-center rounded-full px-3 py-2 cursor-pointer border border-gray bg-white/15"
@@ -155,7 +145,7 @@ export default function MobileTopbar({ onMenuClick }: MobileTopbarProps) {
 
         {/* Dropdown */}
         {showMenu && (
-          <div className="absolute right-0 mt-2 w-40 bg-[#1b263b] border border-gray rounded-md shadow-lg">
+          <div className="absolute right-0 mt-3 w-40 bg-[#1b263b] border border-gray rounded-md shadow-lg">
             <a
               href="#"
               className="flex items-center px-4 py-2 text-white hover:bg-[#343D50]"
@@ -164,7 +154,7 @@ export default function MobileTopbar({ onMenuClick }: MobileTopbarProps) {
             </a>
             <a
               href="#"
-              className="flex items-center px-4 py-2 text-red-500 hover:bg-[#343D50]"
+              className="flex items-center px-4 py-2 text-Red hover:bg-[#343D50]"
             >
               <LogOut className="mr-2" size={16} /> Log Out
             </a>

@@ -16,27 +16,28 @@
 
 
 "use client";
-import Sidebar from "../sidebar/Sidebar";
-import Topbar from "../topber/Topbar";
-import StatsCards from "./StatsCards";
+// import Sidebar from "../sidebar/Sidebar";
+// import Topbar from "../topber/Topbar";
+// import StatsCards from "./StatsCards";
 import Activity from "./Activity";
 import QuickActions from "./QuickActions";
+import ResponsiveStats from "./ResponsiveStats";
 import TeamTable from "./TeamTable";
 
 export default function DashboardPage() {
   return (
     <div>
      
-      {/* <main className="flex-auto p-3 md:p-6 lg:p-8">
+      <main className="flex-auto p-3 md:p-6 lg:p-8">
         
         <h1 className="text-sm font-semibold mb-6 p-5 -mt-10 md:hidden">Home / Dashboard </h1>
-        <StatsCards />
+        <ResponsiveStats />
         <div className="grid grid-cols-2 gap-6 mb-6">
           <Activity />
           <QuickActions />
         </div>
         <TeamTable />
-      </main> */}
+      </main> 
     </div>
   );
 }

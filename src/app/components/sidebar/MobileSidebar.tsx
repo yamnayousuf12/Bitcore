@@ -45,7 +45,7 @@ export default function MobileSidebar() {
 
       {/* Sidebar */}
       <aside
-        className={`fixed top-0 left-0 h-full w-64 bg-[#0d1b2a] text-white p-6 z-50 transform transition-transform duration-300 ${
+        className={`fixed top-0 left-0 h-full w-84 bg-[#0d1b2a] text-white p-6 z-50 transform transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
