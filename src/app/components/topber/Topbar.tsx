@@ -1,6 +1,6 @@
 "use client";
 import { useState, ChangeEvent } from "react";
-import { Search, Settings, LogOut, ChevronDown } from "lucide-react";
+import { Search, Settings, LogOut, ChevronsUpDown } from "lucide-react";
 
 export default function Topbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -66,7 +66,7 @@ export default function Topbar() {
             </div>
 
             {/* Dropdown Icon */}
-            <ChevronDown className="ml-2 text-gray" size={16} />
+            < ChevronsUpDown className="ml-2 text-gray" size={16} />
           </div>
 
           {/* Dropdown Menu */}
