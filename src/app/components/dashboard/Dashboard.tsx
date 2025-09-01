@@ -31,7 +31,7 @@ export default function DashboardPage() {
      
       <main className="flex-auto p-3 md:p-6 lg:p-8">
         
-        <h1 className="text-sm font-semibold mb-6 p-5 -mt-10 md:hidden">Home / Dashboard </h1>
+        <h1 className="text-base font-semibold mb-6 p-5 -mt-10 md:hidden text-white1">Home / Dashboard </h1>
         <ResponsiveStats />
         <div className="grid md:grid-cols-2 gap-6 mb-6 mt-8 ">
           <Activity />
