@@ -45,12 +45,12 @@ export default function MobileStats() {
           key={i}
           className="bg-[#1b294b] rounded-xl p-4 flex flex-col  text-start shadow-md"
         >
-          <div className="mb-2 ml-24">
+          <div className="mb-2 ml-20">
             <Image
               src={s.icon}
               alt={s.label}
-              width={36}
-              height={36}
+              width={40}
+              height={40}
               className="object-contain"
             />
           </div>
