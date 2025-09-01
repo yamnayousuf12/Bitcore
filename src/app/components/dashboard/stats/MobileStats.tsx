@@ -49,8 +49,8 @@ export default function MobileStats() {
             <Image
               src={s.icon}
               alt={s.label}
-              width={32}
-              height={32}
+              width={36}
+              height={36}
               className="object-contain"
             />
           </div>
