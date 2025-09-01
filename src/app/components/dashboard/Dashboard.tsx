@@ -21,7 +21,7 @@
 // import StatsCards from "./StatsCards";
 import Activity from "./Activity";
 import QuickActions from "./QuickActions";
-import ResponsiveTeam from "./ResponsiveTeam";
+import ResponsiveTeam from "./team/ResponsiveTeam";
 import ResponsiveStats from "./stats/ResponsiveStats";
 
 
