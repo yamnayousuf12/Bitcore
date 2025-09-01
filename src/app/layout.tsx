@@ -5,8 +5,8 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 // import Topbar from "./components/dashboard/Topbar";
 // import Sidebar from "./components/dashboard/Sidebar"; // Make sure you have Sidebar component
-import ResponsiveSidebar from "./components/sidebar/ResponsiveSidebar";
-import ResponsiveTopber from "./components/topber/ResponsiveTopber";
+import ResponsiveSidebar from "../components/sidebar/ResponsiveSidebar";
+import ResponsiveTopber from "../components/topber/ResponsiveTopber";
 
 const inter = Inter({ subsets: ["latin"] });
 

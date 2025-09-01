@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Topbar from "./Topbar";
-import MobileTopbar from "../topber/MobileTopbar";
+import MobileTopbar from "./MobileTopbar";
 // import Sidebar from "./Sidebar";
 // import MobileSidebar from "./MobileSidebar";
 
