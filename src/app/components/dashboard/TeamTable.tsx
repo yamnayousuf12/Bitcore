@@ -19,7 +19,7 @@ const teamData: TeamMember[] = [
 export default function TeamTable() {
   return (
     <div className="bg-gradient-to-br from-[#454c5b] to-[#0b1a3a] p-5 rounded-xl border border-white/30 shadow-md text-white">
-      <h3 className="mb-4 font-semibold text-gray ">
+      <h3 className="mb-4 font-semibold text-gray">
         Team Performance Overview (Top 5)
       </h3>
       <div className="overflow-x-auto rounded-xl border border-white/30 shadow-md">

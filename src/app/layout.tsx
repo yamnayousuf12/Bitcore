@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div className="flex  min-h-screen bg-gradient-to-br from-[#0d1b2a] to-[#1b263b] text-white w-full">
+          <div className="flex  min-h-screen bg-gradient-to-br from-[#0d1b2a] to-[#1b263b] text-white md:w-full mx-auto">
             {/* Sidebar on the left */}
             {/* <Sidebar /> */}
  <ResponsiveSidebar />

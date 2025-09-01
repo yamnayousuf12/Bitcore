@@ -10,11 +10,11 @@ const stats = [
 
 export default function MobileStats() {
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid grid-cols-2 gap-4 ">
       {stats.map((s, i) => (
         <div
           key={i}
-          className="bg-[#1b294b] rounded-xl p-4 flex flex-col items-center justify-center text-center shadow-md"
+          className="bg-[#1b294b] rounded-xl p-4 flex flex-col items-center justify-center text-center shadow-md "
         >
           <div className="text-Blue mb-2">{s.icon}</div>
           <p className="text-lg font-bold">{s.value}</p>

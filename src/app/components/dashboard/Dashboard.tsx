@@ -21,8 +21,9 @@
 // import StatsCards from "./StatsCards";
 import Activity from "./Activity";
 import QuickActions from "./QuickActions";
-import ResponsiveStats from "./ResponsiveStats";
-import TeamTable from "./TeamTable";
+import ResponsiveTeam from "./ResponsiveTeam";
+import ResponsiveStats from "./stats/ResponsiveStats";
+
 
 export default function DashboardPage() {
   return (
@@ -32,11 +33,11 @@ export default function DashboardPage() {
         
         <h1 className="text-sm font-semibold mb-6 p-5 -mt-10 md:hidden">Home / Dashboard </h1>
         <ResponsiveStats />
-        <div className="grid grid-cols-2 gap-6 mb-6">
+        <div className="grid md:grid-cols-2 gap-6 mb-6 mt-8 ">
           <Activity />
           <QuickActions />
         </div>
-        <TeamTable />
+      <ResponsiveTeam/>
       </main> 
     </div>
   );
