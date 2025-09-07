@@ -18,9 +18,13 @@
 // export default nextConfig;
 
 // next.config.js
-module.exports = {
-  eslint: {
-    ignoreDuringBuilds: true,
+// next.config.js
+const nextConfig = {
+  images: {
+    unoptimized: true,
   },
 };
+
+export default nextConfig;
+
 
