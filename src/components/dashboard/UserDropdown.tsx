@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+// import Image from "next/image";
 
 interface UserDropdownProps {
   username: string;
@@ -25,13 +25,13 @@ const UserDropdown = ({ username, role }: UserDropdownProps) => {
         onClick={toggleDropdown}
       >
         <span className="relative inline-grid place-items-center">
-          <Image
+          {/* <Image
             src="https://ui-avatars.com/api/?name=R&background=0D8ABC&color=fff"
             alt="User"
             width={32}
             height={32}
             className="md:h-8 md:w-8 h-6 w-6 rounded-full ring-2 ring-white/20"
-          />
+          /> */}
           <span className="absolute -bottom-0.5 -right-0.5 h-3 w-3 rounded-full bg-emerald-400 ring-2 ring-[#0c1424]" />
         </span>
         <div className=" text-left">

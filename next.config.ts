@@ -7,12 +7,21 @@
 // export default nextConfig;
 
 
-import type { NextConfig } from 'next';
+// import type { NextConfig } from 'next';
 
-const nextConfig: NextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
+// const nextConfig: NextConfig = {
+//   eslint: {
+//     ignoreDuringBuilds: true,
+//   },
+// };
+
+// export default nextConfig;
+
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  images: {
+    domains: ["ui-avatars.com"],
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
