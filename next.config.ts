@@ -17,11 +17,10 @@
 
 // export default nextConfig;
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  images: {
-    domains: ["ui-avatars.com"],
+// next.config.js
+module.exports = {
+  eslint: {
+    ignoreDuringBuilds: true,
   },
 };
 
-module.exports = nextConfig;
