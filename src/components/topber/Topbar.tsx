@@ -76,7 +76,7 @@ export default function Topbar() {
                 className="flex items-center px-4 py-2 hover:bg-[#343D50] text-white hover:text-white"
                 href="#"
               >
-                <Settings className="mr-2" size={16} /> Settings
+                <Settings className="mr-2" size={16} /> Sett
               </a>
               <a
                 className="flex items-center px-4 py-2 hover:bg-[#343D50] text-Red"
