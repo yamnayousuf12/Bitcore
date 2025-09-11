@@ -127,7 +127,7 @@ const SEED_USERS: AddUserForm[] = [
     firstName: "Mahnoor",
     lastName: "",
     role: "HR",
-    department: "HR",
+    department: "Human Resource",
     status: "Active",
     permissions: ["Reporting"],
     email: "mahnoor@gmail.com"
