@@ -211,9 +211,9 @@ export default function UserManagement() {
   };
 
   return (
-    <div className="p-6 md:h-screen md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5">
+    <div className="p-6 md:h-screen md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-8">
       {/* Search + Add */}
-      <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-4 md:mt-0">
+      <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0">
         <input
           type="text"
           placeholder="Search User..."
