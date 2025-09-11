@@ -121,147 +121,215 @@
 "use client";
 import { useMemo, useState } from "react";
 import AddUserModal, { AddUserForm } from "@/components/usermanagement/AddUserModal";
+import EditUserModal from "@/components/usermanagement/EditUserModal";
+import ViewUserModal from "@/components/usermanagement/ViewUserModal";
+import { Eye, Edit2, Trash2 } from "lucide-react";
 
-const SEED_USERS = [
+// ✅ Always include permissions (at least empty array) to avoid runtime errors
+const SEED_USERS: AddUserForm[] = [
   {
-    name: "Mahnoor",
-    email: "mahnoor@gmail.com",
+    firstName: "Mahnoor",
+    lastName: "",
     role: "HR",
+    department: "HR",
     status: "Active",
-    activeTask: "Meeting Schedule",
-    timeToday: "4hr",
+    permissions: ["Reporting"],
+   
   },
   {
-    name: "Raheel",
-    email: "raheel@gmail.com",
+    firstName: "Raheel",
+    lastName: "",
     role: "Manager",
+    department: "Operations",
     status: "Active",
-    activeTask: "Work Distribution",
-    timeToday: "8hr",
+    permissions: [],
+    
   },
   {
-    name: "Ayesha",
-    email: "ayesha@gmail.com",
+    firstName: "Ayesha",
+    lastName: "",
     role: "Employee",
+    department: "Engineering",
     status: "Inactive",
-    activeTask: "Meeting Schedule",
-    timeToday: "4hr",
+    permissions: [],
+    
   },
   {
-    name: "Safia Seher",
-    email: "safia@gmail.com",
+    firstName: "Safia",
+    lastName: "Seher",
     role: "Employee",
+    department: "Finance",
     status: "Inactive",
-    activeTask: "Q/A Report",
-    timeToday: "3hr",
+    permissions: [],
+    
   },
 ];
 
 export default function UserManagement() {
   const [search, setSearch] = useState("");
+  const [users, setUsers] = useState(SEED_USERS);
+
+  // Modal states
   const [openAdd, setOpenAdd] = useState(false);
-  const [users] = useState(SEED_USERS);
+  const [openEdit, setOpenEdit] = useState(false);
+  const [openView, setOpenView] = useState(false);
+
+  const [selectedUser, setSelectedUser] = useState<AddUserForm | null>(null);
 
   const roles = ["Admin", "Manager", "HR", "Employee"];
   const departments = ["Engineering", "HR", "Finance", "Operations", "Design"];
 
   const filteredUsers = useMemo(
-    () => users.filter((u) => u.name.toLowerCase().includes(search.toLowerCase())),
+    () =>
+      users.filter((u) =>
+        `${u.firstName} ${u.lastName}`.toLowerCase().includes(search.toLowerCase())
+      ),
     [users, search]
   );
 
+  // Handlers
   const handleSaveUser = (data: AddUserForm) => {
-    console.log("New user payload:", data);
+    setUsers((prev) => [...prev, data]);
+    setOpenAdd(false);
+  };
+
+  const handleEditUser = (data: AddUserForm) => {
+    setUsers((prev) =>
+      prev.map((u) =>
+        u.firstName === selectedUser?.firstName && u.lastName === selectedUser?.lastName
+          ? { ...u, ...data }
+          : u
+      )
+    );
+    setOpenEdit(false);
+  };
+
+  const handleViewUser = (user: AddUserForm) => {
+    setSelectedUser(user);
+    setOpenView(true);
+  };
+
+  const handleOpenEdit = (user: AddUserForm) => {
+    setSelectedUser(user);
+    setOpenEdit(true);
   };
 
   return (
-    <div
-      className="p-6 md:h-screen md:border md:border-white rounded-lg text-white"
-      style={{
-        background:
-          " md:linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(19, 43, 96, 0.15) 100%)",
-      }}
-    >
-      <div className="flex gap-3 mb-4">
+    <div className="p-6 md:h-screen md:border md:border-white/25 rounded-lg text-white md:bg-[#3b36484d] -mt-5">
+      {/* Search + Add */}
+      <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0">
         <input
           type="text"
           placeholder="Search User..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-gray-800 border border-gray-700 focus:outline-none w-64 md:ml-0 -ml-8"
+          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none w-64 md:ml-0 -ml-10"
         />
         <button
-          className="bg-blue-600 md:px-4 px-5 py-2 rounded-xl hover:bg-blue-700"
+          className="bg-Blue md:px-4 px-3 py-2 rounded-xl hover:bg-Blue flex-shrink-0"
           onClick={() => setOpenAdd(true)}
         >
           Add User
         </button>
       </div>
 
-      {/* ===== Desktop Table Layout ===== */}
-      <div className="hidden md:block overflow-x-auto border border-gray-600 rounded-lg">
+      {/* Desktop Table */}
+      <div className="hidden md:block overflow-x-auto border border-gray/30 rounded-lg bg-[#3c315a4d]">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-[#101B31]">
+            <tr className="bg-[#060c18]">
               <th className="p-3">Name</th>
-              <th className="p-3">Email</th>
               <th className="p-3">Role</th>
+              <th className="p-3">Department</th>
               <th className="p-3">Status</th>
-              <th className="p-3"></th>
+              <th className="p-3">Actions</th>
             </tr>
           </thead>
           <tbody>
             {filteredUsers.map((user, i) => (
-              <tr key={i} className="border-b border-gray-700 hover:bg-gray-800">
-                <td className="p-3">{user.name}</td>
-                <td className="p-3">{user.email}</td>
+              <tr key={i} className="border-b border-gray/30 hover:bg-gray/10">
+                <td className="p-3">{user.firstName} {user.lastName}</td>
                 <td className="p-3">{user.role}</td>
+                <td className="p-3">{user.department}</td>
                 <td className="p-3">
-                  <span
-                    className={
-                      user.status === "Active" ? "text-green-400" : "text-orange-400"
-                    }
-                  >
+                  <span className={user.status === "Active" ? "text-green" : "text-orange"}>
                     {user.status}
                   </span>
+                </td>
+                <td className="p-3 flex gap-3">
+                  <button className="text-gray hover:text-white" onClick={() => handleViewUser(user)}>
+                    <Eye size={18} />
+                  </button>
+                  <button className="text-Blue hover:text-Blue" onClick={() => handleOpenEdit(user)}>
+                    <Edit2 size={18} />
+                  </button>
+                  <button
+                    className="text-Red hover:text-Red"
+                    onClick={() => setUsers(users.filter((u) => u !== user))}
+                  >
+                    <Trash2 size={18} />
+                  </button>
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-<div className="absolute left-20 -translate-x-1/2 flex items-center -mt-40 text-base lg:hidden text-[#BAD4EF]">
-      <span className="font-semibold tracking-wide "> ← User Mangement</span>
-      </div>
-      {/* ===== Mobile Card Layout ===== */}
-      <div className="block md:hidden space-y-4">
-        {filteredUsers.map((user, i) => (
-          <div
-            key={i}
-            className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4"
-          >
-            <div className="flex justify-between items-center">
-              <h3 className="text-lg font-semibold">{user.name}</h3>
-              <span
-                className={
-                  user.status === "Active" ? "text-green-400 text-sm" : "text-orange-400 text-sm"
-                }
-              >
-                {user.status === "Active" ? "Online" : "Offline"}
-              </span>
-            </div>
-            <p className="text-sm text-gray-300">Role: {user.role}</p>
-            <p className="text-sm text-gray-300">
-              Active Task: {user.activeTask || "N/A"}
-            </p>
-            <p className="text-sm text-gray-300">
-              Time Today: {user.timeToday || "N/A"}
-            </p>
-          </div>
-        ))}
+{/* Mobile Layout */}
+<div className="block md:hidden space-y-4">
+  {filteredUsers.map((user, i) => (
+    <div
+      key={i}
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4"
+    >
+      <div className="flex justify-between items-center">
+        <h3 className="text-base font-semibold">
+          {user.firstName} {user.lastName}
+        </h3>
+        <span
+          className={
+            user.status === "Active"
+              ? "text-green text-sm"
+              : "text-orange text-sm"
+          }
+        >
+          {user.status === "Active" ? "Online" : "Offline"}
+        </span>
       </div>
 
-      {/* Add User Modal */}
+      
+      <p className="text-xs text-gray">Role: {user.role}</p>
+      <p className="text-xs text-gray">Department: {user.department}</p>
+
+      {/* Actions */}
+      <div className="flex gap-4 mt-3 ml-32">
+        <button
+          className="text-gray hover:text-white"
+          onClick={() => handleViewUser(user)}
+        >
+          <Eye size={18} />
+        </button>
+        <button
+          className="text-Blue hover:text-Blue"
+          onClick={() => handleOpenEdit(user)}
+        >
+          <Edit2 size={18} />
+        </button>
+        <button
+          className="text-Red hover:text-Red"
+          onClick={() =>
+            setUsers(users.filter((u) => u !== user))
+          }
+        >
+          <Trash2 size={18} />
+        </button>
+      </div>
+    </div>
+  ))}
+</div>
+
+
+      {/* Modals */}
       <AddUserModal
         isOpen={openAdd}
         onClose={() => setOpenAdd(false)}
@@ -269,6 +337,25 @@ export default function UserManagement() {
         roles={roles}
         departments={departments}
       />
+
+      {selectedUser && (
+        <EditUserModal
+          isOpen={openEdit}
+          onClose={() => setOpenEdit(false)}
+          onUpdate={handleEditUser}
+          roles={roles}
+          departments={departments}
+          user={selectedUser}
+        />
+      )}
+
+      {selectedUser && (
+        <ViewUserModal
+          isOpen={openView}
+          onClose={() => setOpenView(false)}
+          user={selectedUser}
+        />
+      )}
     </div>
   );
 }

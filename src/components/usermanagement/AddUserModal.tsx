@@ -321,14 +321,17 @@ export default function AddUserModal({
   };
 
   const field =
-    "w-full md:h-11 h-7 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none text-xs";
+    "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#14223c] p-4 md:p-8 mt-[90px] ">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b1220] p-4 md:p-8">
       {/* frame */}
       <div
-        className="p-1 rounded-2xl w-full max-w-4xl bg-[rgb(5,18,43)] mt-20"
-       
+        className="p-1 rounded-2xl w-full max-w-4xl"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(18,46,88,0.8) 0%, rgba(4,12,33,0.8) 100%)",
+        }}
       >
         {/* card */}
         <div
@@ -338,10 +341,10 @@ export default function AddUserModal({
               "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(19,43,96,0.05) 100%)",
           }}
         >
-          <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 py-2">
+          <form onSubmit={submit} className="p-6 md:p-8 space-y-6">
             {/* header */}
             <div className="flex items-center justify-between">
-              <h2 className="md:text-2xl font-semibold text-white mt-5">Add User</h2>
+              <h2 className="text-2xl font-semibold text-white">Add User</h2>
               <button
                 type="button"
                 onClick={onClose}
@@ -355,9 +358,9 @@ export default function AddUserModal({
             <hr className="border-white/10" />
 
             {/* top grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5 gap-2">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
-                <label className="block md:text-sm text-white text-xs mb-2">First Name:</label>
+                <label className="block text-sm text-white mb-2">First Name:</label>
                 <input
                   className={field}
                   placeholder="Enter First name"
@@ -368,7 +371,7 @@ export default function AddUserModal({
               </div>
 
               <div>
-                <label className="block md:text-sm text-xs text-white mb-2">Last Name:</label>
+                <label className="block text-sm text-white mb-2">Last Name:</label>
                 <input
                   className={field}
                   placeholder="Enter Last name"
@@ -379,7 +382,7 @@ export default function AddUserModal({
               </div>
 
               <div>
-                <label htmlFor="role-select" className="block md:text-sm text-white mb-2 text-xs">Role:</label>
+                <label htmlFor="role-select" className="block text-sm text-white mb-2">Role:</label>
                 <select
                   id="role-select"
                   className={field}
@@ -387,7 +390,7 @@ export default function AddUserModal({
                   onChange={(e) => set("role", e.target.value)}
                   aria-label="Role"
                 >
-                  <option value="" className="bg-[#0f172a] md:text-sm text-xs">Select role</option>
+                  <option value="" className="bg-[#0f172a]">Select role</option>
                   {roles.map((r) => (
                     <option key={r} value={r} className="bg-[#0f172a]">
                       {r}
@@ -397,7 +400,7 @@ export default function AddUserModal({
               </div>
 
               <div>
-                <label htmlFor="department-select" className="block md:text-sm text-xs text-white mb-2">Department:</label>
+                <label htmlFor="department-select" className="block text-sm text-white mb-2">Department:</label>
                 <select
                   id="department-select"
                   className={field}
@@ -405,7 +408,7 @@ export default function AddUserModal({
                   onChange={(e) => set("department", e.target.value)}
                   aria-label="Department"
                 >
-                  <option value="" className="bg-[#0f172a] md:text-sm text-xs">Select department</option>
+                  <option value="" className="bg-[#0f172a]">Select department</option>
                   {departments.map((d) => (
                     <option key={d} value={d} className="bg-[#0f172a]">
                       {d}
@@ -419,23 +422,23 @@ export default function AddUserModal({
             <div className="space-y-2">
               <span className="block text-sm text-white">Status</span>
               <div className="flex items-center gap-6">
-                <label className="inline-flex items-center gap-2 text-white md:text-sm text-sm">
+                <label className="inline-flex items-center gap-2 text-white">
                   <input
                     type="radio"
                     name="status"
                     checked={form.status === "Active"}
                     onChange={() => set("status", "Active")}
-                    className="h-4 w-4 accent-Blue"
+                    className="h-4 w-4 accent-blue-500"
                   />
                   Active
                 </label>
-                <label className="inline-flex items-center gap-2 text-white md:text-sm text-sm">
+                <label className="inline-flex items-center gap-2 text-white">
                   <input
                     type="radio"
                     name="status"
                     checked={form.status === "Inactive"}
                     onChange={() => set("status", "Inactive")}
-                    className="h-4 w-4 accent-Blue"
+                    className="h-4 w-4 accent-blue-500"
                   />
                   Inactive
                 </label>
@@ -450,13 +453,13 @@ export default function AddUserModal({
               <button
                 type="button"
                 onClick={onClose}
-                className="text-Blue hover:text-Blue/55 text-sm md:text-base"
+                className="text-blue-400 hover:text-blue-300"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="h-11 md:px-5 px-3 rounded-2xl bg-white hover:bg-gray/20 text-Blue font-medium text-xs md:text-sm"
+                className="h-11 px-5 rounded-2xl bg-white hover:bg-gray/20 text-Blue font-medium"
               >
                 Save User
               </button>
