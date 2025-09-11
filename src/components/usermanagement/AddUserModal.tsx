@@ -313,7 +313,7 @@ export default function AddUserModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b1220] p-4 md:p-8">
       {/* frame */}
-      <div className="p-1 rounded-2xl w-full max-w-4xl bg-gradient-to-b from-white/[0.08] to-white/[0.03]">
+      <div className="p-1 rounded-2xl w-full max-w-4xl bg-gradient-to-b from-white/[0.08] to-white/[0.03] mt-28">
         {/* card */}
         <div
           className="relative rounded-2xl border-2 border-dotted border-white"
