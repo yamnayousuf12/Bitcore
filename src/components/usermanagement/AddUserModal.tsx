@@ -313,19 +313,16 @@ export default function AddUserModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b1220] p-4 md:p-8">
       {/* frame */}
-      <div className="p-1 rounded-2xl w-full max-w-4xl bg-gradient-to-b from-white/[0.08] to-white/[0.03]">
+      <div className="p-1 rounded-2xl w-full max-w-4xl bg-gradient-to-b from-white/[0.08] to-white/[0.03] ">
         {/* card */}
         <div
-          className="relative rounded-2xl border-2 border-dotted border-white"
-          style={{
-            background:
-              "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(19,43,96,0.05) 100%)",
-          }}
+          className="relative rounded-2xl border-2 border-dotted border-white py-0"
+         
         >
-          <form onSubmit={submit} className="p-6 md:p-8 space-y-6">
+          <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
             {/* header */}
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-semibold text-white">Add User</h2>
+              <h2 className="md:text-2xl font-semibold text-white ">Add User</h2>
               <button
                 type="button"
                 onClick={onClose}
@@ -366,7 +363,7 @@ export default function AddUserModal({
                 />
               </div>
 
-              <div>
+              {/* <div>
                 <label
                   htmlFor="email"
                   className="block text-sm text-white mb-2"
@@ -382,7 +379,7 @@ export default function AddUserModal({
                   onChange={(e) => set("email", e.target.value)}
                   required
                 />
-              </div>
+              </div> */}
 
               <div>
                 <label
