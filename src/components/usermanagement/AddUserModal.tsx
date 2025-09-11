@@ -250,6 +250,7 @@
 import { useEffect, useState } from "react";
 
 export interface AddUserForm {
+  email: ReactNode;
   firstName: string;
   lastName: string;
   role: string;
