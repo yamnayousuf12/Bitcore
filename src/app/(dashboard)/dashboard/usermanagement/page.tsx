@@ -237,7 +237,7 @@ export default function UserManagement() {
       <div className="hidden md:block overflow-x-auto border border-gray/30 rounded-lg bg-[#3c315a4d]">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-[#060c18]">
+            <tr className="bg-[#0f1d3a]">
               <th className="p-3">Name</th>
               <th className="p-3">Role</th>
               <th className="p-3">Department</th>

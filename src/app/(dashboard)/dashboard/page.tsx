@@ -353,13 +353,13 @@ export default function DashboardPage() {
     />
   </div>
 </section>
-<div className="absolute left-20 -translate-x-1/2 flex items-center -mt-12 text-base lg:hidden text-[#BAD4EF]">
+<div className="absolute left-20 -translate-x-1/2 flex items-center -mt-16 text-base lg:hidden text-[#BAD4EF]">
       <span className="font-semibold tracking-wide ">Home/Dashboard</span>
       </div>
 {/* ===== Mobile Stats Strip ===== */}
 <section className="block lg:hidden">
   
-  <div className="grid grid-cols-2 gap-4">
+  <div className="grid grid-cols-2 gap-4 -mt-5">
     <StatItemProps
       icon={
         <Image
@@ -650,7 +650,7 @@ function TeamCard({
   status: "Online" | "Offline";
 }) {
   const statusColor =
-    status === "Online" ? "text-emerald-400" : "text-orange-400";
+    status === "Online" ? "text-green" : "text-orange";
 
   return (
     <div className="rounded-xl border border-white/10 bg-white/[0.05] p-4">

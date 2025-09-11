@@ -74,7 +74,7 @@ export default function TopBar({ heading, onOpenMenu }: TopBarProps) {
   return (
     <>
       {/* Mobile Top Bar */}
-      <div className="lg:hidden sticky top-0 z-40 bg-[#0c1424]/90 backdrop-blur px-4 py-3 flex items-center justify-between border border-white/30 w-screen -ml-3" >
+      <div className="lg:hidden sticky top-0 z-40 bg-[#101B31] backdrop-blur px-4 py-3 flex items-center justify-between border border-white/30 w-screen -ml-3  " >
         {/* Hamburger Menu */}
         <button
           onClick={onOpenMenu}
@@ -93,7 +93,7 @@ export default function TopBar({ heading, onOpenMenu }: TopBarProps) {
       
 
       {/* Desktop Top Bar */}
-      <header className="hidden lg:block top-6 z-30 px-3 sm:px-4 lg:px-6 pb-3 bg-gradient-to-b from-[#0c1424] to-transparent max-w-7xl w-full rounded-tr-xl border border-white/20 h-20">
+      <header className="hidden lg:block top-6 z-30 px-3 sm:px-4 lg:px-6 pb-3 bg-gradient-to-b bg-[#101B31] to-transparent max-w-7xl w-full mx-auto  rounded-tr-xl border border-white/20 h-20">
         <div className="flex items-center gap-6">
           <h1 className="text-xl font-semibold tracking-wide flex-1 mt-4">{heading}</h1>
           <div className="relative w-full md:w-auto max-w-md mt-4">

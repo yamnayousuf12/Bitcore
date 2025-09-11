@@ -70,19 +70,22 @@ export default function ViewUserModal({ isOpen, onClose, user }: ViewUserModalPr
                 <label className="block text-sm text-white mb-2">Department:</label>
                 <div className={field}>{user.department}</div>
               </div>
-              <div>
-                <label className="block text-sm text-white mb-2">Status:</label>
-                <div className={field}>{user.status}</div>
               </div>
-              <div>
-                <label className="block text-sm text-white mb-2">Permissions:</label>
-                <div className={field}>
-                  {user.permissions && user.permissions.length > 0
-                    ? user.permissions.join(", ")
-                    : "No Permissions"}
-                </div>
+              <div className="space-y-2">
+              <span className="block text-sm text-white">Status</span>
+              <div className="flex gap-6">
+                {["Active", "Inactive"].map((s) => (
+                  <label key={s} className="inline-flex items-center gap-2 text-white">
+                    <input type="radio"checked={user.status === s}
+                    readOnly
+                     className="h-4 w-4 accent-Blue"/>
+                     
+                     {s}
+                  </label>
+                ))}
               </div>
             </div>
+
 
             {/* actions */}
             <div className="flex justify-end pt-2">

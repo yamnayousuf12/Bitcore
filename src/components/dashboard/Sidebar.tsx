@@ -132,28 +132,31 @@ export default function Sidebar({ open, onClose, logoSrc }: SidebarProps) {
       </div>
 
       {/* Navigation */}
-      <nav className="space-y-1">
-        {NAV_LINKS.map((item) => {
-          const isActive = pathname === item.href;
-          const Icon = item.icon;
+      {/* Navigation */}
+<nav className="space-y-1">
+  {NAV_LINKS.map((item) => {
+    const isActive = pathname === item.href;
+    const Icon = item.icon;
 
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={[
-                "flex items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors",
-                "text-gray-300 hover:bg-white/10",
-                isActive ? "bg-white/10 text-white" : "",
-              ].join(" ")}
-            >
-              {/* Mobile: show icons, Desktop: hide icons */}
-              <Icon className="h-5 w-5 lg:hidden" />
-              <span>{item.label}</span>
-            </Link>
-          );
-        })}
-      </nav>
+    return (
+      <Link
+        key={item.href}
+        href={item.href}
+        onClick={onClose} // 🔥 Close sidebar on link click
+        className={[
+          "flex items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors",
+          "text-gray-300 hover:bg-white/10",
+          isActive ? "bg-white/10 text-white" : "",
+        ].join(" ")}
+      >
+        {/* Mobile: show icons, Desktop: hide icons */}
+        <Icon className="h-5 w-5 lg:hidden" />
+        <span>{item.label}</span>
+      </Link>
+    );
+  })}
+</nav>
+
     </aside>
   );
 }
