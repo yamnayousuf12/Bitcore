@@ -1,3 +1,251 @@
+// "use client";
+// import { useEffect, useState } from "react";
+
+// export interface AddUserForm {
+//   firstName: string;
+//   lastName: string;
+//   role: string;
+//   department: string;
+//   status: "Active" | "Inactive";
+//   permissions: string[]; // e.g. ["User Management","Reporting"]
+// }
+
+// interface AddUserModalProps {
+//   isOpen: boolean;
+//   onClose: () => void;
+//   onSave: (data: AddUserForm) => void;
+//   roles: string[];
+//   departments: string[];
+// }
+
+// const ALL_PERMISSIONS = [
+//   { key: "User Management", desc: "Create, edit and manage users" },
+//   { key: "Task Management", desc: "Configure system task" },
+//   { key: "System Settings", desc: "Configure system parameters" },
+//   { key: "Leave Approval", desc: "Approve/reject leave requests" },
+//   { key: "Performance Review", desc: "Conduct employee evaluations" },
+//   { key: "Reporting", desc: "Access system reports" },
+// ];
+
+// export default function AddUserModal({
+//   isOpen,
+//   onClose,
+//   onSave,
+//   roles,
+//   departments,
+// }: AddUserModalProps) {
+//   const [form, setForm] = useState<AddUserForm>({
+//     firstName: "",
+//     lastName: "",
+//     role: "",
+//     department: "",
+//     status: "Active",
+//     permissions: ["Reporting"], // example pre-checked like screenshot
+//   });
+
+//   useEffect(() => {
+//     if (!isOpen) return;
+//     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+//     document.addEventListener("keydown", onKey);
+//     const prev = document.body.style.overflow;
+//     document.body.style.overflow = "hidden";
+//     return () => {
+//       document.removeEventListener("keydown", onKey);
+//       document.body.style.overflow = prev;
+//     };
+//   }, [isOpen, onClose]);
+
+//   if (!isOpen) return null;
+
+//   const set = <K extends keyof AddUserForm>(k: K, v: AddUserForm[K]) =>
+//     setForm((s) => ({ ...s, [k]: v }));
+
+//   const togglePermission = (p: string) =>
+//     setForm((s) => {
+//       const has = s.permissions.includes(p);
+//       return { ...s, permissions: has ? s.permissions.filter(x => x !== p) : [...s.permissions, p] };
+//     });
+
+//   const submit = (e: React.FormEvent) => {
+//     e.preventDefault();
+//     onSave(form);
+//     onClose();
+//   };
+
+//   const field =
+//     "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
+
+//   return (
+//     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b1220] p-4 md:p-8">
+//       {/* frame */}
+//       <div
+//         className="p-1 rounded-2xl w-full max-w-4xl"
+//         style={{
+//           background:
+//             "linear-gradient(180deg, rgba(18,46,88,0.8) 0%, rgba(4,12,33,0.8) 100%)",
+//         }}
+//       >
+//         {/* card */}
+//         <div
+//           className="relative rounded-2xl border-2 border-dotted border-white"
+//           style={{
+//             background:
+//               "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(19,43,96,0.05) 100%)",
+//           }}
+//         >
+//           <form onSubmit={submit} className="p-6 md:p-8 space-y-6">
+//             {/* header */}
+//             <div className="flex items-center justify-between">
+//               <h2 className="text-2xl font-semibold text-white">Add User</h2>
+//               <button
+//                 type="button"
+//                 onClick={onClose}
+//                 aria-label="Close"
+//                 className="rounded-lg px-2 py-1 text-white/80 hover:text-white"
+//               >
+//                 ✕
+//               </button>
+//             </div>
+
+//             <hr className="border-white/10" />
+
+//             {/* top grid */}
+//             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+//               <div>
+//                 <label className="block text-sm text-white mb-2">First Name:</label>
+//                 <input
+//                   className={field}
+//                   placeholder="Enter First name"
+//                   value={form.firstName}
+//                   onChange={(e) => set("firstName", e.target.value)}
+//                   required
+//                 />
+//               </div>
+
+//               <div>
+//                 <label className="block text-sm text-white mb-2">Last Name:</label>
+//                 <input
+//                   className={field}
+//                   placeholder="Enter Last name"
+//                   value={form.lastName}
+//                   onChange={(e) => set("lastName", e.target.value)}
+//                   required
+//                 />
+//               </div>
+
+//               <div>
+//                 <label htmlFor="role-select" className="block text-sm text-white mb-2">Role:</label>
+//                 <select
+//                   id="role-select"
+//                   className={field}
+//                   value={form.role}
+//                   onChange={(e) => set("role", e.target.value)}
+//                   aria-label="Role"
+//                 >
+//                   <option value="" className="bg-[#0f172a]">Select role</option>
+//                   {roles.map((r) => (
+//                     <option key={r} value={r} className="bg-[#0f172a]">
+//                       {r}
+//                     </option>
+//                   ))}
+//                 </select>
+//               </div>
+
+//               <div>
+//                 <label htmlFor="department-select" className="block text-sm text-white mb-2">Department:</label>
+//                 <select
+//                   id="department-select"
+//                   className={field}
+//                   value={form.department}
+//                   onChange={(e) => set("department", e.target.value)}
+//                   aria-label="Department"
+//                 >
+//                   <option value="" className="bg-[#0f172a]">Select department</option>
+//                   {departments.map((d) => (
+//                     <option key={d} value={d} className="bg-[#0f172a]">
+//                       {d}
+//                     </option>
+//                   ))}
+//                 </select>
+//               </div>
+//             </div>
+
+//             {/* status */}
+//             <div className="space-y-2">
+//               <span className="block text-sm text-white">Status</span>
+//               <div className="flex items-center gap-6">
+//                 <label className="inline-flex items-center gap-2 text-white">
+//                   <input
+//                     type="radio"
+//                     name="status"
+//                     checked={form.status === "Active"}
+//                     onChange={() => set("status", "Active")}
+//                     className="h-4 w-4 accent-blue-500"
+//                   />
+//                   Active
+//                 </label>
+//                 <label className="inline-flex items-center gap-2 text-white">
+//                   <input
+//                     type="radio"
+//                     name="status"
+//                     checked={form.status === "Inactive"}
+//                     onChange={() => set("status", "Inactive")}
+//                     className="h-4 w-4 accent-blue-500"
+//                   />
+//                   Inactive
+//                 </label>
+//               </div>
+//             </div>
+
+//             {/* permissions */}
+//             <div>
+//               <p className="text-sm text-white mb-3">Permissions</p>
+//               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+//                 {ALL_PERMISSIONS.map(({ key, desc }) => (
+//                   <label
+//                     key={key}
+//                     className="flex items-start gap-3 rounded-xl border border-white p-3"
+//                   >
+//                     <input
+//                       type="checkbox"
+//                       checked={form.permissions.includes(key)}
+//                       onChange={() => togglePermission(key)}
+//                       className="mt-1 h-4 w-4 accent-blue-500"
+//                     />
+//                     <span className="leading-tight">
+//                       <span className="block text-white font-medium">{key}</span>
+//                       <span className="block text-white/70 text-sm">{desc}</span>
+//                     </span>
+//                   </label>
+//                 ))}
+//               </div>
+//             </div>
+
+//             {/* actions */}
+//             <div className="flex items-center justify-end gap-3 pt-2">
+//               <button
+//                 type="button"
+//                 onClick={onClose}
+//                 className="text-blue-400 hover:text-blue-300"
+//               >
+//                 Cancel
+//               </button>
+//               <button
+//                 type="submit"
+//                 className="h-11 px-5 rounded-2xl bg-white hover:bg-gray-100 text-blue-500 font-medium"
+//               >
+//                 Save User
+//               </button>
+//             </div>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
+
 "use client";
 import { useEffect, useState } from "react";
 
@@ -73,17 +321,14 @@ export default function AddUserModal({
   };
 
   const field =
-    "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
+    "w-full md:h-11 h-7 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none text-xs";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b1220] p-4 md:p-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#14223c] p-4 md:p-8 mt-[90px] ">
       {/* frame */}
       <div
-        className="p-1 rounded-2xl w-full max-w-4xl"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(18,46,88,0.8) 0%, rgba(4,12,33,0.8) 100%)",
-        }}
+        className="p-1 rounded-2xl w-full max-w-4xl bg-[rgb(5,18,43)] mt-20"
+       
       >
         {/* card */}
         <div
@@ -93,10 +338,10 @@ export default function AddUserModal({
               "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(19,43,96,0.05) 100%)",
           }}
         >
-          <form onSubmit={submit} className="p-6 md:p-8 space-y-6">
+          <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 py-2">
             {/* header */}
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-semibold text-white">Add User</h2>
+              <h2 className="md:text-2xl font-semibold text-white mt-5">Add User</h2>
               <button
                 type="button"
                 onClick={onClose}
@@ -110,9 +355,9 @@ export default function AddUserModal({
             <hr className="border-white/10" />
 
             {/* top grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 md:grid-cols-2 md:gap-5 gap-2">
               <div>
-                <label className="block text-sm text-white mb-2">First Name:</label>
+                <label className="block md:text-sm text-white text-xs mb-2">First Name:</label>
                 <input
                   className={field}
                   placeholder="Enter First name"
@@ -123,7 +368,7 @@ export default function AddUserModal({
               </div>
 
               <div>
-                <label className="block text-sm text-white mb-2">Last Name:</label>
+                <label className="block md:text-sm text-xs text-white mb-2">Last Name:</label>
                 <input
                   className={field}
                   placeholder="Enter Last name"
@@ -134,7 +379,7 @@ export default function AddUserModal({
               </div>
 
               <div>
-                <label htmlFor="role-select" className="block text-sm text-white mb-2">Role:</label>
+                <label htmlFor="role-select" className="block md:text-sm text-white mb-2 text-xs">Role:</label>
                 <select
                   id="role-select"
                   className={field}
@@ -142,7 +387,7 @@ export default function AddUserModal({
                   onChange={(e) => set("role", e.target.value)}
                   aria-label="Role"
                 >
-                  <option value="" className="bg-[#0f172a]">Select role</option>
+                  <option value="" className="bg-[#0f172a] md:text-sm text-xs">Select role</option>
                   {roles.map((r) => (
                     <option key={r} value={r} className="bg-[#0f172a]">
                       {r}
@@ -152,7 +397,7 @@ export default function AddUserModal({
               </div>
 
               <div>
-                <label htmlFor="department-select" className="block text-sm text-white mb-2">Department:</label>
+                <label htmlFor="department-select" className="block md:text-sm text-xs text-white mb-2">Department:</label>
                 <select
                   id="department-select"
                   className={field}
@@ -160,7 +405,7 @@ export default function AddUserModal({
                   onChange={(e) => set("department", e.target.value)}
                   aria-label="Department"
                 >
-                  <option value="" className="bg-[#0f172a]">Select department</option>
+                  <option value="" className="bg-[#0f172a] md:text-sm text-xs">Select department</option>
                   {departments.map((d) => (
                     <option key={d} value={d} className="bg-[#0f172a]">
                       {d}
@@ -174,65 +419,44 @@ export default function AddUserModal({
             <div className="space-y-2">
               <span className="block text-sm text-white">Status</span>
               <div className="flex items-center gap-6">
-                <label className="inline-flex items-center gap-2 text-white">
+                <label className="inline-flex items-center gap-2 text-white md:text-sm text-sm">
                   <input
                     type="radio"
                     name="status"
                     checked={form.status === "Active"}
                     onChange={() => set("status", "Active")}
-                    className="h-4 w-4 accent-blue-500"
+                    className="h-4 w-4 accent-Blue"
                   />
                   Active
                 </label>
-                <label className="inline-flex items-center gap-2 text-white">
+                <label className="inline-flex items-center gap-2 text-white md:text-sm text-sm">
                   <input
                     type="radio"
                     name="status"
                     checked={form.status === "Inactive"}
                     onChange={() => set("status", "Inactive")}
-                    className="h-4 w-4 accent-blue-500"
+                    className="h-4 w-4 accent-Blue"
                   />
                   Inactive
                 </label>
               </div>
             </div>
 
-            {/* permissions */}
-            <div>
-              <p className="text-sm text-white mb-3">Permissions</p>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                {ALL_PERMISSIONS.map(({ key, desc }) => (
-                  <label
-                    key={key}
-                    className="flex items-start gap-3 rounded-xl border border-white p-3"
-                  >
-                    <input
-                      type="checkbox"
-                      checked={form.permissions.includes(key)}
-                      onChange={() => togglePermission(key)}
-                      className="mt-1 h-4 w-4 accent-blue-500"
-                    />
-                    <span className="leading-tight">
-                      <span className="block text-white font-medium">{key}</span>
-                      <span className="block text-white/70 text-sm">{desc}</span>
-                    </span>
-                  </label>
-                ))}
-              </div>
-            </div>
+          
+           
 
             {/* actions */}
             <div className="flex items-center justify-end gap-3 pt-2">
               <button
                 type="button"
                 onClick={onClose}
-                className="text-blue-400 hover:text-blue-300"
+                className="text-Blue hover:text-Blue/55 text-sm md:text-base"
               >
                 Cancel
               </button>
               <button
                 type="submit"
-                className="h-11 px-5 rounded-2xl bg-white hover:bg-gray-100 text-blue-500 font-medium"
+                className="h-11 md:px-5 px-3 rounded-2xl bg-white hover:bg-gray/20 text-Blue font-medium text-xs md:text-sm"
               >
                 Save User
               </button>

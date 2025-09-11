@@ -19,7 +19,7 @@ export default function AdjustButton({ onClick }: AdjustButtonProps) {
   return (
     <button
       onClick={onClick}
-      className="px-3 py-1 rounded-md bg-gray-700 hover:bg-gray-600"
+      className="px-3 py-1 rounded-md bg-gray/30 hover:bg-gray/40"
     >
       Adjust
     </button>
