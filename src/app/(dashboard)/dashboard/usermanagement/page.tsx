@@ -213,13 +213,13 @@ export default function UserManagement() {
   return (
     <div className="p-6 md:h-screen md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5">
       {/* Search + Add */}
-      <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0">
+      <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0 items-center justify-center">
         <input
           type="text"
           placeholder="Search User..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none md:w-64 w-44 md:ml-0 -ml-8"
+          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none md:w-64 w-44 "
         />
         <button
           className="bg-Blue md:px-4 px-3 py-2 rounded-xl hover:bg-Blue flex-shrink-0"
@@ -278,7 +278,7 @@ export default function UserManagement() {
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 w-64 -ml-5"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center"
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
