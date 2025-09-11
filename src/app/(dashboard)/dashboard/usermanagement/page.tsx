@@ -114,9 +114,6 @@
 
 
 
-
-
-
 "use client";
 import { useMemo, useState } from "react";
 import AddUserModal, { AddUserForm } from "@/components/usermanagement/AddUserModal";
@@ -133,34 +130,34 @@ const SEED_USERS: AddUserForm[] = [
     department: "HR",
     status: "Active",
     permissions: ["Reporting"],
-   
+    email: "mahnoor@gmail.com"
   },
   {
     firstName: "Raheel",
     lastName: "",
     role: "Manager",
-    department: "Operations",
+    department: "Product Manager",
     status: "Active",
     permissions: [],
-    
+    email: "raheel@gmail.com"
   },
   {
     firstName: "Ayesha",
     lastName: "",
     role: "Employee",
-    department: "Engineering",
+    department: "Design",
     status: "Inactive",
     permissions: [],
-    
+    email: "ayesha@gmail.com"
   },
   {
     firstName: "Safia",
     lastName: "Seher",
     role: "Employee",
-    department: "Finance",
+    department: "Engineering",
     status: "Inactive",
     permissions: [],
-    
+    email: "mahveen@gmail.com"
   },
 ];
 
@@ -222,7 +219,7 @@ export default function UserManagement() {
           placeholder="Search User..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none md:w-64 md:ml-0 -ml-14 w-44"
+          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none md:w-64 w-44 md:ml-0 -ml-8"
         />
         <button
           className="bg-Blue md:px-4 px-3 py-2 rounded-xl hover:bg-Blue flex-shrink-0"
@@ -238,6 +235,7 @@ export default function UserManagement() {
           <thead>
             <tr className="bg-[#0f1d3a]">
               <th className="p-3">Name</th>
+              <th className="p-3">Email</th>
               <th className="p-3">Role</th>
               <th className="p-3">Department</th>
               <th className="p-3">Status</th>
@@ -248,6 +246,7 @@ export default function UserManagement() {
             {filteredUsers.map((user, i) => (
               <tr key={i} className="border-b border-gray/30 hover:bg-gray/10">
                 <td className="p-3">{user.firstName} {user.lastName}</td>
+                <td className="p-3">{user.email}</td>
                 <td className="p-3">{user.role}</td>
                 <td className="p-3">{user.department}</td>
                 <td className="p-3">
@@ -279,29 +278,31 @@ export default function UserManagement() {
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 md:bg-gradient-to-b from-white/10 to-white/[0.04] p-4"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 w-64 -ml-5"
     >
+      {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
-        <h3 className="text-base font-semibold">
-          {user.firstName} {user.lastName}
-        </h3>
+        <h3 className="text-base font-semibold">{user.firstName} {user.lastName}</h3>
+        <span className="text-Blue text-sm">{user.department}</span>
+       
+      </div>
+
+      {/* Email */}
+      
+ <span className="text-xs text-gray">{user.email}</span>
+      {/* Status */}
+      <div className="flex items-center gap-2 mt-2">
         <span
-          className={
-            user.status === "Active"
-              ? "text-green text-sm"
-              : "text-orange text-sm"
-          }
+          className={`text-sm font-medium ${
+            user.status === "Active" ? "text-green" : "text-orange"
+          }`}
         >
-          {user.status === "Active" ? "Online" : "Offline"}
+          {user.status}
         </span>
       </div>
 
-      
-      <p className="text-xs text-gray">Role: {user.role}</p>
-      <p className="text-xs text-gray">Department: {user.department}</p>
-
       {/* Actions */}
-      <div className="flex gap-4 mt-3 ml-32">
+      <div className="flex justify-end gap-4 mt-3">
         <button
           className="text-gray hover:text-white"
           onClick={() => handleViewUser(user)}
@@ -317,7 +318,7 @@ export default function UserManagement() {
         <button
           className="text-Red hover:text-Red"
           onClick={() =>
-            setUsers(users.filter((u) => u !== user))
+            setUsers(users.filter((u) => u.email !== user.email))
           }
         >
           <Trash2 size={18} />
