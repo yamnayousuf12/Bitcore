@@ -311,12 +311,12 @@ export default function AddUserModal({
     "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b1220] p-4 md:p-8 mt-[90px] md:mt-0">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 mt-[177px] md:mt-0">
       {/* frame */}
-      <div className="p-1 rounded-2xl w-full max-w-4xl bg-gradient-to-b from-white/[0.08] to-white/[0.03] ">
+      <div className="p-1 rounded-2xl w-screen mx-auto max-w-4xl bg-[#0b1220] -ml-4 h-screen  ">
         {/* card */}
         <div
-          className="relative rounded-2xl border-2 border-dotted border-white"
+          className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen"
          
         >
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
