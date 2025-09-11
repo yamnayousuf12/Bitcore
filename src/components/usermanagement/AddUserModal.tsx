@@ -311,9 +311,9 @@ export default function AddUserModal({
     "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 mt-[180px] md:mt-0">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
       {/* frame */}
-      <div className="p-1 rounded-2xl w-screen mx-auto max-w-4xl bg-[#0b1220] -ml-4 h-screen  ">
+      <div className="p-1 rounded-2xl w-screen mx-auto max-w-4xl bg-[#0b1220] -ml-4 h-screen  mt-[180px] md:mt-0  ">
         {/* card */}
         <div
           className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen"
