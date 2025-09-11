@@ -250,7 +250,7 @@
 import { useEffect, useState } from "react";
 
 export interface AddUserForm {
-  email: ReactNode;
+  email: string; // ✅ string instead of ReactNode/any
   firstName: string;
   lastName: string;
   role: string;
@@ -267,15 +267,6 @@ interface AddUserModalProps {
   departments: string[];
 }
 
-const ALL_PERMISSIONS = [
-  { key: "User Management", desc: "Create, edit and manage users" },
-  { key: "Task Management", desc: "Configure system task" },
-  { key: "System Settings", desc: "Configure system parameters" },
-  { key: "Leave Approval", desc: "Approve/reject leave requests" },
-  { key: "Performance Review", desc: "Conduct employee evaluations" },
-  { key: "Reporting", desc: "Access system reports" },
-];
-
 export default function AddUserModal({
   isOpen,
   onClose,
@@ -284,6 +275,7 @@ export default function AddUserModal({
   departments,
 }: AddUserModalProps) {
   const [form, setForm] = useState<AddUserForm>({
+    email: "", // ✅ added properly
     firstName: "",
     lastName: "",
     role: "",
@@ -309,12 +301,6 @@ export default function AddUserModal({
   const set = <K extends keyof AddUserForm>(k: K, v: AddUserForm[K]) =>
     setForm((s) => ({ ...s, [k]: v }));
 
-  const togglePermission = (p: string) =>
-    setForm((s) => {
-      const has = s.permissions.includes(p);
-      return { ...s, permissions: has ? s.permissions.filter(x => x !== p) : [...s.permissions, p] };
-    });
-
   const submit = (e: React.FormEvent) => {
     e.preventDefault();
     onSave(form);
@@ -327,13 +313,7 @@ export default function AddUserModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0b1220] p-4 md:p-8">
       {/* frame */}
-      <div
-        className="p-1 rounded-2xl w-full max-w-4xl"
-        style={{
-          background:
-            "linear-gradient(180deg, rgba(18,46,88,0.8) 0%, rgba(4,12,33,0.8) 100%)",
-        }}
-      >
+      <div className="p-1 rounded-2xl w-full max-w-4xl bg-gradient-to-b from-white/[0.08] to-white/[0.03]">
         {/* card */}
         <div
           className="relative rounded-2xl border-2 border-dotted border-white"
@@ -361,7 +341,9 @@ export default function AddUserModal({
             {/* top grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
               <div>
-                <label className="block text-sm text-white mb-2">First Name:</label>
+                <label className="block text-sm text-white mb-2">
+                  First Name:
+                </label>
                 <input
                   className={field}
                   placeholder="Enter First name"
@@ -372,7 +354,9 @@ export default function AddUserModal({
               </div>
 
               <div>
-                <label className="block text-sm text-white mb-2">Last Name:</label>
+                <label className="block text-sm text-white mb-2">
+                  Last Name:
+                </label>
                 <input
                   className={field}
                   placeholder="Enter Last name"
@@ -383,7 +367,30 @@ export default function AddUserModal({
               </div>
 
               <div>
-                <label htmlFor="role-select" className="block text-sm text-white mb-2">Role:</label>
+                <label
+                  htmlFor="email"
+                  className="block text-sm text-white mb-2"
+                >
+                  Email:
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  className={field}
+                  placeholder="Enter email"
+                  value={form.email}
+                  onChange={(e) => set("email", e.target.value)}
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  htmlFor="role-select"
+                  className="block text-sm text-white mb-2"
+                >
+                  Role:
+                </label>
                 <select
                   id="role-select"
                   className={field}
@@ -391,7 +398,9 @@ export default function AddUserModal({
                   onChange={(e) => set("role", e.target.value)}
                   aria-label="Role"
                 >
-                  <option value="" className="bg-[#0f172a]">Select role</option>
+                  <option value="" className="bg-[#0f172a]">
+                    Select role
+                  </option>
                   {roles.map((r) => (
                     <option key={r} value={r} className="bg-[#0f172a]">
                       {r}
@@ -401,7 +410,12 @@ export default function AddUserModal({
               </div>
 
               <div>
-                <label htmlFor="department-select" className="block text-sm text-white mb-2">Department:</label>
+                <label
+                  htmlFor="department-select"
+                  className="block text-sm text-white mb-2"
+                >
+                  Department:
+                </label>
                 <select
                   id="department-select"
                   className={field}
@@ -409,7 +423,9 @@ export default function AddUserModal({
                   onChange={(e) => set("department", e.target.value)}
                   aria-label="Department"
                 >
-                  <option value="" className="bg-[#0f172a]">Select department</option>
+                  <option value="" className="bg-[#0f172a]">
+                    Select department
+                  </option>
                   {departments.map((d) => (
                     <option key={d} value={d} className="bg-[#0f172a]">
                       {d}
@@ -445,9 +461,6 @@ export default function AddUserModal({
                 </label>
               </div>
             </div>
-
-          
-           
 
             {/* actions */}
             <div className="flex items-center justify-end gap-3 pt-2">
