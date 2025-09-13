@@ -42,15 +42,15 @@ export default function EditUserModal({
     "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center  p-4 md:p-8 ">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 ">
       <div
-        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen mt-[100px] md:mt-0 md:h-full">
+        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen  md:mt-0 md:h-full">
         <div
           className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full  md:mt-0 mx-auto max-w-4xl md:w-full"
         >
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-4 ">
             <div className="flex items-center justify-between">
-              <h2 className="md:text-2xl font-semibold text-white ">Edit User</h2>
+              <h2 className="text-2xl font-semibold text-white">Edit User</h2>
               <button
                 type="button"
                 onClick={onClose}
