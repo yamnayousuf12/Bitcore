@@ -452,7 +452,7 @@ export default function AddUserModal({
                     name="status"
                     checked={form.status === "Inactive"}
                     onChange={() => set("status", "Inactive")}
-                    className="h-4 w-4 accent-blue-500"
+                    className="h-4 w-4 accent-Blue"
                   />
                   Inactive
                 </label>
@@ -464,7 +464,7 @@ export default function AddUserModal({
               <button
                 type="button"
                 onClick={onClose}
-                className="text-blue-400 hover:text-blue-300"
+                className="text-Blue hover:text-Blue/50"
               >
                 Cancel
               </button>
