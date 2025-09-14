@@ -97,10 +97,10 @@ export default function DateFilter() {
       </div>
 
       {/* ✅ Desktop Layout (your existing code, only visible md+) */}
-      <div className="hidden md:flex flex-col md:flex-row gap-4 md:items-end bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full md:w-[850px]">
-        <div className="flex flex-col">
+      <div className="hidden md:flex flex-col md:flex-row gap-10 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full ">
+        <div className="flex flex-col ">
           <label className="text-sm mb-1 lg:block hidden">Date Range</label>
-          <div className="md:flex gap-2">
+          <div className="md:flex gap-9">
             <input
               type="date"
               className="bg-gray3 p-2 rounded border border-gray/20"

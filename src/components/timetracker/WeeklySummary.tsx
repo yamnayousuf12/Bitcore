@@ -35,7 +35,6 @@ export default function WeeklySummary({
           <BarChart data={data} margin={{ top: 8, right: 8, left: 8, bottom: 8 }}>
             <defs>
               <linearGradient id="barBlue" x1="0" y1="1" x2="0" y2="0">
-                <stop offset="0%" stopColor="#2563eb" />
                 <stop offset="100%" stopColor="#60a5fa" />
               </linearGradient>
             </defs>
@@ -69,7 +68,7 @@ export default function WeeklySummary({
             <Bar
               dataKey="value"
               fill="url(#barBlue)"
-              radius={[10, 10, 0, 0]}
+              radius={[0, 0, 0, 0]}
               barSize={44}      // <- makes bars broader
               maxBarSize={52}
             />

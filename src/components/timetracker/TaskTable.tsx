@@ -189,7 +189,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
             return (
               <div
                 key={absIndex}
-                className={`w-80 -ml-10 rounded-xl border border-white/30 p-4 cursor-pointer select-none transition ${
+                className={`w-80 items-center justify-center rounded-xl border border-white/30 p-4 cursor-pointer select-none transition ${
                   isSelected ? "bg-white/5" : "hover:bg-white/2.5"
                 }`}
                 onClick={() => toggleRow(absIndex)}
@@ -230,7 +230,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
       <div className="md:border md:border-Blue/45 md:rounded-md">
       <div className="hidden lg:block overflow-x-auto ">
         <table className="w-full text-left ">
-          <thead className="bg-gray3 text-gray text-sm">
+          <thead className="bg-gray3 text-Blue text-sm">
             <tr>
               <th className="px-4 py-2">Employee</th>
               <th className="px-4 py-2">Task</th>
@@ -256,7 +256,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
                 return (
                   <tr
                     key={absIndex}
-                    className={`border-t border-gray text-sm cursor-pointer select-none ${
+                    className={`border-t border-Blue/45 text-sm cursor-pointer select-none ${
                       isSelected ? "bg-white/5" : "hover:bg-white/2.5"
                     }`}
                     onClick={() => toggleRow(absIndex)}
@@ -283,38 +283,40 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
         </table>
       </div>
 
-      {/* footer */}
-      <div className="flex items-center justify-between px-2 py-2 text-xs sm:text-sm border-t border-gray mt-4">
-        <span className="text-gray">
-          {selected.size} of {tasks.length} selected.
-        </span>
 
-        <div className="flex items-center gap-2">
-          <button
-            onClick={() => setPage((p) => Math.max(0, p - 1))}
-            disabled={!canPrev}
-            className={`px-3 py-1 rounded-md border text-gray ${
-              canPrev
-                ? "border-white/20 hover:bg-white/10"
-                : "border-white/10 opacity-50 cursor-not-allowed"
-            }`}
-          >
-            Previous
-          </button>
-          <button
-            onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}
-            disabled={!canNext}
-            className={`px-3 py-1 rounded-md border text-gray ${
-              canNext
-                ? "border-white/20 hover:bg-white/10"
-                : "border-white/10 opacity-50 cursor-not-allowed"
-            }`}
-          >
-            Next
-          </button>
-        </div>
-      </div>
+
+{/* ===== Footer (shared) ===== */}
+  <div className="flex items-center justify-between px-2 py-2 text-xs sm:text-sm border-t border-Blue/45 mt-4">
+    <span className="text-gray">
+      {selected.size} of {tasks.length} selected.
+    </span>
+    <div className="flex items-center gap-2">
+      <button
+        onClick={() => setPage((p) => Math.max(0, p - 1))}
+        disabled={!canPrev}
+        className={`px-3 py-1 rounded-md border text-gray ${
+          canPrev
+            ? "border-white/20 hover:bg-white/10"
+            : "border-white/10 opacity-50 cursor-not-allowed"
+        }`}
+      >
+        Previous
+      </button>
+      <button
+        onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}
+        disabled={!canNext}
+        className={`px-3 py-1 rounded-md border text-gray ${
+          canNext
+            ? "border-white/20 hover:bg-white/10"
+            : "border-white/10 opacity-50 cursor-not-allowed"
+        }`}
+      >
+        Next
+      </button>
     </div>
+  </div>
+</div>
+     
     </div>
   );
 }
