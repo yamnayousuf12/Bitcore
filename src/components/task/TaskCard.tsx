@@ -34,7 +34,7 @@ export default function TaskCard({ task }: { task: Task }) {
             <div className="h-9 w-9 rounded-full bg-white/10 flex-shrink-0" />
             <div>
               <h4 className="font-semibold w-28 text-sm text-white flex-shrink-0">{task.title}</h4>
-              <span className="text-xs text-blue-400">{task.datetime ?? ""}</span>
+              <span className="text-xs text-Blue">{task.datetime ?? ""}</span>
             </div>
           </div>
 
@@ -56,13 +56,13 @@ export default function TaskCard({ task }: { task: Task }) {
 
           <div className="flex items-center gap-3">
             <button
-              className="text-blue-400 hover:text-blue-300"
+              className="text-Blue hover:text-Blue/55"
               title="Edit"
               onClick={() => setOpenEdit(true)}
             >
               ✎
             </button>
-            <button className="text-red-400 hover:text-red-300" title="Delete">
+            <button className="text-Red hover:text-Red/20" title="Delete">
               🗑
             </button>
           </div>

@@ -31,7 +31,7 @@ export default function BoardHeader({
 
         <button
           onClick={() => setOpen(true)}
-          className=" h-11 px-5 rounded-2xl bg-blue-500/90 hover:bg-blue-500
+          className=" h-11 px-5 rounded-2xl bg-Blue hover:bg-Blue/55
                      text-white font-medium bordnd er border-white/10 itemes-e flex-shrink-0 md:-ml-12"
         >
           Add Task
@@ -42,10 +42,10 @@ export default function BoardHeader({
             <span
               key={i}
               className="-ml-3 first:ml-0 inline-grid place-items-center
-                         h-10 w-10 rounded-full ring-2 ring-white/20 bg-white/20"
+                         h-10 w-10 rounded-full ring-2 ring-white/20 bg-white/40"
             />
           ))}
-          <span className="ml-2 text-sm text-white/70">+12</span>
+          <span className="ml-2 text-sm text-white">+12</span>
         </div>
       </div>
 

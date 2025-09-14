@@ -15,7 +15,7 @@ export default function Column({
     <section className=" p-3 sm:p-4">
       <header className="mb-3 sm:mb-4 flex items-baseline gap-2">
         <h3 className={`text-lg sm:text-xl font-semibold ${accent}`}>{title}</h3>
-        <span className="text-white/60 text-sm">({count.toString().padStart(2, "0")})</span>
+        <span className="text-white text-sm">({count.toString().padStart(2, "0")})</span>
       </header>
       <div className="grid gap-3 sm:gap-4">{children}</div>
     </section>

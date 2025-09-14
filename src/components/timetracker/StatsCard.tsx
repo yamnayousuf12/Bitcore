@@ -4,42 +4,42 @@ import type { IconType } from "react-icons";
 // ✅ Static Version (Desktop Only)
 export function StaticStatsCard() {
   return (
-    <div className="hidden md:flex bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-xl p-6 justify-around items-center shadow-lg max-w-4xl mx-auto border border-white/30">
+    <div className="hidden md:flex bg-gradient-to-r  from-white/[0.08] to-white/[0.03]  text-white rounded-xl p-6 justify-around items-center shadow-lg max-w-4xl mx-auto border border-white/30">
       {/* Team Members */}
       <div className="flex items-center space-x-4">
-        <div className="bg-gray-900 p-4 rounded-full">
+        <div className="bg-gray3 p-4 rounded-full">
           <FaUsers className="text-3xl text-white" />
         </div>
         <div>
-          <p className="text-sm text-gray-400">Team Members</p>
+          <p className="text-sm text-gray">Team Members</p>
           <h2 className="text-2xl font-bold">25</h2>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="h-14 w-px bg-gray-600"></div>
+      <div className="h-14 w-px bg-gray"></div>
 
       {/* Avg Daily Hours */}
       <div className="flex items-center space-x-4">
-        <div className="bg-gray-900 p-4 rounded-full">
+        <div className="bg-gray3 p-4 rounded-full">
           <FaClock className="text-3xl text-white" />
         </div>
         <div>
-          <p className="text-sm text-gray-400">Avg. Daily Hours</p>
+          <p className="text-sm text-gray">Avg. Daily Hours</p>
           <h2 className="text-2xl font-bold">6.8</h2>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="h-14 w-px bg-gray-600"></div>
+      <div className="h-14 w-px bg-gray"></div>
 
       {/* Active Tasks */}
       <div className="flex items-center space-x-4">
-        <div className="bg-gray-900 p-4 rounded-full">
+        <div className="bg-gray3 p-4 rounded-full">
           <FaTasks className="text-3xl text-white" />
         </div>
         <div>
-          <p className="text-sm text-gray-400">Active Tasks</p>
+          <p className="text-sm text-gray">Active Tasks</p>
           <h2 className="text-2xl font-bold">12</h2>
         </div>
       </div>

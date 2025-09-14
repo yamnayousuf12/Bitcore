@@ -178,7 +178,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
       {/* ===== Mobile Cards ===== */}
       <div className="space-y-4 block lg:hidden">
         {tasks.length === 0 ? (
-          <div className="text-center text-gray-400 py-6 ">
+          <div className="text-center text-gray py-6 ">
             No tasks available.
           </div>
         ) : (
@@ -196,10 +196,10 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
               >
                 <div className="flex items-start justify-between">
                   <h3 className="text-white font-medium">{t.employee}</h3>
-                  <span className="text-blue-400 text-sm">{t.date}</span>
+                  <span className="text-Blue text-sm">{t.date}</span>
                 </div>
 
-                <div className="mt-1 text-gray-300 text-sm space-y-1">
+                <div className="mt-1 text-gray text-sm space-y-1">
                   <p>
                     <span className="font-medium">Task:</span> {t.task}
                   </p>
@@ -227,10 +227,10 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
       </div>
 
       {/* ===== Desktop Table ===== */}
-      <div className="md:border md:border-blue-900 md:rounded-md">
+      <div className="md:border md:border-Blue/45 md:rounded-md">
       <div className="hidden lg:block overflow-x-auto ">
         <table className="w-full text-left ">
-          <thead className="bg-gray-800 text-gray-300 text-sm">
+          <thead className="bg-gray3 text-gray text-sm">
             <tr>
               <th className="px-4 py-2">Employee</th>
               <th className="px-4 py-2">Task</th>
@@ -256,7 +256,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
                 return (
                   <tr
                     key={absIndex}
-                    className={`border-t border-gray-700 text-sm cursor-pointer select-none ${
+                    className={`border-t border-gray text-sm cursor-pointer select-none ${
                       isSelected ? "bg-white/5" : "hover:bg-white/2.5"
                     }`}
                     onClick={() => toggleRow(absIndex)}
@@ -284,8 +284,8 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
       </div>
 
       {/* footer */}
-      <div className="flex items-center justify-between px-2 py-2 text-xs sm:text-sm border-t border-gray-800 mt-4">
-        <span className="text-gray-400">
+      <div className="flex items-center justify-between px-2 py-2 text-xs sm:text-sm border-t border-gray mt-4">
+        <span className="text-gray">
           {selected.size} of {tasks.length} selected.
         </span>
 
@@ -293,7 +293,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
           <button
             onClick={() => setPage((p) => Math.max(0, p - 1))}
             disabled={!canPrev}
-            className={`px-3 py-1 rounded-md border text-gray-200 ${
+            className={`px-3 py-1 rounded-md border text-gray ${
               canPrev
                 ? "border-white/20 hover:bg-white/10"
                 : "border-white/10 opacity-50 cursor-not-allowed"
@@ -304,7 +304,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
           <button
             onClick={() => setPage((p) => Math.min(pageCount - 1, p + 1))}
             disabled={!canNext}
-            className={`px-3 py-1 rounded-md border text-gray-200 ${
+            className={`px-3 py-1 rounded-md border text-gray ${
               canNext
                 ? "border-white/20 hover:bg-white/10"
                 : "border-white/10 opacity-50 cursor-not-allowed"

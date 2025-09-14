@@ -17,19 +17,19 @@ export default function TaskBoard() {
       <BoardHeader query={query} setQuery={setQuery} />
 
       <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-0">
-        <Column title="Pending" count={todo.length} accent="text-yellow-400">
+        <Column title="Pending" count={todo.length} accent="text-yellow">
           {todo.map((t) => <TaskCard key={t.id} task={t} />)}
         </Column>
 
-        <Column title="In Progress" count={inprogress.length} accent="text-blue-400">
+        <Column title="In Progress" count={inprogress.length} accent="text-Blue">
           {inprogress.map((t) => <TaskCard key={t.id} task={t} />)}
         </Column>
 
-        <Column title="Delayed" count={review.length} accent="text-red-400">
+        <Column title="Delayed" count={review.length} accent="text-Red">
           {review.map((t) => <TaskCard key={t.id} task={t} />)}
         </Column>
 
-        <Column title="Completed" count={done.length} accent="text-emerald-400">
+        <Column title="Completed" count={done.length} accent="text-green">
           {done.map((t) => <TaskCard key={t.id} task={t} />)}
         </Column>
       </div>
