@@ -189,7 +189,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
             return (
               <div
                 key={absIndex}
-                className={`w-80 items-center justify-center rounded-xl border border-white/30 p-4 cursor-pointer select-none transition ${
+                className={`w-full items-center justify-center rounded-xl border border-white/30 p-4 cursor-pointer select-none transition ${
                   isSelected ? "bg-white/5" : "hover:bg-white/2.5"
                 }`}
                 onClick={() => toggleRow(absIndex)}
