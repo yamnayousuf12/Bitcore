@@ -212,6 +212,9 @@ export default function UserManagement() {
 
   return (
     <div className="p-6 md:h-screen md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5">
+      <div className="absolute left-24 -translate-x-1/2 flex items-center -mt-20 text-base lg:hidden text-[#BAD4EF] itemes-eflex-shrink-0">
+      <span className="font-semibold tracking-wide "> ← User Management</span>
+      </div>
       {/* Search + Add */}
       <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0 items-center justify-center md:justify-start md:items-start">
         <input

@@ -10,6 +10,9 @@ import { IconBaseProps } from "react-icons";
 export default function DashboardPage() {
   return (
     <div className="p-4 space-y-6 text-white">
+      <div className="absolute left-24 -translate-x-1/2 flex items-center -mt-20 text-base lg:hidden text-[#BAD4EF]">
+      <span className="font-semibold tracking-wide ">← Time Tracker</span>
+      </div>
       <DateFilter />
       {/* <div className=" grid grid-cols-1 md:grid-rows-1 gap-4 md:gap-0">
         {stats.map((item, idx) => (

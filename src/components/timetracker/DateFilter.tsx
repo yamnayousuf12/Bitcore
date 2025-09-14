@@ -46,7 +46,7 @@ export default function DateFilter() {
   return (
     <div>
       {/* ✅ Mobile Layout (only visible on small screens) */}
-      <div className="bg-[#0f172a] p-4 rounded-xl border border-gray/30 w-full max-w-lg mx-auto block md:hidden">
+      <div className="bg-[#0f172a] p-4 rounded-xl border border-gray/30 w-full max-w-lg mx-auto block md:hidden -mt-12">
         <div className="flex flex-col gap-4">
           {/* Date From */}
           <div className="flex items-center justify-between gap-4 ">
