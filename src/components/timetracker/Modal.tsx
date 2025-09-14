@@ -3,7 +3,7 @@ import { X } from "lucide-react";
 export default function Modal({ onClose }: { onClose: () => void }) {
   return (
 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-8">
-  <div className="bg-[#0d1136] rounded-2xl w-full max-w-sm sm:max-w-md md:max-w-lg">
+  <div className="bg-[#0d1136] rounded-2xl w-full max-w-sm sm:max-w-md md:max-w-sm">
  <div
   className="relative p-6 rounded-lg w-96 max-w-full border-2 border-dotted border-white"
   style={{
