@@ -306,67 +306,36 @@ export default function HRPolicyTabs() {
   };
 
   return (
-    // <div className="p-4 text-white">
-    //   {/* Tabs */}
-    //   <div
-    //     className="flex gap-4 mb-4 rounded-lg p-2"
-    //     style={{
-    //       background:
-    //         "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(19,43,96,0.15) 100%)",
-    //     }}
-    //     role="tablist"
-    //   >
-    //     {tabs.map((tab) => {
-    //       const selected = activeTab === tab;
-    //       return (
-    //         <button
-    //           key={tab}
-    //           role="tab"
-    //           aria-selected={selected}
-    //           onClick={() => {
-    //             setActiveTab(tab);
-    //             setContent(policyData[tab].content);
-    //           }}
-    //           className={`px-4 py-2 rounded-lg ${
-    //             selected ? "border-b-2 border-white font-semibold" : "text-gray"
-    //           }`}
-    //         >
-    //           {tab}
-    //         </button>
-    //       );
-    //     })}
-    //   </div>
-
     <div className="p-4 text-white">
-  {/* Tabs */}
-  <div
-    className="flex gap-4 mb-4 rounded-lg p-2 overflow-x-auto scrollbar-hide"
-    style={{
-      background:
-        "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(19,43,96,0.15) 100%)",
-    }}
-    role="tablist"
-  >
-    {tabs.map((tab) => {
-      const selected = activeTab === tab;
-      return (
-        <button
-          key={tab}
-          role="tab"
-          aria-selected={selected}
-          onClick={() => {
-            setActiveTab(tab);
-            setContent(policyData[tab].content);
-          }}
-          className={`flex-shrink-0 px-4 py-2 rounded-lg whitespace-nowrap ${
-            selected ? "border-b-2 border-white font-semibold" : "text-gray"
-          }`}
-        >
-          {tab}
-        </button>
-      );
-    })}
-  </div>
+      {/* Tabs */}
+      <div
+        className="flex md:gap-4 mb-4 rounded-lg p-2 justify-center items-center w-full"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(19,43,96,0.15) 100%)",
+        }}
+        role="tablist"
+      >
+        {tabs.map((tab) => {
+          const selected = activeTab === tab;
+          return (
+            <button
+              key={tab}
+              role="tab"
+              aria-selected={selected}
+              onClick={() => {
+                setActiveTab(tab);
+                setContent(policyData[tab].content);
+              }}
+              className={`px-4 py-2 rounded-lg w-full justify-center items-center ${
+                selected ? "border-b-2 border-white font-semibold text-xs md:text-base" : "text-gray text-xs md:text-base"
+              }`}
+            >
+              {tab}
+            </button>
+          );
+        })}
+      </div>
 
 
 
