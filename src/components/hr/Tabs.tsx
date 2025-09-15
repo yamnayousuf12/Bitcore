@@ -309,7 +309,7 @@ export default function HRPolicyTabs() {
     <div className="p-4 text-white">
       {/* Tabs */}
       <div
-        className="flex md:gap-4 mb-4 rounded-lg p-2 justify-center items-center w-full"
+        className="flex md:gap-4 mb-4 rounded-lg p-2 justify-center items-center md:w-full max-w-7xl  "
         style={{
           background:
             "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(19,43,96,0.15) 100%)",
@@ -327,8 +327,8 @@ export default function HRPolicyTabs() {
                 setActiveTab(tab);
                 setContent(policyData[tab].content);
               }}
-              className={`px-4 py-2 rounded-lg w-full justify-center items-center ${
-                selected ? "border-b-2 border-white font-semibold text-xs md:text-base" : "text-gray text-xs md:text-base"
+              className={`md:px-4 px-1 py-2 rounded-lg justify-center items-center ${
+                selected ? "border-b-2 border-white font-semibold text-[11px] md:text-base" : "text-gray text-[10px] md:text-base flex-shrink-0 justify-center items-center"
               }`}
             >
               {tab}
@@ -340,9 +340,9 @@ export default function HRPolicyTabs() {
 
 
       {/* Content */}
-      <div className="bg-[#0c1424] p-6 rounded-lg relative border-2 border-dotted border-white">
+      <div className="bg-[#0c1424] p-6 max-w-7xl rounded-lg relative border-2 border-dotted border-white ">
         <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-bold text-Blue">
+          <h2 className="md:text-lg text-xs font-bold text-Blue">
             {policyData[activeTab].title}
           </h2>
           <Edit3
@@ -350,7 +350,7 @@ export default function HRPolicyTabs() {
             onClick={() => setOpenModal(true)}
           />
         </div>
-        <div className="space-y-3">{content}</div>
+        <div className="space-y-3 text-xs max-w-3xl">{content}</div>
         <p className="text-xs text-gray mt-4 text-right">
           Last updated: June 15, 2025
         </p>
