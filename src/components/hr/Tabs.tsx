@@ -306,10 +306,10 @@ export default function HRPolicyTabs() {
   };
 
   return (
-    <div className="p-4 text-white">
+    <div className="p-4 text-white ">
       {/* Tabs */}
       <div
-        className="flex md:gap-4 mb-4 rounded-lg p-2 justify-center items-center md:w-full max-w-7xl  "
+        className="flex md:gap-4 mb-4 -mt-20 rounded-lg p-2 justify-center items-center md:w-full max-w-7xl  "
         style={{
           background:
             "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(19,43,96,0.15) 100%)",

@@ -24,17 +24,17 @@ const ActiveChats: React.FC<ActiveChatsProps> = ({ chats }) => {
 >
       <h2 className="text-xl font-semibold text-white">Active Chats</h2>
       {chats.map((chat, index) => (
-        <div key={index} className="flex items-center space-x-4">
+        <div key={index} className="flex items-center space-x-0">
           <div className="relative">
-            <Image src={chat.avatarUrl} alt={chat.name} width={40} height={40} className="w-10 h-10 rounded-full" />
-            <span className={`w-3 h-3 rounded-full absolute top-0 left-0 ${chat.status === 'online' ? 'bg-green-500' : 'bg-yellow-500'}`}></span>
+            <Image src={chat.avatarUrl} alt={chat.name} width={40} height={40} className="w-8 h-8 rounded-full" />
+            <span className={`w-3 h-3 rounded-full absolute top-0 left-0 ${chat.status === 'online' ? 'bg-green' : 'bg-yellow'}`}></span>
           </div>
           <div className="text-white flex justify-between w-full p-4">
             <div>
-              <div className="font-medium">{chat.name}</div>
-              <div className="text-sm text-gray-300">{chat.message}</div>
+              <div className="font-medium text-sm">{chat.name}</div>
+              <div className="text-xs text-gray">{chat.message}</div>
             </div>
-            <div className="text-sm text-gray-400 ml-auto">{chat.time}</div> {/* Time aligned to the right */}
+            <div className="text-xs text-gray ml-auto">{chat.time}</div> {/* Time aligned to the right */}
           </div>
         </div>
       ))}

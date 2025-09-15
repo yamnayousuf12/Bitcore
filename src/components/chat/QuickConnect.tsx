@@ -1,9 +1,59 @@
-import React from 'react';
-import ConnectionCard from './ConnectionCard';
+// import React from 'react';
+// import ConnectionCard from './ConnectionCard';
+
+// interface Connection {
+//   name: string;
+//   status: 'online' | 'away' | 'busy';
+// }
+
+// interface QuickConnectProps {
+//   connections: Connection[];
+// }
+
+// const QuickConnect: React.FC<QuickConnectProps> = ({ connections }) => {
+//   return (
+//     <div
+//   className="bg-[#2a2f3a] p-6 rounded-lg w-full max-w-full ml-0 border-2 border-white/20"
+//   style={{
+//     background: "linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(19, 43, 96, 0.15) 100%)"
+//   }}
+// >
+//       <h2 className="text-xl font-semibold text-white mb-4">Quick Connect</h2>
+//       {/* Flex container for the row layout */}
+//       {/* Flex container for the row layout */}
+// <div className=" flex-wrap gap-2 overflow-x-auto grid grid-cols-4 ">
+//   {connections.map((connection, index) => (
+//     <ConnectionCard
+//       key={index}
+//       name={connection.name}
+//       status={connection.status}
+//       buttonText="Message"
+//     />
+//   ))}
+
+//   {/* Add New Card */}
+//   <ConnectionCard name="Add New" status="online" buttonText="Create" /> {/* "Create" button for "Add New" */}
+// </div>
+
+//     </div>
+//   );
+// };
+
+// export default QuickConnect;
+
+
+
+
+
+
+
+import React from "react";
+import ConnectionCard from "./ConnectionCard";
 
 interface Connection {
   name: string;
-  status: 'online' | 'away' | 'busy';
+  status: "online" | "away" | "busy";
+  role?: string;
 }
 
 interface QuickConnectProps {
@@ -13,31 +63,31 @@ interface QuickConnectProps {
 const QuickConnect: React.FC<QuickConnectProps> = ({ connections }) => {
   return (
     <div
-  className="bg-[#2a2f3a] p-6 rounded-lg w-full max-w-full ml-0 border-2 border-white/20"
-  style={{
-    background: "linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(19, 43, 96, 0.15) 100%)"
-  }}
->
+      className="p-6 rounded-lg md:w-[560px] max-w-full mx-auto border border-white/20"
+      style={{
+        background:
+          "linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(19,43,96,0.15) 100%)",
+      }}
+    >
       <h2 className="text-xl font-semibold text-white mb-4">Quick Connect</h2>
-      {/* Flex container for the row layout */}
-      {/* Flex container for the row layout */}
-<div className="flex flex-wrap gap-6 overflow-x-auto">
-  {connections.map((connection, index) => (
-    <ConnectionCard
-      key={index}
-      name={connection.name}
-      status={connection.status}
-      buttonText="Message"
-    />
-  ))}
 
-  {/* Add New Card */}
-  <ConnectionCard name="Add New" status="online" buttonText="Create" /> {/* "Create" button for "Add New" */}
-</div>
+      {/* Grid / Scrollable row */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 overflow-x-auto">
+        {connections.map((connection, index) => (
+          <ConnectionCard
+            key={index}
+            name={connection.name}
+            status={connection.status}
+            role={connection.role}
+            buttonText="Message"
+          />
+        ))}
 
+        {/* Add New Card */}
+        <ConnectionCard name="Add New" status="online" buttonText="Create" />
+      </div>
     </div>
   );
 };
 
 export default QuickConnect;
-

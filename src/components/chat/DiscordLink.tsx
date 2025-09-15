@@ -10,17 +10,17 @@ interface DiscordLinkProps {
 
 const DiscordLink: React.FC<DiscordLinkProps> = ({ link, buttonText }) => {
   return (
-    <div className="bg-[#2a2f3a]  rounded-lg space-y-4 w-[500px] h-[200px]"> {/* Increased width and height */}
+    <div className="bg-[#2a2f3a]  rounded-lg space-y-4 md:w-[500px] h-[200px] w-full "> {/* Increased width and height */}
       <a href={link} className="flex items-center justify-between py-2 px-4 bg-[#0066FF] text-white rounded-lg hover:bg-[#5a6f9e] w-full">
-        <div className="flex items-center">
+        <div className="flex items-center justify-center ml-40">
           <Image 
             src={DashboardImages.discordlogo} 
             alt="Discord Logo"
-            width={30} 
-            height={30} 
-            className="mr-3"
+            width={80} 
+            height={80} 
+            className="mr-3 "
           />
-          <span className="text-sm">Discord</span>
+          {/* <span className="text-sm">Discord</span> */}
         </div>
       </a>
       <div className="mt-16 text-center">
