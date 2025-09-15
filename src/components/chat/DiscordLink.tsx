@@ -12,7 +12,7 @@ const DiscordLink: React.FC<DiscordLinkProps> = ({ link, buttonText }) => {
   return (
     <div className="bg-[#2a2f3a]  rounded-lg space-y-4 md:w-[500px] h-[200px] w-full "> {/* Increased width and height */}
       <a href={link} className="flex items-center justify-between py-2 px-4 bg-[#0066FF] text-white rounded-lg hover:bg-[#5a6f9e] w-full">
-        <div className="flex items-center justify-center ml-40">
+        <div className="flex items-center justify-center md:ml-40 ml-32">
           <Image 
             src={DashboardImages.discordlogo} 
             alt="Discord Logo"
