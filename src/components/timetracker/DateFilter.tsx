@@ -50,10 +50,10 @@ export default function DateFilter() {
         <div className="flex flex-col gap-4">
           {/* Date From */}
           <div className="flex items-center justify-between gap-4 ">
-            <label className="text-sm text-white whitespace-nowr ">Date from:</label>
+            <label className="text-sm text-white whitespace-nowrap ">Date from:</label>
             <input
               type="date"
-              className="bg-gray3 text-white p-2 rounded-lg border border-gray "
+              className="bg-gray3 text-white p-2 rounded-lg border border-gray flex-1"
             />
           </div>
 
@@ -62,14 +62,14 @@ export default function DateFilter() {
             <label className="text-sm text-white whitespace-nowrap">Date To:</label>
             <input
               type="date"
-              className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 "
+              className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 flex-1"
             />
           </div>
 
           {/* Employee */}
           <div className="flex items-center justify-between gap-4">
             <label className="text-sm text-white whitespace-nowrap">Employee:</label>
-            <select className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 ">
+            <select className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 flex-1">
               <option>All Employee</option>
             </select>
           </div>
@@ -77,7 +77,7 @@ export default function DateFilter() {
           {/* Project */}
           <div className="flex items-center justify-between gap-4">
             <label className="text-sm text-white whitespace-nowrap">Project:</label>
-            <select className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 ">
+            <select className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 flex-1">
               <option>All Projects</option>
             </select>
           </div>
@@ -97,7 +97,7 @@ export default function DateFilter() {
       </div>
 
       {/* ✅ Desktop Layout (your existing code, only visible md+) */}
-      <div className="hidden md:flex flex-col md:flex-row gap-4 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full ">
+      <div className="hidden md:flex flex-col md:flex-row gap-4 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full mt-16 ">
         <div className="flex flex-col">
           <label className="text-sm mb-1 lg:block hidden">Date Range</label>
           <div className="md:flex gap-2">
