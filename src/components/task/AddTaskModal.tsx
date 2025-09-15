@@ -336,11 +336,11 @@ export default function AddTaskModal({
               "linear-gradient(180deg, rgba(255,255,255,0.05) 0%, rgba(19,43,96,0.05) 100%)",
           }}
         >
-          <form onSubmit={submit} className="p-4 sm:p-6 md:p-8 space-y-6">
+          <form onSubmit={submit} className="p-2 sm:p-6 md:p-5 md:space-y-2 space-y-1">
             <div className="flex items-center justify-between">
               <h2
                 id="add-task-title"
-                className="text-lg sm:text-xl md:text-2xl font-semibold text-white"
+                className="text-lg sm:text-sm md:text-xl font-semibold text-white"
               >
                 Add Task
               </h2>
@@ -356,10 +356,10 @@ export default function AddTaskModal({
 
             <hr className="border-white/10" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 sm:gap-3">
               {/* Title */}
               <div>
-                <label className="block text-sm text-white mb-2">Task Title:</label>
+                <label className="block md:text-sm text-xs text-white mb-2">Task Title:</label>
                 <input
                   className="w-full h-11 rounded-xl bg-white/5 border border-white px-3 
                   text-white placeholder:text-white/40 
@@ -373,7 +373,7 @@ export default function AddTaskModal({
 
               {/* Assignee */}
               <div>
-                <label className="block text-sm text-white mb-2">Assign To:</label>
+                <label className="block md:text-sm text-xs text-white mb-2">Assign To:</label>
                 <select
                   className="w-full h-11 rounded-xl bg-white/5 border border-white px-3 
                   text-white placeholder:text-white/40 
@@ -391,7 +391,7 @@ export default function AddTaskModal({
 
               {/* Subtasks */}
               <div>
-                <label className="block text-sm text-white mb-2">Subtasks:</label>
+                <label className="block md:text-sm text-xs text-white mb-2">Subtasks:</label>
                 <input
                   className="w-full h-11 rounded-xl bg-white/5 border border-white px-3 
                   text-white placeholder:text-white/40 
@@ -404,7 +404,7 @@ export default function AddTaskModal({
 
               {/* Status */}
               <div>
-                <label className="block text-sm text-white mb-2">Status:</label>
+                <label className="block md:text-sm text-xs text-white mb-2">Status:</label>
                 <select
                   className="w-full h-11 rounded-xl bg-white/5 border border-white px-3 
                   text-white placeholder:text-white/40 
@@ -422,7 +422,7 @@ export default function AddTaskModal({
 
               {/* Description */}
               <div className="lg:col-span-2">
-                <label className="block text-sm text-white mb-2">Description:</label>
+                <label className="block md:text-sm text-xs text-white mb-2">Description:</label>
                 <textarea
                   className="w-full h-28 rounded-xl bg-white/5 border border-white px-3 
                   text-white placeholder:text-white/40 
@@ -435,7 +435,7 @@ export default function AddTaskModal({
 
               {/* Deadline */}
               <div>
-                <label className="block text-sm text-white mb-2">Deadline:</label>
+                <label className="block md:text-sm text-xs text-white mb-2">Deadline:</label>
                 <input
                   type="date"
                   className="w-full h-11 rounded-xl bg-white/5 border border-white px-3 
@@ -448,7 +448,7 @@ export default function AddTaskModal({
 
               {/* Attachment */}
               <div>
-                <label className="block text-sm text-white mb-2">Attachments:</label>
+                <label className="block md:text-sm text-xs text-white mb-2">Attachments:</label>
                 <div className="flex items-center gap-3">
                   <label className="inline-flex items-center justify-center h-11 px-4 rounded-xl bg-white text-Blue font-medium cursor-pointer border border-white/20 hover:bg-gray/20">
                     Choose File
