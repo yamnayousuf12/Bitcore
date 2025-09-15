@@ -132,9 +132,12 @@ const Page: React.FC = () => {
 
   return (
     <div className="space-y-6">
+      <div className="absolute left-24 -translate-x-1/2 flex items-center -mt-24 text-base lg:hidden text-[#BAD4EF] itemes-eflex-shrink-0">
+      <span className="font-semibold tracking-wide "> ← Admin Chat Portal</span>
+      </div>
       {/* ActiveChats & QuickActions */}
       <div className="flex flex-col md:flex-row gap-6">
-        <div className="w-full md:flex-1">
+        <div className="w-full md:flex-1 -mt-12">
           <ActiveChats chats={activeChats} />
         </div>
         <div className="w-full md:flex-1">
