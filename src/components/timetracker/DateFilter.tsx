@@ -158,7 +158,7 @@ export default function DateFilter() {
             </label>
             <input
               type="date"
-              className="bg-white text-black p-2 rounded-lg border border-gray-300 flex-1"
+              className="bg-gray3 text-white p-2 rounded-lg border border-gray flex-1"
             />
           </div>
 
@@ -206,36 +206,36 @@ export default function DateFilter() {
       </div>
 
       {/* ✅ Desktop Layout */}
-      <div className="hidden md:flex flex-row gap-4 items-end bg-[#0f172a] p-4 rounded-lg border border-gray-600 w-full -mt-16">
+      <div className="hidden md:flex flex-row gap-4 items-end bg-[#0f172a] p-4 rounded-lg border border-gray/15 w-full -mt-16">
         <div className="flex flex-col">
           <label className="text-sm mb-1">Date Range</label>
           <div className="flex gap-2">
             <input
               type="date"
-              className="bg-white text-black p-2 rounded border border-gray-300"
+              className="bg-gray3 text-white p-2 rounded border border-gray/20"
             />
             <input
               type="date"
-              className="bg-white text-black p-2 rounded border border-gray-300"
+              className="bg-gray3 text-white p-2 rounded border border-gray/20"
             />
           </div>
         </div>
 
         <div className="flex flex-col">
           <label className="text-sm mb-1">Employee</label>
-          <select className="bg-gray-800 text-white p-2.5 rounded border border-gray-600 w-36 md:w-full">
+          <select className="bg-gray3 text-white p-2.5 rounded border border-gray/20 w-36 md:w-full">
             <option>All Employee</option>
           </select>
         </div>
 
         <div className="flex flex-col">
           <label className="text-sm mb-1">Project</label>
-          <select className="bg-gray-800 text-white p-2.5 rounded border border-gray-600 w-36 md:w-full">
+          <select className="bg-gray3 text-white p-2.5 rounded border border-gray/20 w-36 md:w-full">
             <option>All Projects</option>
           </select>
         </div>
 
-        <button className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded-lg text-white flex items-center gap-2">
+        <button className="bg-Blue hover:bg-Blue px-4 py-2 rounded-lg text-white flex items-center gap-2">
           <Image
             src="/icon.png"
             alt="Filter Icon"
