@@ -53,7 +53,7 @@ export default function DateFilter() {
             <label className="text-sm text-white whitespace-nowrap ">Date from:</label>
             <input
               type="date"
-              className="bg-gray3 text-white p-2 rounded-lg border border-gray md:flex-1"
+              className="bg-gray3 text-white p-2 rounded-lg border border-gray flex-1"
             />
           </div>
 

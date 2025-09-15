@@ -56,12 +56,12 @@ interface StatsCardProps {
 
 function SingleStatsCard({ title, value, icon: Icon }: StatsCardProps) {
   return (
-    <div className="relative bg-gradient-to-r from-gray-900 to-gray-800 text-white rounded-xl shadow-lg p-4  flex flex-col w-24 -ml-10 border border-white/20 ">
+    <div className="relative bg-[#0f172a] text-white rounded-xl shadow-lg p-4  flex flex-col w-24 -ml-10 border border-white/20 -mt-12">
       <div className="absolute top-3 right-3 bg-[#0b1f3a] p-2 rounded-full w-5 h-5 ml-4">
         <Icon size={20} className="text-white w-3 -mt-2" />
       </div>
       <div>
-        <p className="text-gray-400 text-[10px] mt-7 w-20">{title}</p>
+        <p className="text-gray text-[10px] mt-7 w-20">{title}</p>
         <h2 className="text-xs font-bold">{value}</h2>
       </div>
     </div>
