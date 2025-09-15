@@ -100,7 +100,7 @@ export default function DateFilter() {
       <div className="hidden md:flex flex-col md:flex-row gap-4 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full -mt-16 ">
         <div className="flex flex-col">
           <label className="text-sm mb-1 lg:block hidden">Date Range</label>
-          <div className="flex gap-2">
+          <div className="md:flex gap-2">
             <input
               type="date"
               className="bg-gray3 p-2 rounded border border-gray/20"
@@ -112,14 +112,14 @@ export default function DateFilter() {
           </div>
         </div>
 
-        <div className="flex flex-col">
+        <div className="md:flex flex-col">
           <label className="text-sm mb-1">Employee</label>
           <select className="bg-gray3 p-2.5 rounded border border-gray/20 w-36 md:w-full">
             <option>All Employee</option>
           </select>
         </div>
 
-        <div className="flex flex-col">
+        <div className="md:flex flex-col">
           <label className="text-sm mb-1">Project</label>
           <select className="bg-gray3 p-2.5 rounded border border-gray/20 w-36 md:w-full">
             <option>All Projects</option>
