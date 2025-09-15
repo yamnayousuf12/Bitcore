@@ -34,7 +34,7 @@ const ActiveChats: React.FC<ActiveChatsProps> = ({ chats }) => {
               <div className="font-medium text-sm">{chat.name}</div>
               <div className="text-xs text-gray">{chat.message}</div>
             </div>
-            <div className="text-[8px] text-Blue ml-auto">{chat.time}</div> {/* Time aligned to the right */}
+            <div className="text-[8px] md:text-xs text-Blue ml-auto">{chat.time}</div> {/* Time aligned to the right */}
           </div>
         </div>
       ))}

@@ -137,7 +137,7 @@ const Page: React.FC = () => {
       </div>
       {/* ActiveChats & QuickActions */}
       <div className="flex flex-col md:flex-row gap-6">
-        <div className="w-full md:flex-1 -mt-12">
+        <div className="w-full md:flex-1 -mt-12 md:mt-0">
           <ActiveChats chats={activeChats} />
         </div>
         <div className="w-full md:flex-1">
