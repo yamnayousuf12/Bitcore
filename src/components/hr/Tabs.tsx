@@ -328,7 +328,7 @@ export default function HRPolicyTabs() {
                 setContent(policyData[tab].content);
               }}
               className={`md:px-4 px-1 py-2 rounded-lg justify-center items-center ${
-                selected ? "border-b-2 border-white font-semibold text-[11px] md:text-base" : "text-gray text-[10px] md:text-base flex-shrink-0 justify-center items-center"
+                selected ? "border-b-2 border-white font-semibold text-[9px] md:text-base flex-shrink-0" : "text-gray text-[8px] md:text-base flex-shrink-0 justify-center items-center"
               }`}
             >
               {tab}
@@ -350,7 +350,7 @@ export default function HRPolicyTabs() {
             onClick={() => setOpenModal(true)}
           />
         </div>
-        <div className="space-y-3 text-xs max-w-3xl">{content}</div>
+        <div className="space-y-3 md:text-base text-xs max-w-3xl">{content}</div>
         <p className="text-xs text-gray mt-4 text-right">
           Last updated: June 15, 2025
         </p>
