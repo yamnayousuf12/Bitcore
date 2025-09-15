@@ -46,14 +46,14 @@ export default function DateFilter() {
   return (
     <div>
       {/* ✅ Mobile Layout (only visible on small screens) */}
-      <div className="bg-[#0f172a] p-4 rounded-xl border border-gray/30 w-full max-w-lg mx-auto block md:hidden -mt-12">
+      <div className="bg-[#0f172a] p-4 rounded-xl border border-gray/30 w-full max-w-lg mx-auto block md:hidden -mt-20">
         <div className="flex flex-col gap-4">
           {/* Date From */}
           <div className="flex items-center justify-between gap-4 ">
-            <label className="text-sm text-white whitespace-nowrap ">Date from:</label>
+            <label className="text-sm text-white whitespace-nowr ">Date from:</label>
             <input
               type="date"
-              className="bg-gray3 text-white p-2 rounded-lg border border-gray flex-1"
+              className="bg-gray3 text-white p-2 rounded-lg border border-gray "
             />
           </div>
 
@@ -62,14 +62,14 @@ export default function DateFilter() {
             <label className="text-sm text-white whitespace-nowrap">Date To:</label>
             <input
               type="date"
-              className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 flex-1"
+              className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 "
             />
           </div>
 
           {/* Employee */}
           <div className="flex items-center justify-between gap-4">
             <label className="text-sm text-white whitespace-nowrap">Employee:</label>
-            <select className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 flex-1">
+            <select className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 ">
               <option>All Employee</option>
             </select>
           </div>
@@ -77,7 +77,7 @@ export default function DateFilter() {
           {/* Project */}
           <div className="flex items-center justify-between gap-4">
             <label className="text-sm text-white whitespace-nowrap">Project:</label>
-            <select className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 flex-1">
+            <select className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 ">
               <option>All Projects</option>
             </select>
           </div>
