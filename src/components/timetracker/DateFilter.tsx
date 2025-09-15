@@ -59,7 +59,7 @@ export default function DateFilter() {
 
           {/* Date To */}
           <div className="flex items-center justify-between gap-4">
-            <label className="text-sm text-white whitespace-nowrap">Date To:</label>
+            <label className="text-sm text-white ">Date To:</label>
             <input
               type="date"
               className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 flex-1"
@@ -97,7 +97,7 @@ export default function DateFilter() {
       </div>
 
       {/* ✅ Desktop Layout (your existing code, only visible md+) */}
-      <div className="hidden md:flex flex-col md:flex-row gap-4 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full mt-16 ">
+      <div className="hidden md:flex flex-col md:flex-row gap-4 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full -mt-16 ">
         <div className="flex flex-col">
           <label className="text-sm mb-1 lg:block hidden">Date Range</label>
           <div className="md:flex gap-2">

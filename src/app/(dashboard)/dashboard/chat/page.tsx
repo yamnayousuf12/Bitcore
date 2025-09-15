@@ -90,7 +90,7 @@ import QuickActions from "@/components/chat/QuickActions";
 import RecentUser from "@/components/chat/RecentUser";
 import DiscordLink from "@/components/chat/DiscordLink";
 import { FaUser, FaUserPlus, FaSync, FaHandshake } from "react-icons/fa";
-import QuickConnect from "@/components/chat/QuickConnect";
+import QuickConnect from "../../../../components/chat/QuickConnect";
 
 const Page: React.FC = () => {
   const activeChats = [
