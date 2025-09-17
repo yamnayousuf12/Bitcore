@@ -397,8 +397,8 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.thirdicon}
           alt="Complete Tasks"
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="object-contain"
         />
       }
