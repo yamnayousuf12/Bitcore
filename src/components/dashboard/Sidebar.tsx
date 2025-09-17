@@ -145,7 +145,7 @@ export default function Sidebar({ open, onClose, logoSrc }: SidebarProps) {
         onClick={onClose} // 🔥 Close sidebar on link click
         className={[
           "flex items-center gap-3 rounded-xl px-3 py-2 text-sm transition-colors",
-          "text-gray-300 hover:bg-white/10",
+          "text-gray hover:bg-white/10",
           isActive ? "bg-white/10 text-white" : "",
         ].join(" ")}
       >

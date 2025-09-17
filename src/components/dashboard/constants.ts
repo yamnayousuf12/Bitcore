@@ -2,11 +2,10 @@
 import {
   Home,
   Users,
-  ListTodo,
   Clock,
   FileText,
- 
   MessageCircleMore,
+  CalendarCheck2,
 } from "lucide-react";
 export const TITLE_MAP: Record<string, string> = {
   "/dashboard": "Dashboard" ,
@@ -24,7 +23,7 @@ export const TITLE_MAP: Record<string, string> = {
 export const NAV_LINKS = [
   { label: "Dashboard", href: "/dashboard" , icon: Home },
   { label: "User Management", href: "/dashboard/usermanagement", icon: Users  },
-  { label: "Task Management", href: "/dashboard/tasks", icon: ListTodo },
+  { label: "Task Management", href: "/dashboard/tasks", icon: CalendarCheck2 },
   { label: "Time Tracker", href: "/dashboard/timetracker", icon: Clock },
   { label: "HR Policies", href: "/dashboard/hr",icon: FileText },
   { label: "Chat", href: "/dashboard/chat", icon: MessageCircleMore },

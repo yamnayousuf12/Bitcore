@@ -288,6 +288,8 @@
 "use client";
 import Image from "next/image";
 import { DashboardImages } from "@/assests/dashboard";
+import { FiSettings } from "react-icons/fi";
+import { MessageCircleMore } from "lucide-react";
 
 
 export default function DashboardPage() {
@@ -365,8 +367,8 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.firsticon}
           alt="Total Users"
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="object-contain"
         />
       }
@@ -380,8 +382,8 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.secondicon}
           alt="Pending Tasks"
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="object-contain"
         />
       }
@@ -410,8 +412,8 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.fourthicon}
           alt="Average Hours"
-          width={30}
-          height={30}
+          width={40}
+          height={40}
           className="object-contain"
         />
       }
@@ -464,8 +466,8 @@ export default function DashboardPage() {
           <div className="grid grid-cols-2 gap-3 sm:gap-4">
             <PillButton icon={<UsersRound />} label="Add User" />
             <PillButton icon={<PlusIcon />} label="Add Task" />
-            <PillButton icon={<MessageCircle />} label="Chat" />
-            <PillButton icon={<LucideSettings  />} label="Settings" />
+            <PillButton icon={<MessageCircleMore />} label="Chat" />
+            <PillButton icon={<FiSettings  />} label="Settings" />
           </div>
         </div>
       </section>
