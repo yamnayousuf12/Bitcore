@@ -367,8 +367,8 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.firsticon}
           alt="Total Users"
-          width={70}
-          height={70}
+          width={100}
+          height={100}
           className="object-contain"
         />
       }
@@ -382,8 +382,8 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.secondicon}
           alt="Pending Tasks"
-          width={70}
-          height={70}
+          width={100}
+          height={100}
           className="object-contain"
         />
       }
@@ -397,8 +397,8 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.thirdicon}
           alt="Complete Tasks"
-          width={70}
-          height={70}
+          width={100}
+          height={100}
           className="object-contain"
         />
       }
@@ -412,8 +412,8 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.fourthicon}
           alt="Average Hours"
-          width={70}
-          height={70}
+          width={100}
+          height={100}
           className="object-contain"
         />
       }
