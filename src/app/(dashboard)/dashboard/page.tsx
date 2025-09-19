@@ -369,7 +369,7 @@ export default function DashboardPage() {
           alt="Total Users"
           width={50}
           height={50}
-          className="object-contain w-20 h-20"
+          className="object-contain w-50 h-50"
         />
       }
       label="Total Users:"
