@@ -358,71 +358,7 @@ export default function DashboardPage() {
 <div className="absolute left-20 -translate-x-1/2 flex items-center -mt-16 text-base lg:hidden text-[#BAD4EF]">
       <span className="font-semibold tracking-wide ">Home/Dashboard</span>
       </div>
-{/* ===== Mobile Stats Strip ===== */}
-{/* <section className="block lg:hidden">
-  
-  <div className="grid grid-cols-2 gap-4 -mt-5">
-    <StatItemProps
-      icon={
-        <Image
-          src={DashboardImages.firsticon}
-          alt="Total Users"
-          width={100}
-          height={100}
-          className="object-contain"
-        />
-      }
-      label="Total Users:"
-      value="25"
-      
-    />
 
-    <StatItemProps
-      icon={
-        <Image
-          src={DashboardImages.secondicon}
-          alt="Pending Tasks"
-          width={100}
-          height={100}
-          className="object-contain"
-        />
-      }
-      label="Pending Tasks:"
-      value="08"
-    
-    />
-
-    <StatItemProps
-      icon={
-        <Image
-          src={DashboardImages.thirdicon}
-          alt="Complete Tasks"
-          width={100}
-          height={100}
-          className="object-contain"
-        />
-      }
-      label="Complete Tasks:"
-      value="05"
-     
-    />
-
-    <StatItemProps
-      icon={
-        <Image
-          src={DashboardImages.fourthicon}
-          alt="Average Hours"
-          width={100}
-          height={100}
-          className="object-contain"
-        />
-      }
-      label="Avg. Hours/Day:"
-      value="7.5"
-      
-    />
-  </div>
-</section> */}
 
 <section className="block lg:hidden">
   <div className="grid grid-cols-2 gap-4 -mt-5">
@@ -551,35 +487,35 @@ export default function DashboardPage() {
             name="Mahnoor"
             role="HR"
             task="Meeting Schedule"
-            time="4hr"
+             timetoday="4hr"
             status="Online"
           />
           <TeamCard
             name="Raheel"
             role="Manager"
             task="Work Distribution"
-            time="8hr"
+             timetoday="8hr"
             status="Online"
           />
           <TeamCard
             name="Ayesha"
             role="UI/UX Designer"
             task="MCM App"
-            time="4hr"
+             timetoday="4hr"
             status="Offline"
           />
           <TeamCard
             name="Mahveen"
             role="Developer"
             task="Api Integration"
-            time="4hr"
+             timetoday="4hr"
             status="Online"
           />
           <TeamCard
             name="Safia Seher"
             role="Q/A"
             task="Q/A Report"
-            time="3 hr"
+             timetoday="3 hr"
             status="Offline"
           />
         </div>
@@ -601,35 +537,35 @@ export default function DashboardPage() {
                 name="Mahnoor"
                 role="HR"
                 task="Meeting Schedule"
-                time="4hr"
+                 timetoday="4hr"
                 status="Online"
               />
               <Row
                 name="Raheel"
                 role="Manager"
                 task="Work Distribution"
-                time="8hr"
+                 timetoday="8hr"
                 status="Online"
               />
               <Row
                 name="Ayesha"
                 role="UI/UX Designer"
                 task="MCM App"
-                time="4hr"
+                 timetoday="4hr"
                 status="Offline"
               />
               <Row
                 name="Mahveen"
                 role="Developer"
                 task="Api Integration"
-                time="4hr"
+                 timetoday="4hr"
                 status="Online"
               />
               <Row
                 name="Safia Seher"
                 role="Q/A"
                 task="Q/A Report"
-                time="3 hr"
+                 timetoday="3 hr"
                 status="Offline"
               />
             </tbody>
@@ -677,24 +613,24 @@ function Row({
   name,
   role,
   task,
-  time,
+   timetoday,
   status,
 }: {
   name: string;
   role: string;
   task: string;
-  time: string;
+   timetoday: string;
   status: "Online" | "Offline";
 }) {
   const statusColor =
-    status === "Online" ? "text-emerald-400" : "text-orange-400";
+    status === "Online" ? "text-green" : "text-orange";
 
   return (
     <tr className="border-t border-white/10">
       <Td>{name}</Td>
       <Td>{role}</Td>
       <Td>{task}</Td>
-      <Td>{time}</Td>
+      <Td>{ timetoday}</Td>
       <Td>
         <span className={statusColor}>{status}</span>
       </Td>
@@ -710,13 +646,13 @@ function TeamCard({
   name,
   role,
   task,
-  time,
+   timetoday,
   status,
 }: {
   name: string;
   role: string;
   task: string;
-  time: string;
+   timetoday: string;
   status: "Online" | "Offline";
 }) {
   const statusColor =
@@ -730,7 +666,7 @@ function TeamCard({
       </div>
       <p className="text-xs text-white/70">Role: {role}</p>
       <p className="text-xs text-white/70">Task: {task}</p>
-      <p className="text-xs text-white/70">Time: {time}</p>
+      <p className="text-xs text-white/70">Time Today: { timetoday}</p>
     </div>
   );
 }
@@ -813,7 +749,7 @@ function StatItem({
       <div className="mb-2">{icon}</div>
       <div className="flex flex-col mb-2">
         <span className="text-xs text-white/70 mt-3">{label}</span>
-        <span className="text-xl font-semibold  text-white   ">{value}</span>
+        <span className="text-xl font-semibold  text-white  ">{value}</span>
       </div>
     </div>
   );
@@ -837,18 +773,9 @@ const StatItemProps = ({ icon, label, value }: StatItemProps) => {
 };
 
 
-// function PillButton({ icon, label }: { icon: React.ReactNode; label: string }) {
-//   return (
-//     <button className="flex items-center justify-center gap-2 rounded-full border border-white/20 bg-[#FFFFFF26] px-4 h-11 hover:bg-white/30 transition">
-//       <span className="opacity-90">{icon}</span>
-//       <span className="text-sm">{label}</span>
-//     </button>
-//   );
-// }
-
 function PillButton({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <button className="flex items-center justify-start gap-2 rounded-full border border-gray/30 bg-[#FFFFFF26] px-4 h-11 hover:bg-white/30 transition w-full">
+    <button className="flex items-center justify-start gap-2 rounded-full border border-gray bg-[#FFFFFF26] px-4 h-11 hover:bg-white/30 transition w-full">
       <span className="opacity-90">{icon}</span>
       <span className="text-sm">{label}</span>
     </button>
