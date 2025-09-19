@@ -434,7 +434,7 @@ export default function DashboardPage() {
             alt="Total Users"
             width={120}
             height={120}
-            className="object-contain w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
           />
         </div>
       }
@@ -450,7 +450,7 @@ export default function DashboardPage() {
             alt="Pending Tasks"
             width={120}
             height={120}
-            className="object-contain w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
           />
         </div>
       }
@@ -466,7 +466,7 @@ export default function DashboardPage() {
             alt="Complete Tasks"
             width={120}
             height={120}
-            className="object-contain w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
           />
         </div>
       }
@@ -482,7 +482,7 @@ export default function DashboardPage() {
             alt="Average Hours"
             width={120}
             height={120}
-            className="object-contain w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28"
+            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
           />
         </div>
       }
@@ -491,6 +491,7 @@ export default function DashboardPage() {
     />
   </div>
 </section>
+
 
 
 
