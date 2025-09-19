@@ -74,7 +74,7 @@ export default function TopBar({ heading, onOpenMenu }: TopBarProps) {
   return (
     <>
       {/* Mobile Top Bar */}
-      <div className="lg:hidden top-0 z-40 bg-[#101B31] backdrop-blur px-4 py-3 flex items-center justify-between border border-white/30 w-screen -ml-8 -mt-2 " >
+      <div className="lg:hidden top-0 z-40 bg-[#101B31] backdrop-blur px-4 py-3 flex items-center justify-between border border-white/30 w-screen -ml-3 -mt-5 " >
         {/* Hamburger Menu */}
         <button
           onClick={onOpenMenu}
