@@ -359,7 +359,7 @@ export default function DashboardPage() {
       <span className="font-semibold tracking-wide ">Home/Dashboard</span>
       </div>
 {/* ===== Mobile Stats Strip ===== */}
-<section className="block lg:hidden">
+{/* <section className="block lg:hidden">
   
   <div className="grid grid-cols-2 gap-4 -mt-5">
     <StatItemProps
@@ -367,9 +367,9 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.firsticon}
           alt="Total Users"
-          width={50}
-          height={50}
-          className="object-contain w-50 h-50"
+          width={100}
+          height={100}
+          className="object-contain"
         />
       }
       label="Total Users:"
@@ -382,9 +382,9 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.secondicon}
           alt="Pending Tasks"
-          width={50}
-          height={50}
-          className="object-contain w-20 h-20"
+          width={100}
+          height={100}
+          className="object-contain"
         />
       }
       label="Pending Tasks:"
@@ -397,9 +397,9 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.thirdicon}
           alt="Complete Tasks"
-          width={50}
-          height={50}
-          className="object-contain w-20 h-20"
+          width={100}
+          height={100}
+          className="object-contain"
         />
       }
       label="Complete Tasks:"
@@ -412,9 +412,9 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.fourthicon}
           alt="Average Hours"
-          width={50}
-          height={50}
-          className="object-contain w-20 h-20"
+          width={100}
+          height={100}
+          className="object-contain"
         />
       }
       label="Avg. Hours/Day:"
@@ -422,8 +422,75 @@ export default function DashboardPage() {
       
     />
   </div>
-</section>
+</section> */}
 
+<section className="block lg:hidden">
+  <div className="grid grid-cols-2 gap-4 -mt-5">
+    <StatItemProps
+      icon={
+        <div className="flex justify-center items-center">
+          <Image
+            src={DashboardImages.firsticon}
+            alt="Total Users"
+            width={120}
+            height={120}
+            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+          />
+        </div>
+      }
+      label="Total Users:"
+      value="25"
+    />
+
+    <StatItemProps
+      icon={
+        <div className="flex justify-center items-center">
+          <Image
+            src={DashboardImages.secondicon}
+            alt="Pending Tasks"
+            width={120}
+            height={120}
+            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+          />
+        </div>
+      }
+      label="Pending Tasks:"
+      value="08"
+    />
+
+    <StatItemProps
+      icon={
+        <div className="flex justify-center items-center">
+          <Image
+            src={DashboardImages.thirdicon}
+            alt="Complete Tasks"
+            width={120}
+            height={120}
+            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+          />
+        </div>
+      }
+      label="Complete Tasks:"
+      value="05"
+    />
+
+    <StatItemProps
+      icon={
+        <div className="flex justify-center items-center">
+          <Image
+            src={DashboardImages.fourthicon}
+            alt="Average Hours"
+            width={120}
+            height={120}
+            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+          />
+        </div>
+      }
+      label="Avg. Hours/Day:"
+      value="7.5"
+    />
+  </div>
+</section>
 
 
 
