@@ -367,9 +367,9 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.firsticon}
           alt="Total Users"
-          width={100}
-          height={100}
-          className="object-contain"
+          width={50}
+          height={50}
+          className="object-contain w-20 h-20"
         />
       }
       label="Total Users:"
@@ -382,9 +382,9 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.secondicon}
           alt="Pending Tasks"
-          width={100}
-          height={100}
-          className="object-contain"
+          width={50}
+          height={50}
+          className="object-contain w-20 h-20"
         />
       }
       label="Pending Tasks:"
@@ -397,9 +397,9 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.thirdicon}
           alt="Complete Tasks"
-          width={100}
-          height={100}
-          className="object-contain"
+          width={50}
+          height={50}
+          className="object-contain w-20 h-20"
         />
       }
       label="Complete Tasks:"
@@ -412,9 +412,9 @@ export default function DashboardPage() {
         <Image
           src={DashboardImages.fourthicon}
           alt="Average Hours"
-          width={100}
-          height={100}
-          className="object-contain"
+          width={50}
+          height={50}
+          className="object-contain w-20 h-20"
         />
       }
       label="Avg. Hours/Day:"
