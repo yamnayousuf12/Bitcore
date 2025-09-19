@@ -765,7 +765,7 @@ type StatItemProps = {
 const StatItemProps = ({ icon, label, value }: StatItemProps) => {
   return (
     <div className="flex flex-col rounded-xl bg-gradient-to-b from-white/5 to-white/[0.02] p-4 shadow-md">
-      <div className="mb-2 ml-16 w-10 h-10 sm:w-20 sm:h-20 md:w-24 md:h-24 ">{icon}</div>
+      <div className="mb-2 ml-16 w-11 h-11 sm:w-20 sm:h-20 md:w-24 md:h-24 ">{icon}</div>
       <p className="text-sm text-white/70 ">{label}</p>
       <p className="text-xl font-semibold text-white">{value}</p>
     </div>
