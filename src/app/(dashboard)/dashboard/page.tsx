@@ -837,9 +837,18 @@ const StatItemProps = ({ icon, label, value }: StatItemProps) => {
 };
 
 
+// function PillButton({ icon, label }: { icon: React.ReactNode; label: string }) {
+//   return (
+//     <button className="flex items-center justify-center gap-2 rounded-full border border-white/20 bg-[#FFFFFF26] px-4 h-11 hover:bg-white/30 transition">
+//       <span className="opacity-90">{icon}</span>
+//       <span className="text-sm">{label}</span>
+//     </button>
+//   );
+// }
+
 function PillButton({ icon, label }: { icon: React.ReactNode; label: string }) {
   return (
-    <button className="flex items-center justify-center gap-2 rounded-full border border-white/20 bg-[#FFFFFF26] px-4 h-11 hover:bg-white/30 transition">
+    <button className="flex items-center justify-start gap-2 rounded-full border border-gray/30 bg-[#FFFFFF26] px-4 h-11 hover:bg-white/30 transition w-full">
       <span className="opacity-90">{icon}</span>
       <span className="text-sm">{label}</span>
     </button>
