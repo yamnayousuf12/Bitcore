@@ -296,7 +296,7 @@ export default function DashboardPage() {
   return (
     <div className="grid gap-6">
       {/* ===== Desktop Stats Strip ===== */}
-<section className="hidden lg:block rounded-2xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4"> 
+<section className="hidden lg:block rounded-2xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 SemiBold"> 
   <div className="flex gap-3 flex-1 items-stretch divide-x divide-white/30">
     <StatItem
       icon={
@@ -356,7 +356,7 @@ export default function DashboardPage() {
   </div>
 </section>
 <div className="absolute left-20 -translate-x-1/2 flex items-center -mt-16 text-base lg:hidden text-[#BAD4EF]">
-      <span className="font-semibold tracking-wide ">Home/Dashboard</span>
+      <span className="font-Medium tracking-wide ">Home/Dashboard</span>
       </div>
 
 
@@ -370,7 +370,7 @@ export default function DashboardPage() {
             alt="Total Users"
             width={120}
             height={120}
-            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+            className="object-contain "
           />
         </div>
       }
@@ -386,7 +386,7 @@ export default function DashboardPage() {
             alt="Pending Tasks"
             width={120}
             height={120}
-            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+            className="object-contain "
           />
         </div>
       }
@@ -402,7 +402,7 @@ export default function DashboardPage() {
             alt="Complete Tasks"
             width={120}
             height={120}
-            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+            className="object-contain"
           />
         </div>
       }
@@ -418,7 +418,7 @@ export default function DashboardPage() {
             alt="Average Hours"
             width={120}
             height={120}
-            className="object-contain w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24"
+            className="object-contain "
           />
         </div>
       }
@@ -748,7 +748,7 @@ function StatItem({
     <div className="flex-1 flex gap-4 px-3">
       <div className="mb-2">{icon}</div>
       <div className="flex flex-col mb-2">
-        <span className="text-xs text-white/70 mt-3">{label}</span>
+        <span className="text-xs text-white/70 mt-3 font-normal">{label}</span>
         <span className="text-xl font-semibold  text-white  ">{value}</span>
       </div>
     </div>
@@ -765,8 +765,8 @@ type StatItemProps = {
 const StatItemProps = ({ icon, label, value }: StatItemProps) => {
   return (
     <div className="flex flex-col rounded-xl bg-gradient-to-b from-white/5 to-white/[0.02] p-4 shadow-md">
-      <div className="mb-2 ml-20">{icon}</div>
-      <p className="text-xs text-white/70 ">{label}</p>
+      <div className="mb-2 ml-20 w-20 h-20 sm:w-20 sm:h-20 md:w-24 md:h-24 ">{icon}</div>
+      <p className="text-sm text-white/70 ">{label}</p>
       <p className="text-xl font-semibold text-white">{value}</p>
     </div>
   );
