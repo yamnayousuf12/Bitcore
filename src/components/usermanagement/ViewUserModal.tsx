@@ -1,6 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import type { AddUserForm } from "./AddUserModal";
+import TopBar from "../dashboard/TopBar";
 
 interface ViewUserModalProps {
   isOpen: boolean;
@@ -24,9 +25,11 @@ export default function ViewUserModal({ isOpen, onClose, user }: ViewUserModalPr
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
       <div
-        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen  md:mt-0 md:h-full"
+        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen mt-9  md:mt-0 md:h-full"
         
       >
+        <TopBar heading={""} onOpenMenu={function (): void {
+          throw new Error("Function not implemented."); } }/>
         <div
           className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full  md:mt-0 mx-auto max-w-4xl md:w-full"
         >
