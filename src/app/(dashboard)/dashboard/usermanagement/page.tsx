@@ -285,7 +285,7 @@ export default function UserManagement() {
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center w-72"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center w-80 -ml-5"
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
