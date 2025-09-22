@@ -217,7 +217,7 @@ export default function UserManagement() {
   <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />
 
   {/* Text */}
-  <span className="font-semibold tracking-wide">User Management</span>
+  <span className="font-medium tracking-wide">User Management</span>
 </div>
       {/* Search + Add */}
       <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0 items-center justify-center md:justify-start md:items-start">
@@ -285,12 +285,12 @@ export default function UserManagement() {
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center w-full"
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
         <h3 className="text-base font-semibold">{user.firstName} {user.lastName}</h3>
-        <span className="text-Blue text-sm">{user.department}</span>
+        <span className="text-Blue text-sm ">{user.department}</span>
        
       </div>
 
@@ -298,7 +298,7 @@ export default function UserManagement() {
       
  <span className="text-xs text-gray">{user.email}</span>
       {/* Status */}
-      <div className="flex items-center gap-2 mt-2">
+      <div className="flex items-center gap-2 mt-9">
         <span
           className={`text-sm font-medium ${
             user.status === "Active" ? "text-green" : "text-orange"
