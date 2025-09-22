@@ -315,8 +315,8 @@ export default function AddUserModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
      
       {/* frame */}
-      <div className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220]  h-screen  mt-20 md:mt-0 md:h-full ">
-         <div className="block md:hidden w-auto">
+      <div className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220]  h-screen  mt-20 md:mt-0 md:h-full  ">
+         <div className="block md:hidden w-auto justify-center items-center ml-2">
   <TopBar
     heading=""
     onOpenMenu={() => {
