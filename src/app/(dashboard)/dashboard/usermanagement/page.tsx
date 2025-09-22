@@ -285,7 +285,7 @@ export default function UserManagement() {
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center w-full"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center w-84"
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
@@ -298,7 +298,7 @@ export default function UserManagement() {
       
  <span className="text-xs text-gray">{user.email}</span>
       {/* Status */}
-      <div className="flex items-center gap-2 mt-9">
+      <div className="flex items-center gap-2 mt-3">
         <span
           className={`text-sm font-medium ${
             user.status === "Active" ? "text-green" : "text-orange"
