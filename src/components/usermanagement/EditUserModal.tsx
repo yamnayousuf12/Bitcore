@@ -45,7 +45,7 @@ export default function EditUserModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 ">
       <div
-        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen md:mt-0 mt-9 md:h-full">
+        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen md:mt-0 mt-12 md:h-full">
            <TopBar heading={""} onOpenMenu={function (): void {
                   throw new Error("Function not implemented.");
                 } }/>
