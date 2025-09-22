@@ -178,11 +178,12 @@ export default function Sidebar({ open, onClose, logoSrc }: SidebarProps) {
   const pathname = usePathname();
 
   return (
+    
     <aside
       className={[
         // Sidebar always sticks left full height
         "fixed top-0 left-0 z-50 lg:z-10 lg:static",
-        "h-screen w-80 shrink-0",
+        "h-screen w-84 shrink-0",
         "bg-[#0f1b2f] lg:border lg:border-white/30 lg:rounded-r-xl",
         "p-4",
         "transition-transform duration-300",
