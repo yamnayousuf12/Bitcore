@@ -316,7 +316,7 @@ export default function AddUserModal({
      
       {/* frame */}
       <div className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220]  h-screen  mt-20 md:mt-0 md:h-full ">
-         <div className="block md:hidden">
+         <div className="block md:hidden w-auto">
   <TopBar
     heading=""
     onOpenMenu={() => {
