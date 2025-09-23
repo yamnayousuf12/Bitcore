@@ -42,7 +42,7 @@ export default function ViewUserModal({ isOpen, onClose, user }: ViewUserModalPr
           <div className="p-6 md:p-8 md:space-y-6 space-y-4">
             {/* header */}
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-semibold text-white">View User</h2>
+              <h2 className="text-2xl font-medium text-white">View User</h2>
               <button
                 type="button"
                 onClick={onClose}

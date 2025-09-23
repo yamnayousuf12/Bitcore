@@ -332,7 +332,7 @@ export default function AddUserModal({
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
             {/* header */}
             <div className="flex items-center justify-between">
-              <h2 className="md:text-2xl font-semibold text-white ">Add User</h2>
+              <h2 className="md:text-2xl font-medium text-white ">Add User</h2>
               <button
                 type="button"
                 onClick={onClose}
@@ -394,18 +394,18 @@ export default function AddUserModal({
               <div>
                 <label
                   htmlFor="role-select"
-                  className="block text-sm text-white mb-2"
+                  className="block text-sm text-white mb-2 "
                 >
                   Role:
                 </label>
                 <select
-                  id="role-select"
-                  className={field}
+                  id="role-select "
+                  className={field } 
                   value={form.role}
                   onChange={(e) => set("role", e.target.value)}
                   aria-label="Role"
                 >
-                  <option value="" className="bg-[#0f172a]">
+                  <option value="" className="bg-[#0f172a]  ">
                     Select role
                   </option>
                   {roles.map((r) => (
@@ -480,7 +480,7 @@ export default function AddUserModal({
               </button>
               <button
                 type="submit"
-                className="h-11 px-5 rounded-2xl bg-white hover:bg-gray/20 text-Blue font-medium"
+                className="h-11 px-5 rounded-2xl bg-white  text-Blue font-medium"
               >
                 Save User
               </button>

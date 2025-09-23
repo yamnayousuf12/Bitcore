@@ -14,7 +14,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, value, onChange }) => {
         type="text" 
         value={value} 
         onChange={onChange} 
-        className="p-2 rounded-md bg-gray-700 text-white w-80 border border-white" // Custom width (e.g., 24rem)
+        className="p-2 rounded-md bg-gray text-white w-80 border border-white" // Custom width (e.g., 24rem)
       />
     </div>
   );

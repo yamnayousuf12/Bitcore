@@ -59,7 +59,7 @@ export default function EditUserModal({
         >
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-4 ">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-semibold text-white">Edit User</h2>
+              <h2 className="text-2xl font-medium text-white">Edit User</h2>
               <button
                 type="button"
                 onClick={onClose}

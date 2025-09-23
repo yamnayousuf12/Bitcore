@@ -246,6 +246,7 @@
 // components/AddTaskModal.tsx
 "use client";
 import { useEffect, useRef, useState } from "react";
+import TopBar from "../dashboard/TopBar";
 
 export interface AddTaskForm {
   title: string;
@@ -319,6 +320,14 @@ export default function AddTaskModal({
       aria-modal="true"
       aria-labelledby="add-task-title"
     >
+      <div className="block md:hidden w-auto justify-center items-center ml-2">
+        <TopBar
+          heading=""
+          onOpenMenu={() => {
+            throw new Error("Function not implemented.");
+          }}
+        />
+      </div>
       {/* middle gradient frame */}
       <div
         className="p-1 rounded-2xl w-full max-w-[95%] sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-4xl"
@@ -340,7 +349,7 @@ export default function AddTaskModal({
             <div className="flex items-center justify-between">
               <h2
                 id="add-task-title"
-                className="text-lg sm:text-sm md:text-xl font-semibold text-white"
+                className="text-lg sm:text-sm md:text-xl font-medium text-white"
               >
                 Add Task
               </h2>

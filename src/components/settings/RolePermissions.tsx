@@ -29,7 +29,7 @@ const RolePermissions: React.FC<RolePermissionsProps> = ({ permissions, onChange
         </div>
       ))}
        <div className="flex justify-center mt-4">
-    <button className="bg-white text-blue-500 py-2 px-8 rounded-full w-full max-w-xs border border-blue-500 hover:bg-blue-500 hover:text-white transition-all">
+    <button className="bg-white text-Blue py-2 px-8 rounded-full w-full max-w-xs border border-Blue hover:bg-Blue hover:text-white transition-all">
       Save Permissions
     </button>
   </div>
