@@ -1,5 +1,4 @@
 "use client";
-import { Dispatch, SetStateAction } from "react";
 
 export default function SearchBar({
   value,
@@ -11,7 +10,7 @@ export default function SearchBar({
   placeholder?: string;
 }) {
   return (
-    <div className="relative w-full md:w-[420px]" >
+    <div className="relative w-auto md:w-[420px]" >
      
       <input
         value={value}

@@ -519,7 +519,7 @@ export default function AddTaskModal({
   onClose,
   onCreate,
   assignees,
-  statuses = ["Pending", "Active", "Pause", "Done"],
+  statuses = ["Pending", "In Progress", "Delayed", "Completed"],
 }: Props) {
   const [form, setForm] = useState<AddTaskForm>({
     title: "",
@@ -655,7 +655,7 @@ export default function AddTaskModal({
             Attachments:
           </label>
           <div className="flex items-center gap-3">
-            <label className="inline-flex items-center justify-center h-11 px-4 rounded-xl bg-white text-Blue font-medium cursor-pointer border border-white/20 hover:bg-gray/20">
+            <label className="inline-flex items-center justify-center h-11 px-4 rounded-xl bg-white text-Blue font-medium cursor-pointer border border-white/20">
               Choose File
               <input
                 type="file"
@@ -683,7 +683,7 @@ export default function AddTaskModal({
         </button>
         <button
           type="submit"
-          className="h-11 px-5 rounded-2xl bg-Blue hover:bg-Blue/55 text-white font-medium border border-white/10"
+          className="h-11 px-5 rounded-2xl bg-Blue  text-white font-medium border border-white/10"
         >
           Create Task
         </button>
@@ -704,25 +704,26 @@ export default function AddTaskModal({
           />
         </div>
         <div className="flex items-center gap-3 p-4 border-b border-white/10">
-          <button onClick={onClose} className="text-white">
+          {/* <button onClick={onClose} className="text-white">
             <ArrowLeft size={22} />
-          </button>
+          </button> */}
           <h2 className="text-lg font-medium text-white">Add Task</h2>
         </div>
         <TaskForm />
       </div>
 
       {/* ✅ Desktop modal */}
-      <div className="hidden sm:flex fixed inset-0 z-50 items-center justify-center px-4 sm:px-6 ">
+      <div className="hidden sm:flex fixed inset-0 z-50 items-center justify-center px-4 sm:px-6 bg-darkBlue w-650 max-w-4xl h-full sm:h-auto py-6 sm:py-12 ml-52 rounded-lg">
         <div
           ref={cardRef}
-          className="relative w-full max-w-4xl rounded-2xl border-2 border-dotted border-white bg-[#0b1220]"
+          className="relative w-full max-w-5xl rounded-2xl border-2 border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03]  "
          
         >
-          <div className="flex items-center justify-between px-6 pt-4">
+          <div className="flex items-center justify-between px-6 pt-4 ">
             <h2 className="text-lg md:text-xl font-medium text-white">
               Add Task
             </h2>
+            
             <button
               type="button"
               onClick={onClose}
@@ -731,7 +732,9 @@ export default function AddTaskModal({
             >
               ✕
             </button>
+            
           </div>
+          <hr className="border-white/30 w-[800px] ml-5" />
           <TaskForm />
         </div>
       </div>
