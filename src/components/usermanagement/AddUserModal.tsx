@@ -384,33 +384,6 @@ export default function AddUserModal({
                   required
                 />
               </div>
-
-
-
-              {/* <div>
-                <label
-                  htmlFor="role-select"
-                  className="block text-sm text-white mb-2 "
-                >
-                  Role:
-                </label>
-                <select
-                  id="role-select "
-                  className={field } 
-                  value={form.role}
-                  onChange={(e) => set("role", e.target.value)}
-                  aria-label="Role"
-                >
-                  <option value="" className="bg-[#0f172a]  ">
-                    Select role
-                  </option>
-                  {roles.map((r) => (
-                    <option key={r} value={r} className="bg-[#0f172a]">
-                      {r}
-                    </option>
-                  ))}
-                </select>
-              </div> */}
               <div>
   <label
     htmlFor="role-select"
@@ -443,33 +416,7 @@ export default function AddUserModal({
 </span>
   </div>
 </div>
-
-
-              {/* <div>
-                <label
-                  htmlFor="department-select"
-                  className="block text-sm text-white mb-2"
-                >
-                  Department:
-                </label>
-                <select
-                  id="department-select"
-                  className={field}
-                  value={form.department}
-                  onChange={(e) => set("department", e.target.value)}
-                  aria-label="Department"
-                >
-                  <option value="" className="bg-[#0f172a]">
-                    Select department
-                  </option>
-                  {departments.map((d) => (
-                    <option key={d} value={d} className="bg-[#0f172a]">
-                      {d}
-                    </option>
-                  ))}
-                </select>
-              </div> */}
-              <div>
+ <div>
   <label
     htmlFor="department-select"
     className="block text-sm text-white mb-2"
