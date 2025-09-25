@@ -318,7 +318,7 @@ export default function AddUserModal({
       {/* frame */}
       <div className="p-1 md:rounded-2xl 
       mx-auto bg-[#0b1220] 
-      h-screen -mt-14 md:mt-0 md:h-auto
+      h-screen -mt-9 md:mt-0 md:h-auto
       w-[110%]\ sm:w-[100%]   
       md:w-[80%]   
       lg:w-[70%]  
