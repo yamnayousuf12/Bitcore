@@ -318,7 +318,7 @@ export default function AddUserModal({
       {/* frame */}
       <div className="p-1 md:rounded-2xl 
       mx-auto bg-[#0b1220] 
-      h-screen -mt-10 md:mt-0 md:h-auto
+      h-screen -mt-14 md:mt-0 md:h-auto
       w-[110%]\ sm:w-[100%]   
       md:w-[80%]   
       lg:w-[70%]  
@@ -337,7 +337,7 @@ export default function AddUserModal({
           className=" md:relative md:rounded-2xl md:border-2 md:border-dotted border-white 
         bg-gradient-to-b from-white/[0.08] to-white/[0.03]  
         h-screen md:h-full md:mt-0 mx-auto
-        w-[120%] sm:w-[90%] md:w-[80%] lg:w-[100%] xl:w-[100%] justify-center items-center overflow-y-auto"
+        w-[100%] sm:w-[90%] md:w-[80%] lg:w-[100%] xl:w-[100%] justify-center items-center overflow-y-auto"
          
         >
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
