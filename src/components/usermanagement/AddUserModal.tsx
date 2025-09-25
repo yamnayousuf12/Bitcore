@@ -318,12 +318,12 @@ export default function AddUserModal({
       <div className="p-1 md:rounded-2xl 
       mx-auto bg-[#0b1220] 
       h-auto md:h-auto
-      w-[109%]     
+      w-[1010%]     
       sm:w-[90%]   
       md:w-[80%]   
       lg:w-[70%]   
       xl:w-[57%]  
-      2xl:max-w-4xl  mt-20 sm:mt-16 md:mt-12 lg:mt-10 xl:-mt-20  ">
+      2xl:max-w-4xl mt-24 sm:mt-16 md:mt-12 lg:mt-10 xl:-mt-20  ">
          <div className="block md:hidden w-auto justify-center items-center ml-2">
   <TopBar
     heading=""
@@ -384,23 +384,7 @@ export default function AddUserModal({
                 />
               </div>
 
-              {/* <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm text-white mb-2"
-                >
-                  Email:
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  className={field}
-                  placeholder="Enter email"
-                  value={form.email}
-                  onChange={(e) => set("email", e.target.value)}
-                  required
-                />
-              </div> */}
+
 
               <div>
                 <label
