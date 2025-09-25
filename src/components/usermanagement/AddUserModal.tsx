@@ -249,6 +249,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import TopBar from "../dashboard/TopBar";
+import { ChevronDown } from "lucide-react";
 
 export interface AddUserForm {
   email: string; // ✅ string instead of ReactNode/any
@@ -372,6 +373,7 @@ export default function AddUserModal({
                   required
                 />
               </div>
+               </div>
 
               {/* <div>
                 <label
@@ -392,54 +394,73 @@ export default function AddUserModal({
               </div> */}
 
               <div>
-                <label
-                  htmlFor="role-select"
-                  className="block text-sm text-white mb-2 "
-                >
-                  Role:
-                </label>
-                <select
-                  id="role-select "
-                  className={field } 
-                  value={form.role}
-                  onChange={(e) => set("role", e.target.value)}
-                  aria-label="Role"
-                >
-                  <option value="" className="bg-[#0f172a]  ">
-                    Select role
-                  </option>
-                  {roles.map((r) => (
-                    <option key={r} value={r} className="bg-[#0f172a]">
-                      {r}
-                    </option>
-                  ))}
-                </select>
-              </div>
+  <label
+    htmlFor="role-select"
+    className="block text-sm text-white mb-2"
+  >
+    Role:
+  </label>
+
+  <div className="relative">
+    <select
+      id="role-select"
+      className={`${field} appearance-none pr-10`} 
+      value={form.role}
+      onChange={(e) => set("role", e.target.value)}
+      aria-label="Role"
+    >
+      <option value="" className="bg-[#0f172a]">
+        Select role
+      </option>
+      {roles.map((r) => (
+        <option key={r} value={r} className="bg-[#0f172a]">
+          {r}
+        </option>
+      ))}
+    </select>
+
+    {/* custom dropdown icon */}
+   <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
+  <ChevronDown size={18} />
+</span>
+  </div>
 
               <div>
-                <label
-                  htmlFor="department-select"
-                  className="block text-sm text-white mb-2"
-                >
-                  Department:
-                </label>
-                <select
-                  id="department-select"
-                  className={field}
-                  value={form.department}
-                  onChange={(e) => set("department", e.target.value)}
-                  aria-label="Department"
-                >
-                  <option value="" className="bg-[#0f172a]">
-                    Select department
-                  </option>
-                  {departments.map((d) => (
-                    <option key={d} value={d} className="bg-[#0f172a]">
-                      {d}
-                    </option>
-                  ))}
-                </select>
-              </div>
+  <label
+    htmlFor="department-select"
+    className="block text-sm text-white mb-2"
+  >
+    Department:
+  </label>
+
+  <div className="relative">
+    <select
+      id="department-select"
+      className={`${field} appearance-none pr-10`}
+      value={form.department}
+      onChange={(e) => set("department", e.target.value)}
+      aria-label="Department"
+    >
+      <option value="" className="bg-[#0f172a]">
+        Select department
+      </option>
+      {departments.map((d) => (
+        <option key={d} value={d} className="bg-[#0f172a]">
+          {d}
+        </option>
+      ))}
+    </select>
+
+    {/* Custom dropdown icon */}
+   
+
+<span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
+  <ChevronDown size={18} />
+</span>
+
+  </div>
+</div>
+
             </div>
 
             {/* status */}
