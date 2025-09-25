@@ -246,19 +246,265 @@
 
 
 
+// "use client";
+// import { useEffect, useState } from "react";
+// import TopBar from "../dashboard/TopBar";
+
+// export interface AddUserForm {
+//   email: string; // ✅ string instead of ReactNode/any
+//   firstName: string;
+//   lastName: string;
+//   role: string;
+//   department: string;
+//   status: "Active" | "Inactive";
+//   permissions: string[]; // e.g. ["User Management","Reporting"]
+// }
+
+// interface AddUserModalProps {
+//   isOpen: boolean;
+//   onClose: () => void;
+//   onSave: (data: AddUserForm) => void;
+//   roles: string[];
+//   departments: string[];
+// }
+
+// export default function AddUserModal({
+//   isOpen,
+//   onClose,
+//   onSave,
+//   roles,
+//   departments,
+// }: AddUserModalProps) {
+//   const [form, setForm] = useState<AddUserForm>({
+//     email: "", // ✅ added properly
+//     firstName: "",
+//     lastName: "",
+//     role: "",
+//     department: "",
+//     status: "Active",
+//     permissions: ["Reporting"], // example pre-checked like screenshot
+//   });
+
+//   useEffect(() => {
+//     if (!isOpen) return;
+//     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
+//     document.addEventListener("keydown", onKey);
+//     const prev = document.body.style.overflow;
+//     document.body.style.overflow = "hidden";
+//     return () => {
+//       document.removeEventListener("keydown", onKey);
+//       document.body.style.overflow = prev;
+//     };
+//   }, [isOpen, onClose]);
+
+//   if (!isOpen) return null;
+
+//   const set = <K extends keyof AddUserForm>(k: K, v: AddUserForm[K]) =>
+//     setForm((s) => ({ ...s, [k]: v }));
+
+//   const submit = (e: React.FormEvent) => {
+//     e.preventDefault();
+//     onSave(form);
+//     onClose();
+//   };
+
+//   const field =
+//     "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
+
+//   return (
+//     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
+     
+//       {/* frame */}
+//       <div className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220]  h-screen  mt-20 md:mt-0 md:h-full">
+//          <div className="block md:hidden w-auto justify-center items-center ml-2">
+//   <TopBar
+//     heading=""
+//     onOpenMenu={() => {
+//       throw new Error("Function not implemented.");
+//     }}
+//   />
+// </div>
+//         {/* card */}
+//         <div
+//           className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full  md:mt-0 mx-auto max-w-4xl md:w-full  "
+         
+//         >
+//           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
+//             {/* header */}
+//             <div className="flex items-center justify-between">
+//               <h2 className="md:text-2xl font-medium text-white ">Add User</h2>
+//               <button
+//                 type="button"
+//                 onClick={onClose}
+//                 aria-label="Close"
+//                 className="rounded-lg px-2 py-1 text-white/80 hover:text-white"
+//               >
+//                 ✕
+//               </button>
+//             </div>
+
+//             <hr className="border-white/10" />
+
+//             {/* top grid */}
+//             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+//               <div>
+//                 <label className="block text-sm text-white mb-2">
+//                   First Name:
+//                 </label>
+//                 <input
+//                   className={field}
+//                   placeholder="Enter First name"
+//                   value={form.firstName}
+//                   onChange={(e) => set("firstName", e.target.value)}
+//                   required
+//                 />
+//               </div>
+
+//               <div>
+//                 <label className="block text-sm text-white mb-2">
+//                   Last Name:
+//                 </label>
+//                 <input
+//                   className={field}
+//                   placeholder="Enter Last name"
+//                   value={form.lastName}
+//                   onChange={(e) => set("lastName", e.target.value)}
+//                   required
+//                 />
+//               </div>
+
+//               {/* <div>
+//                 <label
+//                   htmlFor="email"
+//                   className="block text-sm text-white mb-2"
+//                 >
+//                   Email:
+//                 </label>
+//                 <input
+//                   id="email"
+//                   type="email"
+//                   className={field}
+//                   placeholder="Enter email"
+//                   value={form.email}
+//                   onChange={(e) => set("email", e.target.value)}
+//                   required
+//                 />
+//               </div> */}
+
+//               <div>
+//                 <label
+//                   htmlFor="role-select"
+//                   className="block text-sm text-white mb-2 "
+//                 >
+//                   Role:
+//                 </label>
+//                 <select
+//                   id="role-select "
+//                   className={field } 
+//                   value={form.role}
+//                   onChange={(e) => set("role", e.target.value)}
+//                   aria-label="Role"
+//                 >
+//                   <option value="" className="bg-[#0f172a]  ">
+//                     Select role
+//                   </option>
+//                   {roles.map((r) => (
+//                     <option key={r} value={r} className="bg-[#0f172a]">
+//                       {r}
+//                     </option>
+//                   ))}
+//                 </select>
+//               </div>
+
+//               <div>
+//                 <label
+//                   htmlFor="department-select"
+//                   className="block text-sm text-white mb-2"
+//                 >
+//                   Department:
+//                 </label>
+//                 <select
+//                   id="department-select"
+//                   className={field}
+//                   value={form.department}
+//                   onChange={(e) => set("department", e.target.value)}
+//                   aria-label="Department"
+//                 >
+//                   <option value="" className="bg-[#0f172a]">
+//                     Select department
+//                   </option>
+//                   {departments.map((d) => (
+//                     <option key={d} value={d} className="bg-[#0f172a]">
+//                       {d}
+//                     </option>
+//                   ))}
+//                 </select>
+//               </div>
+//             </div>
+
+//             {/* status */}
+//             <div className="space-y-2">
+//               <span className="block text-sm text-white">Status</span>
+//               <div className="flex items-center gap-6">
+//                 <label className="inline-flex items-center gap-2 text-white">
+//                   <input
+//                     type="radio"
+//                     name="status"
+//                     checked={form.status === "Active"}
+//                     onChange={() => set("status", "Active")}
+//                     className="h-4 w-4 accent-Blue"
+//                   />
+//                   Active
+//                 </label>
+//                 <label className="inline-flex items-center gap-2 text-white">
+//                   <input
+//                     type="radio"
+//                     name="status"
+//                     checked={form.status === "Inactive"}
+//                     onChange={() => set("status", "Inactive")}
+//                     className="h-4 w-4 accent-Blue"
+//                   />
+//                   Inactive
+//                 </label>
+//               </div>
+//             </div>
+
+//             {/* actions */}
+//             <div className="flex items-center justify-end gap-3 pt-2">
+//               <button
+//                 type="button"
+//                 onClick={onClose}
+//                 className="text-Blue hover:text-Blue/50"
+//               >
+//                 Cancel
+//               </button>
+//               <button
+//                 type="submit"
+//                 className="h-11 px-5 rounded-2xl bg-white  text-Blue font-medium"
+//               >
+//                 Save User
+//               </button>
+//             </div>
+//           </form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+
 "use client";
 import { useEffect, useState } from "react";
 import TopBar from "../dashboard/TopBar";
-import { ChevronDown } from "lucide-react";
 
 export interface AddUserForm {
-  email: string; // ✅ string instead of ReactNode/any
+  email: string;
   firstName: string;
   lastName: string;
   role: string;
   department: string;
   status: "Active" | "Inactive";
-  permissions: string[]; // e.g. ["User Management","Reporting"]
+  permissions: string[];
 }
 
 interface AddUserModalProps {
@@ -277,13 +523,13 @@ export default function AddUserModal({
   departments,
 }: AddUserModalProps) {
   const [form, setForm] = useState<AddUserForm>({
-    email: "", // ✅ added properly
+    email: "",
     firstName: "",
     lastName: "",
     role: "",
     department: "",
     status: "Active",
-    permissions: ["Reporting"], // example pre-checked like screenshot
+    permissions: ["Reporting"],
   });
 
   useEffect(() => {
@@ -310,199 +556,139 @@ export default function AddUserModal({
   };
 
   const field =
-    "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
+    "w-full h-11 rounded-xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
-     
-      {/* frame */}
-      <div className="p-1 md:rounded-2xl 
-      mx-auto bg-[#275dcb] 
-      h-screen md:h-auto
-      w-[1010%]     
-      sm:w-[90%]   
-      md:w-[80%]   
-      lg:w-[70%]   
-      xl:w-[57%]  
-      2xl:max-w-4xl -mt-[5%] sm:mt-16 md:mt-12 lg:mt-10 xl:-mt-20  ">
-         {/* <div className="block md:hidden w-auto justify-center items-center ml-3 mt-7">
-  <TopBar
-    heading=""
-    onOpenMenu={() => {
-      throw new Error("Function not implemented.");
-    }}
-  />
-</div> */}
-        {/* card */}
-        <div
-          className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white 
-        bg-gradient-to-b from-white/[0.08] to-white/[0.03]  
-        h-screen md:h-full md:mt-0 mx-auto
-        w-[100%] sm:w-[90%] md:w-[80%] lg:w-[100%] xl:w-[100%]  "
-         
-        >
-         <div className="block md:hidden w-auto justify-center items-center ml-3 mt-[7%] ">
-  <TopBar
-    heading=""
-    onOpenMenu={() => {
-      throw new Error("Function not implemented.");
-    }}
-  />
-</div>
-          <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
-            {/* header */}
-            <div className="flex items-center justify-between">
-              <h2 className="md:text-2xl font-medium text-white ">Add User</h2>
-              <button
-                type="button"
-                onClick={onClose}
-                aria-label="Close"
-                className="rounded-lg px-2 py-1 text-white/80 hover:text-white"
-              >
-                ✕
-              </button>
-            </div>
-
-            <hr className="border-white/10" />
-
-            {/* top grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-              <div>
-                <label className="block text-sm text-white mb-2">
-                  First Name:
-                </label>
-                <input
-                  className={field}
-                  placeholder="Enter First name"
-                  value={form.firstName}
-                  onChange={(e) => set("firstName", e.target.value)}
-                  required
-                />
-              </div>
-
-              <div>
-                <label className="block text-sm text-white mb-2">
-                  Last Name:
-                </label>
-                <input
-                  className={field}
-                  placeholder="Enter Last name"
-                  value={form.lastName}
-                  onChange={(e) => set("lastName", e.target.value)}
-                  required
-                />
-              </div>
-              <div>
-  <label
-    htmlFor="role-select"
-    className="block text-sm text-white mb-2"
-  >
-    Role:
-  </label>
-
-  <div className="relative">
-    <select
-      id="role-select"
-      className={`${field} appearance-none pr-10`} 
-      value={form.role}
-      onChange={(e) => set("role", e.target.value)}
-      aria-label="Role"
-    >
-      <option value="" className="bg-[#0f172a]">
-        Select role
-      </option>
-      {roles.map((r) => (
-        <option key={r} value={r} className="bg-[#0f172a]">
-          {r}
-        </option>
-      ))}
-    </select>
-
-    {/* custom dropdown icon */}
-   <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
-  <ChevronDown size={18} />
-</span>
-  </div>
-</div>
- <div>
-  <label
-    htmlFor="department-select"
-    className="block text-sm text-white mb-2"
-  >
-    Department:
-  </label>
-
-  <div className="relative">
-    <select
-      id="department-select"
-      className={`${field} appearance-none pr-10`}
-      value={form.department}
-      onChange={(e) => set("department", e.target.value)}
-      aria-label="Department"
-    >
-      <option value="" className="bg-[#0f172a]">
-        Select department
-      </option>
-      {departments.map((d) => (
-        <option key={d} value={d} className="bg-[#0f172a]">
-          {d}
-        </option>
-      ))}
-    </select>
-
-   <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
-  <ChevronDown size={18} />
-</span>
-  </div>
-</div>
-
-            </div>
-
-            {/* status */}
-            <div className="space-y-2">
-              <span className="block text-sm text-white">Status</span>
-              <div className="flex items-center gap-6">
-                <label className="inline-flex items-center gap-2 text-white">
-                  <input
-                    type="radio"
-                    name="status"
-                    checked={form.status === "Active"}
-                    onChange={() => set("status", "Active")}
-                    className="h-4 w-4 accent-Blue"
-                  />
-                  Active
-                </label>
-                <label className="inline-flex items-center gap-2 text-white">
-                  <input
-                    type="radio"
-                    name="status"
-                    checked={form.status === "Inactive"}
-                    onChange={() => set("status", "Inactive")}
-                    className="h-4 w-4 accent-Blue"
-                  />
-                  Inactive
-                </label>
-              </div>
-            </div>
-
-            {/* actions */}
-            <div className="flex items-center justify-end gap-3 pt-2">
-              <button
-                type="button"
-                onClick={onClose}
-                className="text-Blue hover:text-Blue/50"
-              >
-                Cancel
-              </button>
-              <button
-                type="submit"
-                className="h-11 px-5 rounded-2xl bg-white  text-Blue font-medium"
-              >
-                Save User
-              </button>
-            </div>
-          </form>
+    <div className="fixed inset-0 z-50 flex md:items-center md:justify-center bg-[#0b1220] md:bg-transparent">
+      <div className="w-full h-full md:h-auto md:max-w-4xl md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] overflow-y-auto">
+        
+        {/* Mobile TopBar */}
+        <div className="block md:hidden">
+          <TopBar
+            heading="Add User"
+            onOpenMenu={() => {
+              throw new Error("Function not implemented.");
+            }}
+          />
         </div>
+
+        <form onSubmit={submit} className="p-6 md:p-8 space-y-4 md:space-y-6">
+          {/* Header for desktop */}
+          <div className="hidden md:flex items-center justify-between">
+            <h2 className="md:text-2xl font-medium text-white">Add User</h2>
+            <button
+              type="button"
+              onClick={onClose}
+              aria-label="Close"
+              className="rounded-lg px-2 py-1 text-white/80 hover:text-white"
+            >
+              ✕
+            </button>
+          </div>
+
+          <hr className="border-white/10 hidden md:block" />
+
+          {/* Form grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <div>
+              <label className="block text-sm text-white mb-2">First Name</label>
+              <input
+                className={field}
+                placeholder="Enter First name"
+                value={form.firstName}
+                onChange={(e) => set("firstName", e.target.value)}
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm text-white mb-2">Last Name</label>
+              <input
+                className={field}
+                placeholder="Enter Last name"
+                value={form.lastName}
+                onChange={(e) => set("lastName", e.target.value)}
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm text-white mb-2">Role</label>
+              <select
+                className={field}
+                value={form.role}
+                onChange={(e) => set("role", e.target.value)}
+              >
+                <option value="">Select Role</option>
+                {roles.map((r) => (
+                  <option key={r} value={r}>
+                    {r}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm text-white mb-2">Department</label>
+              <select
+                className={field}
+                value={form.department}
+                onChange={(e) => set("department", e.target.value)}
+              >
+                <option value="">Select Department</option>
+                {departments.map((d) => (
+                  <option key={d} value={d}>
+                    {d}
+                  </option>
+                ))}
+              </select>
+            </div>
+          </div>
+
+          {/* Status */}
+          <div>
+            <span className="block text-sm text-white mb-2">Status</span>
+            <div className="flex items-center gap-6">
+              <label className="inline-flex items-center gap-2 text-white">
+                <input
+                  type="radio"
+                  name="status"
+                  checked={form.status === "Active"}
+                  onChange={() => set("status", "Active")}
+                  className="h-4 w-4 accent-blue-500"
+                />
+                Active
+              </label>
+              <label className="inline-flex items-center gap-2 text-white">
+                <input
+                  type="radio"
+                  name="status"
+                  checked={form.status === "Inactive"}
+                  onChange={() => set("status", "Inactive")}
+                  className="h-4 w-4 accent-blue-500"
+                />
+                Inactive
+              </label>
+            </div>
+          </div>
+
+          {/* Actions */}
+          <div className="flex items-center justify-end gap-3 pt-4">
+            <button
+              type="button"
+              onClick={onClose}
+              className="text-blue-500 hover:text-blue-400"
+            >
+              Cancel
+            </button>
+            <button
+              type="submit"
+              className="h-11 px-5 rounded-xl bg-white text-blue-600 font-medium"
+            >
+              Save User
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
