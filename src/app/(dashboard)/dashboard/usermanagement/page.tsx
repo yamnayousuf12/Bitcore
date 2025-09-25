@@ -285,7 +285,7 @@ export default function UserManagement() {
         </table>
       </div>
 {/* Mobile Layout */}
-<div className="block md:hidden space-y-4 w-[300px] -ml-14">
+<div className="block md:hidden space-y-4 w-[299px] -ml-14">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
