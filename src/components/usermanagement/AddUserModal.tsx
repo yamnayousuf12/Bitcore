@@ -556,140 +556,133 @@ export default function AddUserModal({
   };
 
   const field =
-    "w-full h-11 rounded-xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
+    "w-full h-11 rounded-xl bg-transparent border border-white/20 px-4 text-white placeholder:text-white/50 focus:outline-none focus:ring-1 focus:ring-blue-500";
 
   return (
-    <div className="fixed inset-0 z-50 flex md:items-center md:justify-center bg-[#0b1220] md:bg-transparent">
-      <div className="w-full h-full md:h-auto md:max-w-4xl md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] overflow-y-auto">
-        
-        {/* Mobile TopBar */}
-        <div className="block md:hidden">
-          <TopBar
-            heading="Add User"
-            onOpenMenu={() => {
-              throw new Error("Function not implemented.");
-            }}
+    <div className="fixed inset-0 z-50 bg-[#0b1220]">
+      {/* TopBar only on mobile */}
+      <div className="block md:hidden">
+        <TopBar
+          heading=""
+          onOpenMenu={() => {
+            throw new Error("Function not implemented.");
+          }}
+        />
+      </div>
+
+      <form
+        onSubmit={submit}
+        className="flex flex-col h-full px-5 py-6 space-y-5 overflow-y-auto"
+      >
+        {/* Header */}
+        <h2 className="text-lg font-medium text-blue-400">Add User</h2>
+
+        {/* First Name */}
+        <div>
+          <label className="block text-sm text-white mb-2">First Name</label>
+          <input
+            className={field}
+            placeholder="Enter First name"
+            value={form.firstName}
+            onChange={(e) => set("firstName", e.target.value)}
+            required
           />
         </div>
 
-        <form onSubmit={submit} className="p-6 md:p-8 space-y-4 md:space-y-6">
-          {/* Header for desktop */}
-          <div className="hidden md:flex items-center justify-between">
-            <h2 className="md:text-2xl font-medium text-white">Add User</h2>
-            <button
-              type="button"
-              onClick={onClose}
-              aria-label="Close"
-              className="rounded-lg px-2 py-1 text-white/80 hover:text-white"
-            >
-              ✕
-            </button>
-          </div>
+        {/* Last Name */}
+        <div>
+          <label className="block text-sm text-white mb-2">Last Name</label>
+          <input
+            className={field}
+            placeholder="Enter Last name"
+            value={form.lastName}
+            onChange={(e) => set("lastName", e.target.value)}
+            required
+          />
+        </div>
 
-          <hr className="border-white/10 hidden md:block" />
+        {/* Role */}
+        <div>
+          <label className="block text-sm text-white mb-2">Role</label>
+          <select
+            className={field}
+            value={form.role}
+            onChange={(e) => set("role", e.target.value)}
+          >
+            <option value="" className="bg-[#0b1220]">
+              Select Role
+            </option>
+            {roles.map((r) => (
+              <option key={r} value={r} className="bg-[#0b1220]">
+                {r}
+              </option>
+            ))}
+          </select>
+        </div>
 
-          {/* Form grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-            <div>
-              <label className="block text-sm text-white mb-2">First Name</label>
+        {/* Department */}
+        <div>
+          <label className="block text-sm text-white mb-2">Department</label>
+          <select
+            className={field}
+            value={form.department}
+            onChange={(e) => set("department", e.target.value)}
+          >
+            <option value="" className="bg-[#0b1220]">
+              Select Department
+            </option>
+            {departments.map((d) => (
+              <option key={d} value={d} className="bg-[#0b1220]">
+                {d}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* Status */}
+        <div>
+          <span className="block text-sm text-white mb-2">Status</span>
+          <div className="flex gap-6">
+            <label className="inline-flex items-center gap-2 text-white">
               <input
-                className={field}
-                placeholder="Enter First name"
-                value={form.firstName}
-                onChange={(e) => set("firstName", e.target.value)}
-                required
+                type="radio"
+                name="status"
+                checked={form.status === "Active"}
+                onChange={() => set("status", "Active")}
+                className="h-4 w-4 accent-blue-500"
               />
-            </div>
-
-            <div>
-              <label className="block text-sm text-white mb-2">Last Name</label>
+              Active
+            </label>
+            <label className="inline-flex items-center gap-2 text-white">
               <input
-                className={field}
-                placeholder="Enter Last name"
-                value={form.lastName}
-                onChange={(e) => set("lastName", e.target.value)}
-                required
+                type="radio"
+                name="status"
+                checked={form.status === "Inactive"}
+                onChange={() => set("status", "Inactive")}
+                className="h-4 w-4 accent-blue-500"
               />
-            </div>
-
-            <div>
-              <label className="block text-sm text-white mb-2">Role</label>
-              <select
-                className={field}
-                value={form.role}
-                onChange={(e) => set("role", e.target.value)}
-              >
-                <option value="">Select Role</option>
-                {roles.map((r) => (
-                  <option key={r} value={r}>
-                    {r}
-                  </option>
-                ))}
-              </select>
-            </div>
-
-            <div>
-              <label className="block text-sm text-white mb-2">Department</label>
-              <select
-                className={field}
-                value={form.department}
-                onChange={(e) => set("department", e.target.value)}
-              >
-                <option value="">Select Department</option>
-                {departments.map((d) => (
-                  <option key={d} value={d}>
-                    {d}
-                  </option>
-                ))}
-              </select>
-            </div>
+              Inactive
+            </label>
           </div>
+        </div>
 
-          {/* Status */}
-          <div>
-            <span className="block text-sm text-white mb-2">Status</span>
-            <div className="flex items-center gap-6">
-              <label className="inline-flex items-center gap-2 text-white">
-                <input
-                  type="radio"
-                  name="status"
-                  checked={form.status === "Active"}
-                  onChange={() => set("status", "Active")}
-                  className="h-4 w-4 accent-blue-500"
-                />
-                Active
-              </label>
-              <label className="inline-flex items-center gap-2 text-white">
-                <input
-                  type="radio"
-                  name="status"
-                  checked={form.status === "Inactive"}
-                  onChange={() => set("status", "Inactive")}
-                  className="h-4 w-4 accent-blue-500"
-                />
-                Inactive
-              </label>
-            </div>
-          </div>
-
-          {/* Actions */}
-          <div className="flex items-center justify-end gap-3 pt-4">
-            <button
-              type="button"
-              onClick={onClose}
-              className="text-blue-500 hover:text-blue-400"
-            >
-              Cancel
-            </button>
-            <button
-              type="submit"
-              className="h-11 px-5 rounded-xl bg-white text-blue-600 font-medium"
-            >
-              Save User
-            </button>
-          </div>
-        </form>
-      </div>
+        {/* Footer Actions */}
+        <div className="flex items-center justify-end gap-5 mt-auto">
+          <button
+            type="button"
+            onClick={onClose}
+            className="text-sm text-blue-400 hover:text-blue-300"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            className="h-11 px-6 rounded-xl bg-white text-blue-600 font-medium"
+          >
+            Save User
+          </button>
+        </div>
+      </form>
     </div>
   );
 }
