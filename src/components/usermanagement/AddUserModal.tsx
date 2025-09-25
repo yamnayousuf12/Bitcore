@@ -324,15 +324,15 @@ export default function AddUserModal({
       md:w-[80%]   
       lg:w-[70%]   
       xl:w-[57%]  
-      2xl:max-w-4xl mt-17 sm:mt-16 md:mt-12 lg:mt-10 xl:-mt-20  ">
-         <div className="block md:hidden w-auto justify-center items-center ml-3 mt-4">
+      2xl:max-w-4xl -mt-[5%] sm:mt-16 md:mt-12 lg:mt-10 xl:-mt-20  ">
+         {/* <div className="block md:hidden w-auto justify-center items-center ml-3 mt-7">
   <TopBar
     heading=""
     onOpenMenu={() => {
       throw new Error("Function not implemented.");
     }}
   />
-</div>
+</div> */}
         {/* card */}
         <div
           className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white 
@@ -341,6 +341,14 @@ export default function AddUserModal({
         w-[100%] sm:w-[90%] md:w-[80%] lg:w-[100%] xl:w-[100%]  "
          
         >
+         <div className="block md:hidden w-auto justify-center items-center ml-3 mt-[7%] ">
+  <TopBar
+    heading=""
+    onOpenMenu={() => {
+      throw new Error("Function not implemented.");
+    }}
+  />
+</div>
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
             {/* header */}
             <div className="flex items-center justify-between">
