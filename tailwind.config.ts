@@ -33,6 +33,10 @@ const config: Config = {
       green: '#00AC4F',
     },
     extend: {
+       width: {
+    card: "877px",
+    form: "1200px",
+  },
       spacing: {
         72: '18rem',
         84: '21rem',

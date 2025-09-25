@@ -211,7 +211,11 @@ export default function UserManagement() {
   };
 
   return (
-    <div className="p-6 md:h-screen md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5">
+    <div className="p-10 md:h-full md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5  w-[100%] sm:w-[90%]  
+    md:w-[80%]  
+    lg:w-[103%] 
+    xl:w-[102.4%] 
+    2xl:w-[102%]" >
       <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-20 text-base lg:hidden text-[#BAD4EF] flex-shrink-0">
   {/* Back Arrow Icon */}
   <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />

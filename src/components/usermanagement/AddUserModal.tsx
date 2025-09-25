@@ -315,7 +315,15 @@ export default function AddUserModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
      
       {/* frame */}
-      <div className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220]  h-screen  mt-20 md:mt-0 md:h-full">
+      <div className="p-1 md:rounded-2xl 
+      mx-auto bg-[#0b1220] 
+      h-auto md:h-auto
+      w-[109%]     
+      sm:w-[90%]   
+      md:w-[80%]   
+      lg:w-[70%]   
+      xl:w-[57%]  
+      2xl:max-w-4xl  mt-20 sm:mt-16 md:mt-12 lg:mt-10 xl:-mt-20  ">
          <div className="block md:hidden w-auto justify-center items-center ml-2">
   <TopBar
     heading=""
@@ -326,7 +334,10 @@ export default function AddUserModal({
 </div>
         {/* card */}
         <div
-          className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full  md:mt-0 mx-auto max-w-4xl md:w-full  "
+          className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white 
+        bg-gradient-to-b from-white/[0.08] to-white/[0.03]  
+        h-screen md:h-full md:mt-0 mx-auto
+        w-[100%] sm:w-[90%] md:w-[80%] lg:w-[100%] xl:w-[100%]  "
          
         >
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
