@@ -285,11 +285,11 @@ export default function UserManagement() {
         </table>
       </div>
 {/* Mobile Layout */}
-<div className="block md:hidden space-y-4">
+<div className="block md:hidden space-y-4 w-[297px] -ml-14">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center w-80 -ml-8"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center"
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
