@@ -317,15 +317,15 @@ export default function AddUserModal({
      
       {/* frame */}
       <div className="p-1 md:rounded-2xl 
-      mx-auto bg-[#1649af] 
+      mx-auto bg-[#081837] 
       h-screen md:h-auto
       w-[1010%]     
       sm:w-[90%]   
       md:w-[80%]   
       lg:w-[70%]   
       xl:w-[57%]  
-      2xl:max-w-4xl mt-10 sm:mt-16 md:mt-12 lg:mt-10 xl:-mt-20  ">
-         <div className="block md:hidden w-auto justify-center items-center ml-2 ">
+      2xl:max-w-4xl mt-17 sm:mt-16 md:mt-12 lg:mt-10 xl:-mt-20  ">
+         <div className="block md:hidden w-auto justify-center items-center ml-3 mt-4">
   <TopBar
     heading=""
     onOpenMenu={() => {
