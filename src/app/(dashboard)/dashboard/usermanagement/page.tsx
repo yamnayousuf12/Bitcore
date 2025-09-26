@@ -224,7 +224,7 @@ export default function UserManagement() {
   <span className="font-medium tracking-wide">User Management</span>
 </div>
       {/* Search + Add */}
-      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0  justify-start items-start -ml-8 md:ml-0 md:justify-start md:items-center  ">
+      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0  justify-start items-start -ml-7 md:ml-0 md:justify-start md:items-center  ">
         <input
           type="text"
           placeholder="Search User..."
@@ -305,19 +305,19 @@ export default function UserManagement() {
         <h3 className="text-base font-semibold text-white truncate">
           {user.firstName} {user.lastName}
         </h3>
-        <span className="text-sm text-blue-400 font-medium">
+        <span className="text-sm text-Blue font-medium">
           {user.department || "N/A"}
         </span>
       </div>
 
       {/* Email */}
-      <p className="text-xs text-gray-300 break-all">{user.email}</p>
+      <p className="text-xs text-gray break-all">{user.email}</p>
 
       {/* Status */}
       <div className="flex items-center gap-2">
         <span
           className={`text-sm font-semibold ${
-            user.status === "Active" ? "text-green-400" : "text-orange-400"
+            user.status === "Active" ? "text-green" : "text-orange"
           }`}
         >
           {user.status}
@@ -327,7 +327,7 @@ export default function UserManagement() {
       {/* Actions */}
       <div className="flex justify-end gap-3 border-t border-white/10 pt-3">
         <button
-          className="text-gray-300 hover:text-white transition"
+          className="text-gray hover:text-white transition"
           onClick={() => handleViewUser(user)}
           aria-label="View User"
         >
@@ -335,7 +335,7 @@ export default function UserManagement() {
         </button>
 
         <button
-          className="text-blue-400 hover:text-blue-300 transition"
+          className="text-Blue hover:text-Blue transition"
           onClick={() => handleOpenEdit(user)}
           aria-label="Edit User"
         >
@@ -343,7 +343,7 @@ export default function UserManagement() {
         </button>
 
         <button
-          className="text-red-400 hover:text-red-300 transition"
+          className="text-Red hover:text-Red transition"
           onClick={() =>
             setUsers(users.filter((u) => u.email !== user.email))
           }
