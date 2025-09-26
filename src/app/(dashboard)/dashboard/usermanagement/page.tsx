@@ -286,30 +286,30 @@ export default function UserManagement() {
       </div>
 {/* Mobile Layout */}
 
-<div className="block md:hidden space-y-4 w-[140%] left-32 -translate-x-1/2 relative">
+<div className="block md:hidden space-y-4 ">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3 w-[145%] left-28 -translate-x-1/2 relative"
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
         <h3 className="text-base font-semibold text-white truncate">
           {user.firstName} {user.lastName}
         </h3>
-        <span className="text-sm text-blue-400 font-medium">
+        <span className="text-sm text-Blue font-medium">
           {user.department || "N/A"}
         </span>
       </div>
 
       {/* Email */}
-      <p className="text-xs text-gray-300 break-all">{user.email}</p>
+      <p className="text-xs text-gray break-all">{user.email}</p>
 
       {/* Status */}
       <div className="flex items-center gap-2">
         <span
           className={`text-sm font-semibold ${
-            user.status === "Active" ? "text-green-400" : "text-orange-400"
+            user.status === "Active" ? "text-green" : "text-orange"
           }`}
         >
           {user.status}
@@ -319,7 +319,7 @@ export default function UserManagement() {
       {/* Actions */}
       <div className="flex justify-end gap-3 border-t border-white/10 pt-3">
         <button
-          className="text-gray-300 hover:text-white transition"
+          className="text-gray hover:text-white transition"
           onClick={() => handleViewUser(user)}
           aria-label="View User"
         >
@@ -327,7 +327,7 @@ export default function UserManagement() {
         </button>
 
         <button
-          className="text-blue-400 hover:text-blue-300 transition"
+          className="text-Blue hover:text-Blue transition"
           onClick={() => handleOpenEdit(user)}
           aria-label="Edit User"
         >
