@@ -211,7 +211,7 @@ export default function UserManagement() {
   };
 
   return (
-    <div className="p-10 md:h-full md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5 max-w-7xl sm:w-[107.8%]  
+    <div className="p-10 md:h-full md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5 max-w7xl sm:w-[107.8%]  
     md:w-[105.5%]  
     lg:w-[105%] 
     xl:w-[104.2%] 
@@ -230,7 +230,7 @@ export default function UserManagement() {
           placeholder="Search User..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none md:w-64 w-48 "
+          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none md:w-96 w-full "
         />
         <button
           className="bg-Blue md:px-4 px-3 py-2 rounded-xl hover:bg-Blue flex-shrink-0"
