@@ -290,7 +290,7 @@ export default function UserManagement() {
       </div>
 {/* Mobile Layout */}
 
-<div className="block md:hidden space-y-4 w-[120%] sm:w-[108%]  
+<div className="block md:hidden space-y-4 w-[122%] sm:w-[108%]  
     md:w-[105%]  
     lg:w-[105%] 
     xl:w-[103%] 
@@ -302,10 +302,10 @@ export default function UserManagement() {
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
-        <h3 className="text-base font-semibold text-white truncate">
+        <h3 className="text-base font-medium  text-white truncate">
           {user.firstName} {user.lastName}
         </h3>
-        <span className="text-sm text-Blue font-medium">
+        <span className="text-xs text-Blue font-medium">
           {user.department || "N/A"}
         </span>
       </div>
