@@ -46,7 +46,7 @@ export default function EditUserModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 ">
       <div
-        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen md:mt-0 mt-20 md:h-full">
+        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen md:mt-0 mt-10 md:h-full">
           <div className="block md:hidden w-auto justify-center items-center ml-2">
             <TopBar
               heading=""
@@ -90,21 +90,6 @@ export default function EditUserModal({
                   onChange={(e) => set("lastName", e.target.value)}
                 />
               </div>
-
-              {/* <div>
-                <label className="block text-sm text-white mb-2">Role:</label>
-                <select
-                  className={field}
-                  value={form.role}
-                  onChange={(e) => set("role", e.target.value)}
-                >
-                  {roles.map((r) => (
-                    <option key={r} value={r} className="bg-[#0f172a]">
-                      {r}
-                    </option>
-                  ))}
-                </select>
-              </div> */}
               <div className="relative">
   <label className="block text-sm text-white mb-2">Role:</label>
 
