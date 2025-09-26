@@ -298,11 +298,11 @@ export default function UserManagement() {
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3  "
+      className="rounded-xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-0  "
     >
       {/* Top Row: Name + Department */}
-      <div className="flex justify-between items-center">
-        <h3 className="text-base font-medium  text-white truncate">
+      <div className="flex justify-between items-center ">
+        <h3 className="text-base font-medium  text-white truncate  ">
           {user.firstName} {user.lastName}
         </h3>
         <span className="text-xs text-Blue font-medium">
@@ -314,9 +314,9 @@ export default function UserManagement() {
       <p className="text-xs text-gray break-all">{user.email}</p>
 
       {/* Status */}
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2  pt-3 ">
         <span
-          className={`text-sm font-semibold ${
+          className={`text-sm font-medium  ${
             user.status === "Active" ? "text-green" : "text-orange"
           }`}
         >
@@ -325,7 +325,7 @@ export default function UserManagement() {
       </div>
 
       {/* Actions */}
-      <div className="flex justify-end gap-3 border-t border-white/30 pt-3">
+      <div className="flex justify-end gap-3   pt-2">
         <button
           className="text-gray hover:text-white transition"
           onClick={() => handleViewUser(user)}
