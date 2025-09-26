@@ -211,11 +211,11 @@ export default function UserManagement() {
   };
 
   return (
-    <div className="p-10 md:h-full md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5  w-[100%] sm:w-[90%]  
-    md:w-[80%]  
-    lg:w-[103%] 
-    xl:w-[102.4%] 
-    2xl:w-[102%]" >
+    <div className="p-10 md:h-full md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5  w-[109.8%] sm:w-[108%]  
+    md:w-[105%]  
+    lg:w-[105%] 
+    xl:w-[103.5%] 
+    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8" >
       <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-20 text-base lg:hidden text-[#BAD4EF] flex-shrink-0">
   {/* Back Arrow Icon */}
   <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />
@@ -286,30 +286,30 @@ export default function UserManagement() {
       </div>
 {/* Mobile Layout */}
 
-<div className="block md:hidden space-y-4 ">
+<div className="block md:hidden space-y-4">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3 w-[145%] left-28 -translate-x-1/2 relative"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3"
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
         <h3 className="text-base font-semibold text-white truncate">
           {user.firstName} {user.lastName}
         </h3>
-        <span className="text-sm text-Blue font-medium">
+        <span className="text-sm text-blue-400 font-medium">
           {user.department || "N/A"}
         </span>
       </div>
 
       {/* Email */}
-      <p className="text-xs text-gray break-all">{user.email}</p>
+      <p className="text-xs text-gray-300 break-all">{user.email}</p>
 
       {/* Status */}
       <div className="flex items-center gap-2">
         <span
           className={`text-sm font-semibold ${
-            user.status === "Active" ? "text-green" : "text-orange"
+            user.status === "Active" ? "text-green-400" : "text-orange-400"
           }`}
         >
           {user.status}
@@ -319,7 +319,7 @@ export default function UserManagement() {
       {/* Actions */}
       <div className="flex justify-end gap-3 border-t border-white/10 pt-3">
         <button
-          className="text-gray hover:text-white transition"
+          className="text-gray-300 hover:text-white transition"
           onClick={() => handleViewUser(user)}
           aria-label="View User"
         >
@@ -327,7 +327,7 @@ export default function UserManagement() {
         </button>
 
         <button
-          className="text-Blue hover:text-Blue transition"
+          className="text-blue-400 hover:text-blue-300 transition"
           onClick={() => handleOpenEdit(user)}
           aria-label="Edit User"
         >
@@ -335,7 +335,7 @@ export default function UserManagement() {
         </button>
 
         <button
-          className="text-Red hover:text-Red transition"
+          className="text-red-400 hover:text-red-300 transition"
           onClick={() =>
             setUsers(users.filter((u) => u.email !== user.email))
           }
