@@ -93,7 +93,11 @@ export default function TopBar({ heading, onOpenMenu }: TopBarProps) {
       
 
       {/* Desktop Top Bar */}
-      <header className="hidden lg:block top-6 z-30 px-3 sm:px-4 lg:px-6 pb-3 bg-gradient-to-b bg-[#101B31] to-transparent max-w-7xl w-full mx-auto  rounded-tr-xl border border-white/20 h-20">
+      <header className="hidden lg:block top-6 z-30 px-3 sm:px-4 lg:px-6 pb-3 bg-gradient-to-b bg-[#101B31] to-transparent  rounded-tr-xl border border-white/20 h-20 mx-auto max-w-full w-[109.8%] sm:w-[108%]  
+    md:w-[105%]  
+    lg:w-[100%] 
+    xl:w-[200%] 
+    2xl:w-[102%] ">
         <div className="flex items-center gap-6">
           <h1 className="text-xl font-semibold tracking-wide flex-1 mt-4">{heading}</h1>
           <div className="relative w-full md:w-auto max-w-md mt-4">

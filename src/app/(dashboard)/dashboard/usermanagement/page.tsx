@@ -211,12 +211,12 @@ export default function UserManagement() {
   };
 
   return (
-    <div className="p-10 md:h-full md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5  w-[109.8%] sm:w-[108%]  
-    md:w-[105%]  
+    <div className="p-10 md:h-full md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5 max-w-7xl sm:w-[107.8%]  
+    md:w-[105.5%]  
     lg:w-[105%] 
-    xl:w-[103.5%] 
-    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8" >
-      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-20 text-base lg:hidden text-[#BAD4EF] flex-shrink-0">
+    xl:w-[104.2%] 
+    2xl:w-[100.3%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8" >
+      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-20 text-base lg:hidden text-[#BAD4EF] flex-shrink-0 ">
   {/* Back Arrow Icon */}
   <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />
 
@@ -241,7 +241,7 @@ export default function UserManagement() {
       </div>
 
       {/* Desktop Table */}
-      <div className="hidden md:block overflow-x-auto border border-gray/30 rounded-lg bg-[#3c315a4d]">
+      <div className="hidden md:block overflow-x-auto border border-gray/30 rounded-lg bg-[#3c315a4d]  ">
         <table className="w-full text-left border-collapse">
           <thead>
             <tr className="bg-[#0f1d3a]">
@@ -289,8 +289,8 @@ export default function UserManagement() {
 <div className="block md:hidden space-y-4 w-[109.8%] sm:w-[108%]  
     md:w-[105%]  
     lg:w-[105%] 
-    xl:w-[103.5%] 
-    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-5 ">
+    xl:w-[103.%] 
+    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-5 max-w-7xl mx-auto  ">
   {filteredUsers.map((user, i) => (
     <div
       key={i}

@@ -28,7 +28,14 @@ function DashboardShell({ children }: PropsWithChildren) {
       
 
       {/* Shell */}
-      <div className="mx-auto max-w-[1400px] px-3 sm:px-4 lg:px-6">
+      <div className="mx-auto max-w-full w-[109.8%] sm:w-[108%]  
+    md:w-[105%]  
+    lg:w-[100%] 
+    xl:w-[200%] 
+    2xl:w-[102%] px-3 sm:px-4 lg:px-6 " style={{
+        background:
+          "linear-gradient(112.58deg, #1a304efa 0.58%, #080D15 51.36%, #071028 99.29%)",
+      }}>
         <div className="relative flex">
           {/* Backdrop for mobile */}
           {open && (
