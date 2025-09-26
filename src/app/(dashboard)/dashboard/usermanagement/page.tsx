@@ -233,7 +233,7 @@ export default function UserManagement() {
           placeholder="Search User..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none w-[160px] sm:w-[800px]  
+          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none w-[170px] sm:w-[800px]  
     md:w-96  
     lg:w-96 
     xl:w-96 
