@@ -335,7 +335,7 @@ export default function UserManagement() {
         </button>
 
         <button
-          className="text-red-400 hover:text-red-300 transition"
+          className="text-Red hover:text-Red transition"
           onClick={() =>
             setUsers(users.filter((u) => u.email !== user.email))
           }
