@@ -290,7 +290,7 @@ export default function UserManagement() {
     md:w-[105%]  
     lg:w-[105%] 
     xl:w-[103.5%] 
-    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8 ">
+    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-5 ">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
