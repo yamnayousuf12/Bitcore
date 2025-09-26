@@ -285,27 +285,30 @@ export default function UserManagement() {
         </table>
       </div>
 {/* Mobile Layout */}
-<div className="block md:hidden space-y-4 w-[299px] -ml-14">
+<div className="block md:hidden space-y-4">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3"
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
-        <h3 className="text-base font-semibold">{user.firstName} {user.lastName}</h3>
-        <span className="text-Blue text-sm ">{user.department}</span>
-       
+        <h3 className="text-base font-semibold text-white truncate">
+          {user.firstName} {user.lastName}
+        </h3>
+        <span className="text-sm text-blue-400 font-medium">
+          {user.department || "N/A"}
+        </span>
       </div>
 
       {/* Email */}
-      
- <span className="text-xs text-gray">{user.email}</span>
+      <p className="text-xs text-gray-300 break-all">{user.email}</p>
+
       {/* Status */}
-      <div className="flex items-center gap-2 mt-3">
+      <div className="flex items-center gap-2">
         <span
-          className={`text-sm font-medium ${
-            user.status === "Active" ? "text-green" : "text-orange"
+          className={`text-sm font-semibold ${
+            user.status === "Active" ? "text-green-400" : "text-orange-400"
           }`}
         >
           {user.status}
@@ -313,24 +316,29 @@ export default function UserManagement() {
       </div>
 
       {/* Actions */}
-      <div className="flex justify-end gap-4 mt-3">
+      <div className="flex justify-end gap-3 border-t border-white/10 pt-3">
         <button
-          className="text-gray hover:text-white"
+          className="text-gray-300 hover:text-white transition"
           onClick={() => handleViewUser(user)}
+          aria-label="View User"
         >
           <Eye size={18} />
         </button>
+
         <button
-          className="text-Blue hover:text-Blue"
+          className="text-blue-400 hover:text-blue-300 transition"
           onClick={() => handleOpenEdit(user)}
+          aria-label="Edit User"
         >
           <Edit2 size={18} />
         </button>
+
         <button
-          className="text-Red hover:text-Red"
+          className="text-red-400 hover:text-red-300 transition"
           onClick={() =>
             setUsers(users.filter((u) => u.email !== user.email))
           }
+          aria-label="Delete User"
         >
           <Trash2 size={18} />
         </button>
@@ -338,6 +346,7 @@ export default function UserManagement() {
     </div>
   ))}
 </div>
+
 
 
       {/* Modals */}
