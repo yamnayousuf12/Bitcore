@@ -227,13 +227,13 @@ export default function UserManagement() {
       {/* Search + Add */}
       <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-start items-start -ml-7 md:ml-0 md:justify-start md:items-center  ">
         <div className="relative w-full md:w-96 lg:w-96 xl:w-96 2xl:w-96">
-    <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
+    <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray text-sm" />
         <input
           type="text"
           placeholder="Search User..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none w-[400px] sm:w-[800px]  
+          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none w-[320px] sm:w-[800px]  
     md:w-96  
     lg:w-96 
     xl:w-96 
