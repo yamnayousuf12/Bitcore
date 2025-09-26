@@ -216,7 +216,7 @@ export default function UserManagement() {
     lg:w-[105%] 
     xl:w-[104.2%] 
     2xl:w-[100.3%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8" >
-      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-24 text-base lg:hidden text-[#BAD4EF] flex-shrink-0 ">
+      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-24 sm:-mt-[15%] md:-mt-[8%] xl:-mt-[10%] 2xl:-mt-[11%] lg:-mt-[12%] text-base lg:hidden text-[#BAD4EF] flex-shrink-0 ">
   {/* Back Arrow Icon */}
   <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />
 
