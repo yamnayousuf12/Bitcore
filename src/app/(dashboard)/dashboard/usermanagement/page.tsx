@@ -285,7 +285,8 @@ export default function UserManagement() {
         </table>
       </div>
 {/* Mobile Layout */}
-<div className="block md:hidden space-y-4">
+
+<div className="block md:hidden space-y-4 w-[140%] left-32 -translate-x-1/2 relative">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
@@ -347,6 +348,58 @@ export default function UserManagement() {
   ))}
 </div>
 
+{/* <div className="block md:hidden space-y-4  ">
+  {filteredUsers.map((user, i) => (
+    <div
+      key={i}
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center"
+    >
+     
+      <div className="flex justify-between items-center">
+        <h3 className="text-base font-semibold">{user.firstName} {user.lastName}</h3>
+        <span className="text-Blue text-sm ">{user.department}</span>
+       
+      </div>
+
+
+      
+ <span className="text-xs text-gray">{user.email}</span>
+      
+      <div className="flex items-center gap-2 mt-3">
+        <span
+          className={`text-sm font-medium ${
+            user.status === "Active" ? "text-green" : "text-orange"
+          }`}
+        >
+          {user.status}
+        </span>
+      </div>
+
+      <div className="flex justify-end gap-4 mt-3">
+        <button
+          className="text-gray hover:text-white"
+          onClick={() => handleViewUser(user)}
+        >
+          <Eye size={18} />
+        </button>
+        <button
+          className="text-Blue hover:text-Blue"
+          onClick={() => handleOpenEdit(user)}
+        >
+          <Edit2 size={18} />
+        </button>
+        <button
+          className="text-Red hover:text-Red"
+          onClick={() =>
+            setUsers(users.filter((u) => u.email !== user.email))
+          }
+        >
+          <Trash2 size={18} />
+        </button>
+      </div>
+    </div>
+  ))}
+</div> */}
 
 
       {/* Modals */}
