@@ -120,6 +120,7 @@ import AddUserModal, { AddUserForm } from "@/components/usermanagement/AddUserMo
 import EditUserModal from "@/components/usermanagement/EditUserModal";
 import ViewUserModal from "@/components/usermanagement/ViewUserModal";
 import { Eye, Edit2, Trash2, ArrowLeft  } from "lucide-react";
+import { FaSearch } from "react-icons/fa";
 
 // ✅ Always include permissions (at least empty array) to avoid runtime errors
 const SEED_USERS: AddUserForm[] = [
@@ -225,6 +226,8 @@ export default function UserManagement() {
 </div>
       {/* Search + Add */}
       <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-start items-start -ml-7 md:ml-0 md:justify-start md:items-center  ">
+        <div className="relative w-full md:w-96 lg:w-96 xl:w-96 2xl:w-96">
+    <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
         <input
           type="text"
           placeholder="Search User..."
@@ -234,8 +237,9 @@ export default function UserManagement() {
     md:w-96  
     lg:w-96 
     xl:w-96 
-    2xl:w-96 "
+    2xl:w-96 placeholder-gray pl-9 pr-4"
         />
+         </div>
         <button
           className="bg-Blue md:px-4 px-3 py-2 rounded-xl hover:bg-Blue flex-shrink-0"
           onClick={() => setOpenAdd(true)}
