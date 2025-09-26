@@ -293,8 +293,8 @@ export default function UserManagement() {
 <div className="block md:hidden space-y-4 w-[120%] sm:w-[108%]  
     md:w-[105%]  
     lg:w-[105%] 
-    xl:w-[103.%] 
-    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-5 max-w-xl mx-auto  ">
+    xl:w-[103%] 
+    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-3 max-w-xl mx-auto  ">
   {filteredUsers.map((user, i) => (
     <div
       key={i}

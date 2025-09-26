@@ -310,7 +310,7 @@ export default function AddUserModal({
   };
 
   const field =
-    "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none";
+    "w-full h-11 rounded-2xl bg-white/5 border border-white px-4 text-white placeholder:text-white/50 focus:outline-none ";
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
@@ -327,7 +327,7 @@ export default function AddUserModal({
 </div>
         {/* card */}
         <div
-          className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full  md:mt-0 mx-auto max-w-4xl md:w-full  "
+          className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full md:mt-0 mx-auto max-w-4xl md:w-full  "
          
         >
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
@@ -428,7 +428,7 @@ export default function AddUserModal({
               <div>
   <label
     htmlFor="department-select"
-    className="block text-sm text-white mb-2"
+    className="block text-sm text-white mb-3 mt-4"
   >
     Department:
   </label>
