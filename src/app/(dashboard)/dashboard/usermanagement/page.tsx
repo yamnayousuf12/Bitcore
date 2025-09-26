@@ -286,11 +286,15 @@ export default function UserManagement() {
       </div>
 {/* Mobile Layout */}
 
-<div className="block md:hidden space-y-4">
+<div className="block md:hidden space-y-4 w-[109.8%] sm:w-[108%]  
+    md:w-[105%]  
+    lg:w-[105%] 
+    xl:w-[103.5%] 
+    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8 ">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3"
+      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3  "
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
