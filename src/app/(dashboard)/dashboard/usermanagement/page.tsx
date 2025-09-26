@@ -224,7 +224,7 @@ export default function UserManagement() {
   <span className="font-medium tracking-wide">User Management</span>
 </div>
       {/* Search + Add */}
-      <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0  justify-start items-start ">
+      <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0  justify-start items-start -ml-10 ">
         <input
           type="text"
           placeholder="Search User..."
