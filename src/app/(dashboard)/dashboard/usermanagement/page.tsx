@@ -216,7 +216,7 @@ export default function UserManagement() {
     lg:w-[105%] 
     xl:w-[104.2%] 
     2xl:w-[100.3%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8" >
-      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-20 text-base lg:hidden text-[#BAD4EF] flex-shrink-0 ">
+      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-24 text-base lg:hidden text-[#BAD4EF] flex-shrink-0 ">
   {/* Back Arrow Icon */}
   <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />
 
@@ -224,7 +224,7 @@ export default function UserManagement() {
   <span className="font-medium tracking-wide">User Management</span>
 </div>
       {/* Search + Add */}
-      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0  justify-start items-start -ml-7 md:ml-0 md:justify-start md:items-center  ">
+      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-start items-start -ml-7 md:ml-0 md:justify-start md:items-center  ">
         <input
           type="text"
           placeholder="Search User..."
