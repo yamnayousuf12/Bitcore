@@ -224,17 +224,17 @@ export default function UserManagement() {
   <span className="font-medium tracking-wide">User Management</span>
 </div>
       {/* Search + Add */}
-      <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0 items-end justify-end md:justify-start md:items-start ">
+      <div className="flex gap-3 mb-4 md:h-auto h-12 -mt-8 md:mt-0 items-stretch justify-between md:justify-start md:items-start ">
         <input
           type="text"
           placeholder="Search User..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none w-[300px] sm:w-72  
-    md:w-72  
-    lg:w-72 
-    xl:w-72 
-    2xl:w-72 "
+          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none w-[600px] sm:w-[800px]  
+    md:w-96  
+    lg:w-96 
+    xl:w-96 
+    2xl:w-96 "
         />
         <button
           className="bg-Blue md:px-4 px-3 py-2 rounded-xl hover:bg-Blue flex-shrink-0"
