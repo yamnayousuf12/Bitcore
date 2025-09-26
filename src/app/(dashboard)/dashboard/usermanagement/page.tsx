@@ -290,15 +290,15 @@ export default function UserManagement() {
       </div>
 {/* Mobile Layout */}
 
-<div className="block md:hidden space-y-4 w-[130%] sm:w-[108%]  
+<div className="block md:hidden space-y-4 w-[120%] sm:w-[108%]  
     md:w-[105%]  
     lg:w-[105%] 
     xl:w-[103.%] 
-    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-5 max-w-7xl mx-auto  ">
+    2xl:w-[102%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-5 max-w-xl mx-auto  ">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3  "
+      className="rounded-xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-3  "
     >
       {/* Top Row: Name + Department */}
       <div className="flex justify-between items-center">
@@ -325,7 +325,7 @@ export default function UserManagement() {
       </div>
 
       {/* Actions */}
-      <div className="flex justify-end gap-3 border-t border-white/10 pt-3">
+      <div className="flex justify-end gap-3 border-t border-white/30 pt-3">
         <button
           className="text-gray hover:text-white transition"
           onClick={() => handleViewUser(user)}
