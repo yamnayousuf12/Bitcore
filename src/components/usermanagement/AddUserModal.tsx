@@ -315,7 +315,7 @@ export default function AddUserModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
   {/* frame */}
-  <div className="w-full h-full md:h-auto md:rounded-2xl md:max-w-4xl bg-[#0b1220] md:bg-gradient-to-b md:from-white/[0.08] md:to-white/[0.03] md:border border-white/30 overflow-y-auto mt-32 md:mt-0">
+  <div className="w-full h-full md:h-auto md:rounded-2xl md:max-w-4xl bg-[#0b1220] md:bg-gradient-to-b md:from-white/[0.08] md:to-white/[0.03] md:border border-white/30 overflow-y-auto mt-28 md:mt-0">
     {/* mobile top bar */}
     <div className="block md:hidden">
       <TopBar
