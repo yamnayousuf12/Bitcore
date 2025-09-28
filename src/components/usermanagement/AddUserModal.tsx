@@ -332,7 +332,7 @@ export default function AddUserModal({
         >
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
             {/* header */}
-            <div className="flex items-center justify-between mt-20 md:mt-0">
+            <div className="flex items-center justify-between mt-24 md:mt-0">
               <h2 className="md:text-2xl font-medium text-white ">Add User</h2>
               <button
                 type="button"
