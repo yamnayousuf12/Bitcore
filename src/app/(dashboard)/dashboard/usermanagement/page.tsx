@@ -119,7 +119,7 @@ import { useMemo, useState } from "react";
 import AddUserModal, { AddUserForm } from "@/components/usermanagement/AddUserModal";
 import EditUserModal from "@/components/usermanagement/EditUserModal";
 import ViewUserModal from "@/components/usermanagement/ViewUserModal";
-import { Eye, Edit2, Trash2, ArrowLeft  } from "lucide-react";
+import { Eye, Trash2, ArrowLeft, Edit  } from "lucide-react";
 import { FaSearch } from "react-icons/fa";
 
 // ✅ Always include permissions (at least empty array) to avoid runtime errors
@@ -212,12 +212,12 @@ export default function UserManagement() {
   };
 
   return (
-    <div className="p-10 md:h-full md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5 max-w7xl sm:w-[107.8%]  
+    <div className="p-10 md:h-screen md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] -mt-5 max-w7xl sm:w-[107.8%]  
     md:w-[105.5%]  
-    lg:w-[105%] 
+    lg:w-[107%] 
     xl:w-[104.2%] 
-    2xl:w-[100.3%]  2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8" >
-      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-24 sm:-mt-[15%] md:-mt-[8%] xl:-mt-[10%] 2xl:-mt-[11%] lg:-mt-[12%] text-base lg:hidden text-[#BAD4EF] flex-shrink-0 ">
+    2xl:w-[100.3%]  2xl:ml-2 lg:-ml-9  xl:-ml-4 md:-ml-9 sm:-ml-0 -ml-8" >
+      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-24 sm:-mt-[15%] md:-mt-[12%] xl:-mt-[10%] 2xl:-mt-[11%] lg:-mt-[12%] text-base lg:hidden text-[#BAD4EF] flex-shrink-0 ">
   {/* Back Arrow Icon */}
   <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />
 
@@ -225,15 +225,15 @@ export default function UserManagement() {
   <span className="font-medium tracking-wide">User Management</span>
 </div>
       {/* Search + Add */}
-      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-start items-start -ml-7 md:ml-0 md:justify-start md:items-center  ">
-        <div className="relative w-full md:w-96 lg:w-96 xl:w-96 2xl:w-96">
+      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-center items-center ml-8 md:ml-0 md:justify-start md:items-center  ">
+        <div className="relative w-auto md:w-96 lg:w-96 xl:w-96 2xl:w-96">
     <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray text-sm" />
         <input
           type="text"
           placeholder="Search User..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-gray3 border border-gray/40 focus:outline-none w-[250px] sm:w-[500px]  
+          className="px-4 py-2 rounded-xl bg-[rgba(255,255,255,0.3)] border border-gray/40 focus:outline-none w-[224px] sm:w-[500px]  
     md:w-[380px]  
     lg:w-96 
     xl:w-96 
@@ -241,7 +241,7 @@ export default function UserManagement() {
         />
          </div>
         <button
-          className="bg-Blue md:px-4 px-3 py-2 rounded-xl hover:bg-Blue flex-shrink-0"
+          className="bg-[rgba(0,112,255,1)] md:px-4 px-3 py-2 rounded-xl  flex-shrink-0"
           onClick={() => setOpenAdd(true)}
         >
           Add User
@@ -249,42 +249,46 @@ export default function UserManagement() {
       </div>
 
       {/* Desktop Table */}
-      <div className="hidden md:block overflow-x-auto border border-gray/30 rounded-lg bg-[#3c315a4d]  ">
+      <div className="hidden md:block overflow-x-auto border border-gray/30 rounded-lg bg-[#3c315a4d] mt-10 max-w7xl sm:w-[107.8%]  
+    md:w-[105.5%]  
+    lg:w-[105%] 
+    xl:w-[104.2%] 
+    2xl:w-[100.3%] 2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8">
         <table className="w-full text-left border-collapse">
           <thead>
-            <tr className="bg-[#0f1d3a]">
-              <th className="p-3">Name</th>
-              <th className="p-3">Email</th>
-              <th className="p-3">Role</th>
-              <th className="p-3">Department</th>
-              <th className="p-3">Status</th>
-              <th className="p-3">Actions</th>
+            <tr className="bg-[#0f1d3a] font-medium">
+              <th className="p-3 font-medium md:text-sm">Name</th>
+              <th className="p-3 font-medium md:text-sm">Email</th>
+              <th className="p-3 font-medium md:text-sm">Role</th>
+              <th className="p-3 font-medium md:text-sm">Department</th>
+              <th className="p-3 font-medium md:text-sm">Status</th>
+              <th className="p-3 font-medium md:text-sm">Actions</th>
             </tr>
           </thead>
           <tbody>
             {filteredUsers.map((user, i) => (
               <tr key={i} className="border-b border-gray/30 hover:bg-gray/10">
-                <td className="p-3">{user.firstName} {user.lastName}</td>
-                <td className="p-3">{user.email}</td>
-                <td className="p-3">{user.role}</td>
-                <td className="p-3">{user.department}</td>
-                <td className="p-3">
+                <td className="p-3 font-medium md:text-sm ">{user.firstName} {user.lastName}</td>
+                <td className="p-3 font-medium md:text-sm">{user.email}</td>
+                <td className="p-3 font-medium md:text-sm">{user.role}</td>
+                <td className="p-3 font-medium md:text-sm">{user.department}</td>
+                <td className="p-3 font-medium md:text-sm">
                   <span className={user.status === "Active" ? "text-green" : "text-orange"}>
                     {user.status}
                   </span>
                 </td>
                 <td className="p-3 flex gap-3">
                   <button className="text-gray hover:text-white" onClick={() => handleViewUser(user)}>
-                    <Eye size={18} />
+                    <Eye size={14} />
                   </button>
                   <button className="text-Blue hover:text-Blue" onClick={() => handleOpenEdit(user)}>
-                    <Edit2 size={18} />
+                    <Edit size={14} />
                   </button>
                   <button
                     className="text-Red hover:text-Red"
                     onClick={() => setUsers(users.filter((u) => u !== user))}
                   >
-                    <Trash2 size={18} />
+                    <Trash2 size={14} />
                   </button>
                 </td>
               </tr>
@@ -294,19 +298,19 @@ export default function UserManagement() {
       </div>
 {/* Mobile Layout */}
 
-<div className="block md:hidden space-y-4 w-[120%] sm:w-[108%]  
+<div className="block md:hidden space-y-4 w-[122%] sm:w-[109.6%]   
     md:w-[105%]  
     lg:w-[105%] 
     xl:w-[103%] 
-    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-3 max-w-xl mx-auto  ">
+    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-3 -ml-3 max-w-xl mx-auto">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
-      className="rounded-xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-0  "
+      className="rounded-xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 flex flex-col space-y-0"
     >
       {/* Top Row: Name + Department */}
-      <div className="flex justify-between items-center ">
-        <h3 className="text-base font-medium  text-white truncate  ">
+      <div className="flex justify-between items-center">
+        <h3 className="text-base font-medium text-white truncate">
           {user.firstName} {user.lastName}
         </h3>
         <span className="text-xs text-Blue font-medium">
@@ -317,10 +321,20 @@ export default function UserManagement() {
       {/* Email */}
       <p className="text-xs text-gray break-all">{user.email}</p>
 
-      {/* Status */}
-      <div className="flex items-center gap-2  pt-3 ">
+      {/* ✅ Status with Vertical Line */}
+      <div className="flex items-center gap-2 pt-3">
+        {/* Vertical line */}
+        <div
+          className={`w-0.5 h-5 rounded-full ${
+            user.status === "Active"
+              ? "bg-white"
+              : "bg-white "
+          }`}
+        ></div>
+
+        {/* Status text */}
         <span
-          className={`text-sm font-medium  ${
+          className={`text-sm font-medium ${
             user.status === "Active" ? "text-green" : "text-orange"
           }`}
         >
@@ -329,7 +343,7 @@ export default function UserManagement() {
       </div>
 
       {/* Actions */}
-      <div className="flex justify-end gap-3   pt-2">
+      <div className="flex justify-end gap-3 pt-2">
         <button
           className="text-gray hover:text-white transition"
           onClick={() => handleViewUser(user)}
@@ -343,7 +357,7 @@ export default function UserManagement() {
           onClick={() => handleOpenEdit(user)}
           aria-label="Edit User"
         >
-          <Edit2 size={18} />
+          <Edit size={18} />
         </button>
 
         <button
@@ -359,6 +373,7 @@ export default function UserManagement() {
     </div>
   ))}
 </div>
+
 
 {/* <div className="block md:hidden space-y-4  ">
   {filteredUsers.map((user, i) => (

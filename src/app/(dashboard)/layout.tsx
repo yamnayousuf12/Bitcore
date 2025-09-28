@@ -50,7 +50,7 @@ function DashboardShell({ children }: PropsWithChildren) {
             {/* Mobile top bar + sticky top header */}
       <TopBar heading={heading} onOpenMenu={() => setOpen(true)} />
             {/* Content card area */}
-            <main className="min-h-[calc(100vh-8rem)]">
+            <main className="md:min-h-[calc(100vh-8rem)] min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-6rem)] px-2 sm:px-0 pt-6">
               <ContentCard pathname={pathname}>{children ?? <EmptyDemo />}</ContentCard>
             </main>
           </div>

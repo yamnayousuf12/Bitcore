@@ -87,13 +87,13 @@ export default function Sidebar({ open, onClose, logoSrc }: SidebarProps) {
   return (
     <aside
       className={[
-        "fixed z-50 lg:z-0 lg:static -ml-3",
+        " fixed z-50 lg:z-0 lg:static -ml-3",
         "h-[100vh] lg:h-[100vh]",
         " md:w-72 w-84 shrink-0",
         "bg-[#0f1b2f] lg:border lg:border-white/30 lg:rounded-r-xs lg:rounded-l-xl",
         "p-4 lg:mr-0 mt-0 lg:mt-6 ",
         "transition-transform duration-300",
-        open ? "translate-x-0" : "-translate-x-full lg:translate-x-0",
+        open ? "translate-x-0" : "-translate-x-full lg:translate-x-0 ",
       ].join(" ")}
     >
       {/* Logo & Close */}
