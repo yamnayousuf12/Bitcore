@@ -330,10 +330,10 @@ export default function AddUserModal({
           className="md:relative md:rounded-2xl md:border border-white/30 bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full md:mt-0 mx-auto max-w-4xl md:w-full  "
          
         >
-          <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-2 ">
+          <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-4 ">
             {/* header */}
-            <div className="flex items-center justify-between mt-[20%] md:mt-0">
-              <h2 className="md:text-2xl font-medium text-white ">Add User</h2>
+            <div className="flex items-center justify-between mt-[25%] md:mt-0">
+              <h2 className="md:text-2xl font-medium text-white  ">Add User</h2>
               <button
                 type="button"
                 onClick={onClose}
