@@ -25,7 +25,7 @@ export default function ViewUserModal({ isOpen, onClose, user }: ViewUserModalPr
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
       <div
-        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen mt-8  md:mt-0 md:h-full"
+        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen mt-28  md:mt-0 md:h-full"
         
       >
         <div className="block md:hidden w-auto justify-center items-center ml-2">
