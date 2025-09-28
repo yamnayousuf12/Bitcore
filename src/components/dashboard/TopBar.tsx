@@ -73,24 +73,45 @@ export default function TopBar({ heading, onOpenMenu }: TopBarProps) {
 
   return (
     <>
-      {/* Mobile Top Bar */}
-      <div className="lg:hidden top-0 z-40 bg-[#101B31] backdrop-blur px-4 py-3 flex items-center justify-between border border-white/30 w-screen -ml-3 -mt-4 " >
-        {/* Hamburger Menu */}
-        <button
-          onClick={onOpenMenu}
-          aria-label="Open menu"
-          className="p-2 rounded-md hover:bg-white/10"
-        >
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-white">
-            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
-        </button>
+     {/* ✅ Mobile Top Bar */}
+<div
+  className="
+    fixed top-0 left-0 z-40 
+    w-full 
+    bg-[#101B31]/95 
+    backdrop-blur-md 
+    border-b border-white/20 
+    px-4 py-3 
+    flex items-center justify-between
+    lg:hidden
+  "
+>
+  {/* Hamburger Menu */}
+  <button
+    onClick={onOpenMenu}
+    aria-label="Open menu"
+    className="p-2 rounded-md hover:bg-white/10 transition"
+  >
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      className="text-white"
+    >
+      <path
+        d="M4 6h16M4 12h16M4 18h16"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+    </svg>
+  </button>
 
-        
-        <UserDropdown username="Raheel" role="Super Admin" />
-        
-      </div>
-      
+  {/* User Dropdown */}
+  <UserDropdown username="Raheel" role="Super Admin" />
+</div>
+
 
       {/* Desktop Top Bar */}
       <header className="hidden lg:block top-6 z-30 px-3 sm:px-4 lg:px-6 pb-3 bg-gradient-to-b bg-[#101B31] to-transparent  rounded-tr-xl border border-white/20 h-20 mx-auto max-w-full w-[109.8%] sm:w-[108%]  
