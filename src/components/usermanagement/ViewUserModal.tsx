@@ -37,7 +37,7 @@ export default function ViewUserModal({ isOpen, onClose, user }: ViewUserModalPr
           />
         </div>
         <div
-          className="md:relative md:rounded-2xl md:border-2 md:border-dotted border-white bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full  md:mt-0 mx-auto max-w-4xl md:w-full"
+          className="md:relative md:rounded-2xl md:border border-white/30 bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full  md:mt-0 mx-auto max-w-4xl md:w-full"
         >
           <div className="p-6 md:p-8 md:space-y-6 space-y-4">
             {/* header */}
