@@ -344,7 +344,7 @@ export default function AddUserModal({
               </button>
             </div>
 
-            <hr className="border-white/10" />
+           <hr className="hidden md:block border-white/10" />
 
             {/* top grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">

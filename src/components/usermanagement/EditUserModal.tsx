@@ -46,7 +46,7 @@ export default function EditUserModal({
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8 ">
       <div
-        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen md:mt-0 mt-28 md:h-full">
+        className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen md:h-full">
           <div className="block md:hidden w-auto justify-center items-center ml-2">
             <TopBar
               heading=""
@@ -59,8 +59,8 @@ export default function EditUserModal({
           className="md:relative md:rounded-2xl md:border border-white/30 bg-gradient-to-b from-white/[0.08] to-white/[0.03] w-screen h-screen md:h-full  md:mt-0 mx-auto max-w-4xl md:w-full"
         >
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-4 ">
-            <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-medium text-white">Edit User</h2>
+            <div className="flex items-center justify-between mt-[25%] md:mt-0">
+              <h2 className="md:text-2xl font-medium text-white ">Edit User</h2>
               <button
                 type="button"
                 onClick={onClose}
@@ -70,7 +70,7 @@ export default function EditUserModal({
               </button>
             </div>
 
-            <hr className="border-white/10" />
+           <hr className="hidden md:block border-white/10" />
 
             {/* grid fields same as AddUserModal */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
