@@ -344,13 +344,13 @@ export default function UserManagement() {
       
 
       {/* Actions */}
-      <div className="flex ml-52 justify-end gap-3 pt-2">
+      <div className="flex ml-24 md:ml-0 justify-end gap-3 pt-2">
         <button
           className="text-gray hover:text-white transition"
           onClick={() => handleViewUser(user)}
           aria-label="View User"
         >
-          <Eye size={18} />
+          <Eye size={15} />
         </button>
 
         <button
@@ -358,7 +358,7 @@ export default function UserManagement() {
           onClick={() => handleOpenEdit(user)}
           aria-label="Edit User"
         >
-          <Edit size={18} />
+          <Edit size={15} />
         </button>
 
         <button
@@ -368,7 +368,7 @@ export default function UserManagement() {
           }
           aria-label="Delete User"
         >
-          <Trash2 size={18} />
+          <Trash2 size={15} />
         </button>
       </div>
     </div>
