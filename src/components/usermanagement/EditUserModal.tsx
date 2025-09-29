@@ -178,7 +178,7 @@ export default function EditUserModal({
               </button>
               <button
                 type="submit"
-                className="h-11 px-5 rounded-2xl bg-white text-Blue font-medium"
+                className="md:h-11 md:px-5 h-9 px-3 rounded-2xl bg-white text-Blue font-medium"
               >
                 Update User
               </button>
