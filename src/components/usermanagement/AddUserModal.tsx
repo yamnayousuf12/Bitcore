@@ -491,7 +491,7 @@ export default function AddUserModal({
             </div>
 
             {/* actions */}
-            <div className="flex items-center justify-end gap-3 pt-2">
+            <div className="flex items-center justify-end gap-3 pt-20 md-pt-2">
               <button
                 type="button"
                 onClick={onClose}
@@ -501,7 +501,7 @@ export default function AddUserModal({
               </button>
               <button
                 type="submit"
-                className="h-11 px-5 rounded-2xl bg-white  text-Blue font-medium"
+                className="md:h-11 md:px-5 h-9 px-3 rounded-2xl bg-white  text-Blue font-medium"
               >
                 Save User
               </button>
