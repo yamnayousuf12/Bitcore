@@ -89,7 +89,7 @@ export default function ViewUserModal({ isOpen, onClose, user }: ViewUserModalPr
 
 
             {/* actions */}
-            <div className="flex justify-end pt-2">
+            <div className="flex justify-end pt-12 md:pt-2">
               <button
                 onClick={onClose}
                 className="h-11 px-5 rounded-2xl bg-white text-Blue font-medium"

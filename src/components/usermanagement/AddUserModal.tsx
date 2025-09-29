@@ -491,7 +491,7 @@ export default function AddUserModal({
             </div>
 
             {/* actions */}
-            <div className="flex items-center justify-end gap-3 pt-20 md-pt-2">
+            <div className="flex items-center justify-end gap-3 pt-16 md:pt-2">
               <button
                 type="button"
                 onClick={onClose}

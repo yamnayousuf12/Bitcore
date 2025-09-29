@@ -172,7 +172,7 @@ export default function EditUserModal({
             </div>
 
             {/* actions */}
-            <div className="flex justify-end gap-3 pt-2">
+            <div className="flex justify-end gap-3 md:pt-2 pt-12">
               <button type="button" onClick={onClose} className="text-Blue">
                 Cancel
               </button>
