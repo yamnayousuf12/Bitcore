@@ -3,7 +3,7 @@ import { ArrowLeft } from "lucide-react";
 
 export default function TasksPage() {
   return (
-    <div className="text-white/30 md:border md:rounded-lg md:p-6 md:bg-gradient-to-b  from-white/[0.08] to-white/[0.03]  shadow-lg md:w-[920px] mx-auto md:mt-9 relative md:-ml-10 -mt-10 ">
+    <div className="px-4 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-10 md:pb-16 2xl:pb-20 max-w-7xl mx-auto ">
       <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-9 text-base lg:hidden text-[#BAD4EF] flex-shrink-0">
   {/* Back Arrow Icon */}
   <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />

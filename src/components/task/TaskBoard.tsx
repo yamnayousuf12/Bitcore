@@ -13,10 +13,10 @@ export default function TaskBoard() {
   const done = byStatus("done");
 
   return (
-    <div className="space-y-4 sm:space-y-6 -mt-28" >
+    <div className="space-y-4 sm:space-y-6 md-mt-28 lg:-mt-36" >
       <BoardHeader query={query} setQuery={setQuery} />
 
-      <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-0">
+      <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-0 border border-white/10 pt-4 sm:pt-6 md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] md:rounded-2xl md:p-4 lg:p-6 2xl:p-8 max-w-7xl mx-auto overflow-x-auto  w-12 sm:w-12 lg:w-[113%] xl:w-[110%] 2xl:w-[109%] items-start justify-start -ml-10" >
         <Column title="Pending" count={todo.length} accent="text-yellow">
           {todo.map((t) => <TaskCard key={t.id} task={t} />)}
         </Column>

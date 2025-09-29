@@ -118,7 +118,7 @@ export default function TaskCard({ task }: { task: Task }) {
 
   return (
     <>
-      <article className="relative rounded-xl border border-white/10 bg-[#0e1b2c]/80 p-4 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[330px] md:w-[215px] md:-ml-3 -ml-6">
+      <article className="relative rounded-xl border border-white bg-[#0e1b2c]/80 p-4 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[330px] md:w-[215px] ">
         <header className="flex items-start justify-between">
   <div className="flex items-start gap-1">
     <div className="h-8 w-8 rounded-full bg-white/10 flex-shrink-0 -ml-3" />
@@ -165,7 +165,7 @@ export default function TaskCard({ task }: { task: Task }) {
 
         {/* Description */}
         {task.description && (
-          <p className="mt-3 text-xs text-white/80 leading-relaxed whitespace-normal">
+          <p className="mt-3 text-xs text-white/80 leading-relaxed whitespace-normal b">
             {task.description}
           </p>
         )}
