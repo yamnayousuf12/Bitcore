@@ -226,7 +226,7 @@ export default function UserManagement() {
   <span className="font-medium tracking-wide">User Management</span>
 </div>
       {/* Search + Add */}
-      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-center items-center ml-8 md:-ml-3 md:justify-start md:items-center   ">
+      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-center items-center ml-8 md:-ml-4 md:justify-start md:items-center   ">
         <div className="relative w-auto md:w-96 lg:w-96 xl:w-96 2xl:w-96">
     <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray text-sm" />
         <input
@@ -234,7 +234,7 @@ export default function UserManagement() {
           placeholder="Search User..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-[rgba(255,255,255,0.3)] border border-gray/40 focus:outline-none w-[224px] sm:w-[500px]  
+          className="px-4 py-2 rounded-xl bg-[rgba(255,255,255,0.3)] border border-gray/40 focus:outline-none w-[209px] sm:w-[500px]  
     md:w-[380px]  
     lg:w-96 
     xl:w-96 
