@@ -316,7 +316,7 @@ export default function AddUserModal({
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
      
       {/* frame */}
-      <div className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen  md:h-auto">
+      <div className="p-1 md:rounded-2xl w-screen md:w-full mx-auto max-w-4xl bg-[#0b1220] h-screen  md:h-auto lg:h-full xl:h-auto 2xl:h-auto">
          <div className="block md:hidden w-auto justify-center items-center ml-2">
   <TopBar
     heading=""
@@ -333,7 +333,7 @@ export default function AddUserModal({
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-4 ">
             {/* header */}
             <div className="flex items-center justify-between mt-[25%] md:mt-0">
-              <h2 className="md:text-2xl font-medium text-white  ">Add User</h2>
+              <h2 className="md:text-2xl font-medium text-white">Add User</h2>
               <button
                 type="button"
                 onClick={onClose}

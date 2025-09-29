@@ -19,7 +19,7 @@ function DashboardShell({ children }: PropsWithChildren) {
 
   return (
     <div
-      className="min-h-screen text-white"
+      className="min-h-screen text-white mt-12 lg:mt-0"
       style={{
         background:
           "linear-gradient(112.58deg, #1a304efa 0.58%, #080D15 51.36%, #071028 99.29%)",
