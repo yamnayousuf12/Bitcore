@@ -24,15 +24,13 @@ export default function BoardHeader({
 
   return (
     <>
-     
-      
-      <div className="flex items-center gap-3 md:gap-20 p-3 rounded-2xl md:bg-gradient-to-b from-white/5 to-white/0 md:border md:border-white/20" >
+      <div className="flex items-center gap-3 md:gap-20 p-3 rounded-2xl md:bg-gradient-to-b from-white/5 to-white/0 md:border md:border-white/20 md:w-[921px] md:-ml-7" >
   <SearchBar value={query} onChange={setQuery} />
 
         <button
           onClick={() => setOpen(true)}
           className=" h-11 px-5 rounded-2xl bg-Blue hover:bg-Blue/55
-                     text-white font-medium bordnd er border-white/10 itemes-e flex-shrink-0 md:-ml-12"
+                     text-white font-medium bordnd border-white/10 itemes-e flex-shrink-0 md:-ml-12"
         >
           Add Task
         </button>

@@ -226,7 +226,7 @@ export default function UserManagement() {
   <span className="font-medium tracking-wide">User Management</span>
 </div>
       {/* Search + Add */}
-      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-center items-center ml-8 md:ml-0 md:justify-start md:items-center  ">
+      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-center items-center ml-8 md:-ml-3 md:justify-start md:items-center   ">
         <div className="relative w-auto md:w-96 lg:w-96 xl:w-96 2xl:w-96">
     <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray text-sm" />
         <input
