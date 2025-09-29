@@ -60,7 +60,7 @@ export default function EditUserModal({
         >
           <form onSubmit={submit} className="p-6 md:p-8 md:space-y-6 space-y-4 ">
             <div className="flex items-center justify-between mt-[25%] md:mt-0">
-              <h2 className="md:text-2xl font-medium text-white ">Edit User</h2>
+              <h2 className="md:text-2xl font-medium md:text-white text-[#BAD4EF] ">Edit User</h2>
               <button
                 type="button"
                 onClick={onClose}
@@ -108,7 +108,7 @@ export default function EditUserModal({
 
     {/* Dropdown icon */}
     <ChevronDown
-      className="absolute right-3 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+      className="absolute right-8 top-1/2 -translate-y-1/2 text-white pointer-events-none"
       size={16}
     />
   </div>
@@ -131,7 +131,7 @@ export default function EditUserModal({
 
     {/* Dropdown Icon */}
     <ChevronDown
-      className="absolute right-3 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+      className="absolute right-8 top-1/2 -translate-y-1/2 text-white pointer-events-none"
       size={16}
     />
   </div>
