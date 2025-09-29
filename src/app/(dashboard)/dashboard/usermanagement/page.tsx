@@ -344,7 +344,7 @@ export default function UserManagement() {
       
 
       {/* Actions */}
-      <div className="flex ml-20 md:ml-0 justify-end gap-3 pt-2">
+      <div className="flex ml-28 md:ml-0 justify-end gap-3 pt-2">
         <button
           className="text-gray hover:text-white transition"
           onClick={() => handleViewUser(user)}
