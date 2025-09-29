@@ -420,7 +420,7 @@ export default function AddUserModal({
     </select>
 
     {/* custom dropdown icon */}
-   <span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
+   <span className="pointer-events-none absolute inset-y-0 right-5 flex items-center text-white">
   <ChevronDown size={18} />
 </span>
   </div>
@@ -454,7 +454,7 @@ export default function AddUserModal({
     {/* Custom dropdown icon */}
    
 
-<span className="pointer-events-none absolute inset-y-0 right-3 flex items-center text-white">
+<span className="pointer-events-none absolute inset-y-0 right-5 flex items-center text-white">
   <ChevronDown size={18} />
 </span>
 
