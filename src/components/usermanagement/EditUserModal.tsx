@@ -108,7 +108,7 @@ export default function EditUserModal({
 
     {/* Dropdown icon */}
     <ChevronDown
-      className="absolute right-8 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+      className="absolute right-6 top-1/2 -translate-y-1/2 text-white pointer-events-none"
       size={16}
     />
   </div>
@@ -131,7 +131,7 @@ export default function EditUserModal({
 
     {/* Dropdown Icon */}
     <ChevronDown
-      className="absolute right-8 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+      className="absolute right-6 top-1/2 -translate-y-1/2 text-white pointer-events-none"
       size={16}
     />
   </div>
