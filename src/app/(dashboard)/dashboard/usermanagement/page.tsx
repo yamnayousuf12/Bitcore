@@ -341,10 +341,10 @@ export default function UserManagement() {
         >
           {user.status}
         </span>
-      </div>
+      
 
       {/* Actions */}
-      <div className="flex justify-end gap-3 pt-2">
+      <div className="flex ml-52 justify-end gap-3 pt-2">
         <button
           className="text-gray hover:text-white transition"
           onClick={() => handleViewUser(user)}
@@ -372,8 +372,10 @@ export default function UserManagement() {
         </button>
       </div>
     </div>
+    </div>
   ))}
 </div>
+
 
 
 {/* <div className="block md:hidden space-y-4  ">
