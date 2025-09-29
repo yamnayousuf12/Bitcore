@@ -242,7 +242,7 @@ export default function UserManagement() {
         />
          </div>
         <button
-          className="bg-[rgba(0,112,255,1)] md:px-4 px-3 py-2 rounded-xl  flex-shrink-0"
+          className="bg-[rgba(0,112,255,1)] md:px-4 px-2 py-2 rounded-xl  flex-shrink-0"
           onClick={() => setOpenAdd(true)}
         >
           Add User
