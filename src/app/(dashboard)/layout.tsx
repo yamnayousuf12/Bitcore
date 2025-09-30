@@ -19,7 +19,11 @@ function DashboardShell({ children }: PropsWithChildren) {
 
   return (
     <div
-      className="min-h-screen text-white mt-12 lg:mt-0"
+      className="min-h-screen text-white mt-12 lg:mt-0 mx-auto max-w-full w-[109.8%] sm:w-[108%]  
+    md:w-[105%]  
+    lg:w-[100%] 
+    xl:w-[200%] 
+    2xl:w-[102%] overflow-hidden"
       style={{
         background:
           "linear-gradient(112.58deg, #1a304efa 0.58%, #080D15 51.36%, #071028 99.29%)",

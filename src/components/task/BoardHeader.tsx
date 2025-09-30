@@ -24,11 +24,11 @@ export default function BoardHeader({
 
   return (
     <>
-      <div className="flex items-center justify-center gap-3 md:gap-20 p-3 rounded-2xl md:bg-gradient-to-b from-white/5 to-white/0 md:border md:border-white/20  mx-auto max-w-7xl w-[118%] sm:w-[115%]  
-    md:w-[114%]  
-    lg:w-[113%] 
-    xl:w-[110%] 
-    2xl:w-[109%] md:-ml-11 " >
+      <div className="flex items-center justify-center gap-3 md:gap-20 p-3 rounded-2xl md:bg-gradient-to-b from-white/5 to-white/0 md:border md:border-white  mx-auto max-w-7xl w-[118%] sm:w-[115%]  
+    md:w-[109%]  
+    lg:w-[114%] 
+    xl:w-[111%] 
+    2xl:w-[109%] sm:-ml-12 md:-ml-12 lg:-ml-14 xl:-ml-12 2xl:-ml-12" >
   <SearchBar value={query} onChange={setQuery} />
 
         <button
