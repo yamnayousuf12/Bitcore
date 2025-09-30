@@ -10,7 +10,7 @@ export default function SearchBar({
   placeholder?: string;
 }) {
   return (
-    <div className="relative full md:w-[420px] ml-5 md:ml-12 lg:ml-8 xl:-ml-0 2xl:-ml-5" >
+    <div className="relative full md:w-[420px] -ml-20 md:ml-12 lg:ml-8 xl:-ml-0 2xl:-ml-5" >
      
       <input
         value={value}
