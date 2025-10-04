@@ -106,7 +106,7 @@ export default function UserManagement() {
      <div
         className="
           absolute 
-          top-12 left-3 
+          top-12 left-6 
           flex items-center gap-2 
           text-base text-[#BAD4EF] 
           lg:hidden
