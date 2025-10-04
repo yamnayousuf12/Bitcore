@@ -115,12 +115,9 @@ export default function UserManagement() {
           {/* Title */}
           <span className="font-medium tracking-wide text-[#BAD4EF]">User Management</span>
         </div>
-        
-       
-      
-      </div>
+        </div>
    {/* Search + Add */}
-<div className="flex mb-6 mt-20 lg:mt-0 px-4 lg:px-0 -ml-0 lg:-ml-4 gap-2">
+<div className="flex mb-6 mt-20 lg:mt-0 px-4 lg:px-0 -ml-4 lg:-ml-4 gap-2">
   {/* Search Bar - Responsive sizing for all screens */}
   <div className="relative flex-1  bg-purple   /* Mobile (320px-639px) */
          min-w-[200px] max-w-[75%]
@@ -163,7 +160,7 @@ export default function UserManagement() {
     onClick={() => setOpenAdd(true)}
   >
     <span className="hidden sm:inline">Add User</span>
-    <span className="sm:hidden">Add</span>
+    <span className="sm:hidden">Add User</span>
   </button>
 </div>
       {/* Desktop Table */}
