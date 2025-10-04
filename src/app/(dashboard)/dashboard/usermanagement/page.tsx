@@ -130,7 +130,7 @@ export default function UserManagement() {
         xl:w-full xl:max-w-[55%]
         /* 2XL screens (1536px+) */
         2xl:w-full 2xl:max-w-[50%]">
-    <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
+    <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray text-sm" />
     <input
       type="text"
       placeholder="Search User...."
@@ -143,7 +143,7 @@ export default function UserManagement() {
   
   {/* Add User Button - Responsive sizing */}
   <button
-    className="bg-[rgba(0,112,255,1)] px-2 sm:px-4 py-2 sm:py-3 rounded-xl flex-shrink-0 text-white font-medium hover:bg-Blue transition-colors text-xs sm:text-sm
+    className="bg-[rgba(0,112,255,1)] px-2 sm:px-4 py-2 sm:py-3 rounded-2xl flex-shrink-0 text-white font-medium hover:bg-Blue transition-colors text-xs sm:text-sm
       /* Mobile (320px-639px) */
       min-w-[80px] max-w-[25%]
       /* Small screens (640px-767px) */
