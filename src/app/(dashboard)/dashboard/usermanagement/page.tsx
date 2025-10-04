@@ -234,7 +234,7 @@ export default function UserManagement() {
 
       {/* Email */}
       <p className="text-xs text-gray break-all">{user.email}</p>
-
+<div className="flex justify-between items-center">
       {/* ✅ Status with Vertical Line */}
      <div className="flex items-center gap-2 pt-3">
   {/* Vertical line */}
@@ -252,7 +252,7 @@ export default function UserManagement() {
   >
     {user.status}
   </span>
-
+</div>
 
 
 
@@ -286,7 +286,7 @@ export default function UserManagement() {
         </button>
       </div>
     </div>
-     </div>
+    </div>
    
   ))}
 </div>
