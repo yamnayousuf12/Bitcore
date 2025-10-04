@@ -101,21 +101,20 @@ export default function UserManagement() {
     md:w-[105.5%]  
     lg:w-[107%] 
     xl:w-[104.2%] 
-    2xl:w-[100.3%]  2xl:ml-2 lg:-ml-9  xl:-ml-4 md:-ml-9 sm:-ml-0 -ml-8" >
+    2xl:w-[100.3%]  2xl:ml-2 lg:-ml-9 xl:-ml-4 md:-ml-9 sm:-ml-0 -ml-8" >
       {/* Mobile Header */}
-      <div className="lg:hidden fixed top-20 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between">
-        {/* Left side - Hamburger + Back + Title */}
-        <div className="flex items-center gap-3">
-          
-         
-          
-          {/* Back Arrow */}
-          <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white text-[#BAD4EF]" />
-          
-          {/* Title */}
-          <span className="font-medium tracking-wide text-[#BAD4EF]">User Management</span>
-        </div>
-        </div>
+     <div
+        className="
+          absolute 
+          top-12 left-3 
+          flex items-center gap-2 
+          text-base text-[#BAD4EF] 
+          lg:hidden
+        "
+      >
+        <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white transition-colors duration-200" />
+        <span className="font-medium tracking-wide">Use Management</span>
+      </div>
    {/* Search + Add */}
 <div className="flex mb-6 -mt-14 lg:mt-0 px-4 lg:px-0 -ml-5 lg:-ml-4 gap-2">
   {/* Search Bar - Responsive sizing for all screens */}
