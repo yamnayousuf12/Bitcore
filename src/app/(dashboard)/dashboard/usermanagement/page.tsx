@@ -1,119 +1,3 @@
-// "use client";
-// import { useMemo, useState } from "react";
-// import AddUserModal, { AddUserForm } from "@/components/usermanagement/AddUserModal";
-
-// const SEED_USERS = [
-//   { name: "Mahnoor", email: "mahnoor@gmail.com", role: "HR", status: "Active" },
-//   { name: "Raheel", email: "raheel@gmail.com", role: "Manager", status: "Active" },
-//   { name: "Ayesha", email: "ayesha@gmail.com", role: "Employee", status: "Inactive" },
-//   { name: "Mahveen", email: "mahveen@gmail.com", role: "Employee", status: "Active" },
-//   { name: "Safia Seher", email: "safia@gmail.com", role: "Employee", status: "Inactive", },
-// ];
-
-// export default function UserManagement() {
-//   const [search, setSearch] = useState("");
-//   const [openAdd, setOpenAdd] = useState(false);
-
-//   // If you want to actually add users to the table, switch to useState(SEED_USERS)
-//   const [users] = useState(SEED_USERS);
-
-//   const roles = ["Admin", "Manager", "HR", "Employee"];
-//   const departments = ["Engineering", "HR", "Finance", "Operations", "Design"];
-
-//   const filteredUsers = useMemo(
-//     () =>
-//       users.filter((u) =>
-//         u.name.toLowerCase().includes(search.toLowerCase())
-//       ),
-//     [users, search]
-//   );
-
-//   const handleSaveUser = (data: AddUserForm) => {
-//     // Hook up your API/create logic here.
-//     // Example: console only (since AddUserModal doesn't collect email yet).
-//     console.log("New user payload:", data);
-
-//     // If you extend the modal to include email and want to update the table:
-//     // setUsers((prev) => [
-//     //   ...prev,
-//     //   {
-//     //     name: `${data.firstName} ${data.lastName}`.trim(),
-//     //     email: data.email, // <- add email to AddUserModal first
-//     //     role: data.role || "Employee",
-//     //     status: data.status,
-//     //   },
-//     // ]);
-//   };
-
-//   return (
-//     <div className="p-6 h-screen  border border-white rounded-lg text-white " style={{
-//             background:
-//               "linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(19, 43, 96, 0.15) 100%)",
-//           }}> 
-//       <div className="flex gap-3 mb-4">
-//         <input
-//           type="text"
-//           placeholder="Search User..."
-//           value={search}
-//           onChange={(e) => setSearch(e.target.value)}
-//           className="px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none w-64"
-//         />
-//         <button
-//           className="bg-blue-600 px-4 py-2 rounded-lg hover:bg-blue-700"
-//           onClick={() => setOpenAdd(true)}
-//         >
-//           Add User
-//         </button>
-//       </div>
-
-//       <div className="overflow-x-auto border border-gray-600 rounded-lg">
-//         <table className="w-full text-left border-collapse">
-//           <thead>
-//             <tr className="bg-[#101B31]">
-//               <th className="p-3">Name</th>
-//               <th className="p-3">Email</th>
-//               <th className="p-3">Role</th>
-//               <th className="p-3">Status</th>
-//               <th className="p-3"></th>
-//             </tr>
-//           </thead>
-//           <tbody>
-//             {filteredUsers.map((user, i) => (
-//               <tr key={i} className="border-b border-gray-700 hover:bg-gray-800">
-//                 <td className="p-3">{user.name}</td>
-//                 <td className="p-3">{user.email}</td>
-//                 <td className="p-3">{user.role}</td>
-//                 <td className="p-3">
-//                   <span
-//                     className={
-//                       user.status === "Active" ? "text-green-400" : "text-orange-400"
-//                     }
-//                   >
-//                     {user.status}
-//                   </span>
-//                 </td>
-                
-//               </tr>
-//             ))}
-//           </tbody>
-//         </table>
-//       </div>
-
-//       {/* Add User Modal */}
-//       <AddUserModal
-//         isOpen={openAdd}
-//         onClose={() => setOpenAdd(false)}
-//         onSave={handleSaveUser}
-//         roles={roles}
-//         departments={departments}
-//       />
-//     </div>
-//   );
-// }
-
-
-
-
 "use client";
 import { useMemo, useState } from "react";
 import AddUserModal, { AddUserForm } from "@/components/usermanagement/AddUserModal";
@@ -218,37 +102,45 @@ export default function UserManagement() {
     lg:w-[107%] 
     xl:w-[104.2%] 
     2xl:w-[100.3%]  2xl:ml-2 lg:-ml-9  xl:-ml-4 md:-ml-9 sm:-ml-0 -ml-8" >
-      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 -mt-24 sm:-mt-[15%] md:-mt-[10%] xl:-mt-[10%] 2xl:-mt-[11%] lg:-mt-[12%] text-base lg:hidden text-[#BAD4EF] flex-shrink-0 ">
-  {/* Back Arrow Icon */}
-  <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />
-
-  {/* Text */}
-  <span className="font-medium tracking-wide">User Management</span>
-</div>
-      {/* Search + Add */}
-      <div className="flex gap-1 md:gap-3 mb-4 md:h-auto h-12 -mt-14 md:mt-0  justify-center items-center ml-8 md:-ml-4 md:justify-start md:items-center   ">
-        <div className="relative w-auto md:w-96 lg:w-96 xl:w-96 2xl:w-96">
-    <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray text-sm" />
-        <input
-          type="text"
-          placeholder="Search User..."
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          className="px-4 py-2 rounded-xl bg-[rgba(255,255,255,0.3)] border border-gray/40 focus:outline-none w-[209px] sm:w-[500px]  
-    md:w-[380px]  
-    lg:w-96 
-    xl:w-96 
-    2xl:w-96 placeholder-gray pl-9 pr-4"
-        />
-         </div>
-        <button
-          className="bg-[rgba(0,112,255,1)] md:px-4 px-2 py-2 rounded-xl  flex-shrink-0"
-          onClick={() => setOpenAdd(true)}
-        >
-          Add User
-        </button>
+      {/* Mobile Header */}
+      <div className="lg:hidden fixed top-20 left-0 right-0 z-50 px-4 py-3 flex items-center justify-between">
+        {/* Left side - Hamburger + Back + Title */}
+        <div className="flex items-center gap-3">
+          
+         
+          
+          {/* Back Arrow */}
+          <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white text-[#BAD4EF]" />
+          
+          {/* Title */}
+          <span className="font-medium tracking-wide text-[#BAD4EF]">User Management</span>
+        </div>
+        
+       
+      
       </div>
-
+      {/* Search + Add */}
+<div className="flex gap-2 sm:gap-3 mb-6 mt-20 lg:mt-0 px-4 lg:px-0">
+  {/* Search Bar - Responsive width */}
+  <div className="relative flex-1 max-w-[70%] sm:max-w-[72%] md:max-w-[75%] lg:max-w-[78%] xl:max-w-[80%]">
+    <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
+    <input
+      type="text"
+      placeholder="Search User...."
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 pl-9 sm:pl-10 rounded-xl bg-[rgba(255,255,255,0.3)] border border-gray/40 focus:outline-none placeholder-gray-400 text-white text-sm sm:text-base"
+    />
+  </div>
+  
+  {/* Add User Button - Responsive width */}
+  <button
+    className="bg-[rgba(0,112,255,1)] px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl flex-shrink-0 text-white font-medium hover:bg-blue-600 transition-colors text-sm sm:text-base min-w-[80px] sm:min-w-[100px]"
+    onClick={() => setOpenAdd(true)}
+  >
+    Add User
+  </button>
+</div>
       {/* Desktop Table */}
       <div className="hidden md:block overflow-x-auto border border-gray/30 rounded-lg bg-[#3c315a4d] mt-10 max-w7xl sm:w-[107.8%]  
     md:w-[105.5%]  
@@ -378,58 +270,6 @@ export default function UserManagement() {
 
 
 
-{/* <div className="block md:hidden space-y-4  ">
-  {filteredUsers.map((user, i) => (
-    <div
-      key={i}
-      className="rounded-xl border border-white/10 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 items-center justify-center"
-    >
-     
-      <div className="flex justify-between items-center">
-        <h3 className="text-base font-semibold">{user.firstName} {user.lastName}</h3>
-        <span className="text-Blue text-sm ">{user.department}</span>
-       
-      </div>
-
-
-      
- <span className="text-xs text-gray">{user.email}</span>
-      
-      <div className="flex items-center gap-2 mt-3">
-        <span
-          className={`text-sm font-medium ${
-            user.status === "Active" ? "text-green" : "text-orange"
-          }`}
-        >
-          {user.status}
-        </span>
-      </div>
-
-      <div className="flex justify-end gap-4 mt-3">
-        <button
-          className="text-gray hover:text-white"
-          onClick={() => handleViewUser(user)}
-        >
-          <Eye size={18} />
-        </button>
-        <button
-          className="text-Blue hover:text-Blue"
-          onClick={() => handleOpenEdit(user)}
-        >
-          <Edit2 size={18} />
-        </button>
-        <button
-          className="text-Red hover:text-Red"
-          onClick={() =>
-            setUsers(users.filter((u) => u.email !== user.email))
-          }
-        >
-          <Trash2 size={18} />
-        </button>
-      </div>
-    </div>
-  ))}
-</div> */}
 
 
       {/* Modals */}
@@ -462,3 +302,4 @@ export default function UserManagement() {
     </div>
   );
 }
+

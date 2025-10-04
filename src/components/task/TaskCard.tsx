@@ -82,6 +82,148 @@
 //   );
 // }
 
+// "use client";
+// import { useState } from "react";
+// import { Task } from "../../lib/task";
+// import { MoreVertical, Edit, Trash2 } from "lucide-react";
+// import UpdateTaskModal, { UpdateTaskForm } from "./UpdateTaskModal";
+
+// export default function TaskCard({ task }: { task: Task }) {
+//   const [openEdit, setOpenEdit] = useState(false);
+//   const [showMenu, setShowMenu] = useState(false);
+
+//   const assignees = ["Employee 01", "Employee 02", "Employee 03"];
+//   const statuses = ["todo", "inprogress", "review", "done"];
+
+//   const initialData: UpdateTaskForm = {
+//     title: task.title ?? "",
+//     assignee: assignees[0],
+//     subtasks: "",
+//     status: task.status ?? statuses[0],
+//     description: task.description ?? "",
+//     deadline: "",
+//     attachment: null,
+//   };
+
+//   const handleUpdate = (data: UpdateTaskForm) => {
+//     console.log("Updated task:", data);
+//   };
+
+//   // Badge color based on priority (status or a new field if added)
+//   const priorityColors: Record<string, string> = {
+//     Low: "bg-Blue/20 text-Blue",
+//     Medium: "bg-yellow/20 text-yellow",
+//     High: "bg-Red/20 text-Red",
+//   };
+
+//   return (
+//     <>
+//       <article className="relative rounded-xl border border-white bg-[#0e1b2c]/80 p-4 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[330px] md:w-[215px] ">
+//         <header className="flex items-start justify-between">
+//   <div className="flex items-start gap-1">
+//     <div className="h-8 w-8 rounded-full bg-white/10 flex-shrink-0 -ml-3" />
+//     <div>
+//       <h4 className="font-medium text-white text-sm leading-normal whitespace-nowrap ">
+//         {task.title}
+//       </h4>
+//       <p className="text-[10px] text-Blue mt-1 ">{task.datetime ?? ""}</p>
+//     </div>
+//   </div>
+
+//   <div className="flex flex-col items-end gap-2">
+//     {/* ✅ Priority Badge - now in top right */}
+//     {task.priority && (
+//       <span
+//         className={`px-2 py-0.5 rounded-full text-[9px] font-medium mt-6 -ml-3 ${priorityColors[task.priority]}`}
+//       >
+//         {task.priority}
+//       </span>
+//     )}
+
+//     {/* Dropdown Menu Button */}
+//     <button
+//       onClick={() => setShowMenu(!showMenu)}
+//       className="p-1 text-white/70 hover:text-white transition -mt-12"
+//     >
+//       <MoreVertical size={14} />
+//     </button>
+
+//     {showMenu && (
+//       <div className="absolute right-0 mt-2 w-32 rounded-lg bg-[#13233a] shadow-lg ring-1 ring-white/10 z-10">
+//         {statuses.map((status) => (
+//           <button
+//             key={status}
+//             className="w-full text-left px-3 py-2 text-sm text-white/70 hover:bg-white/10"
+//           >
+//             Move to {status}
+//           </button>
+//         ))}
+//       </div>
+//     )}
+//   </div>
+// </header>
+
+//         {/* Description */}
+//         {task.description && (
+//           <p className="mt-3 text-xs text-white/80 leading-relaxed whitespace-normal b">
+//             {task.description}
+//           </p>
+//         )}
+//         {/* Approve/Reject buttons (for completed tasks) */}
+//  {task.status === "done" && (
+//           <div className="flex items-center justify-start gap-2 mt-4">
+//             <button className="px-3 py-1 text-sm rounded-md bg-green text-white hover:bg-green transition">
+//               Approve
+//             </button>
+//             <button className="px-3 py-1 text-sm rounded-md bg-Red text-white hover:bg-Red transition">
+//               Reject
+//             </button>
+//           </div>
+//         )}
+//         <hr className="my-4 border-white/10" />
+
+//         {/* Footer */}
+//         <footer className="flex items-center justify-between">
+//           <span className="text-sm italic text-white/70">
+//             {task.role ?? "—"}
+//           </span>
+
+//           <div className="flex items-center gap-3">
+//             <button
+//               onClick={() => setOpenEdit(true)}
+//               className="text-Blue hover:text-Blue transition"
+//               title="Edit"
+//             >
+//               <Edit size={18} />
+//             </button>
+//             <button
+//               className="text-Red hover:text-Red transition"
+//               title="Delete"
+//             >
+//               <Trash2 size={18} />
+//             </button>
+//           </div>
+//         </footer>
+
+        
+//       </article>
+
+//       {/* Edit Modal */}
+//       <UpdateTaskModal
+//         isOpen={openEdit}
+//         onClose={() => setOpenEdit(false)}
+//         onUpdate={handleUpdate}
+//         initialData={initialData}
+//         assignees={assignees}
+//         statuses={statuses}
+//       />
+//     </>
+//   );
+// }
+
+
+
+
 "use client";
 import { useState } from "react";
 import { Task } from "../../lib/task";
@@ -109,7 +251,6 @@ export default function TaskCard({ task }: { task: Task }) {
     console.log("Updated task:", data);
   };
 
-  // Badge color based on priority (status or a new field if added)
   const priorityColors: Record<string, string> = {
     Low: "bg-Blue/20 text-Blue",
     Medium: "bg-yellow/20 text-yellow",
@@ -118,73 +259,96 @@ export default function TaskCard({ task }: { task: Task }) {
 
   return (
     <>
-      <article className="relative rounded-xl border border-white bg-[#0e1b2c]/80 p-4 shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 w-[330px] md:w-[215px] ">
-        <header className="flex items-start justify-between">
-  <div className="flex items-start gap-1">
-    <div className="h-8 w-8 rounded-full bg-white/10 flex-shrink-0 -ml-3" />
-    <div>
-      <h4 className="font-medium text-white text-sm leading-normal whitespace-nowrap ">
-        {task.title}
-      </h4>
-      <p className="text-[10px] text-Blue mt-1 ">{task.datetime ?? ""}</p>
-    </div>
-  </div>
+      <article
+        className="
+          relative 
+          rounded-xl 
+          border border-white/10 
+          bg-[#0e1b2c]/80 
+          p-2 
+          shadow-lg 
+          hover:shadow-xl 
+          hover:-translate-y-1 
+          transition-all 
+          duration-300  
 
-  <div className="flex flex-col items-end gap-2">
-    {/* ✅ Priority Badge - now in top right */}
-    {task.priority && (
-      <span
-        className={`px-2 py-0.5 rounded-full text-[9px] font-medium mt-6 -ml-3 ${priorityColors[task.priority]}`}
+          /* ✅ Width for all screens */
+          w-full 
+          max-w-xs sm:max-w-sm md:max-w-[230px] lg:max-w-[250px] items-start justify-start md:-ml-2 
+        "
       >
-        {task.priority}
-      </span>
-    )}
+        {/* ===== Header ===== */}
+        <header className="flex items-start justify-between gap-1">
+          <div className="flex items-start gap-1">
+            <div className="h-7 w-7 rounded-full bg-white/10 flex-shrink-0" />
+            <div className="flex flex-col">
+              <h4 className="font-medium text-white text-xs leading-relaxed whitespace-nowrap flex-shrink-0">
+                {task.title}
+              </h4>
+              <p className="text-[9px] text-Blue mt-1">
+                {task.datetime ?? ""}
+              </p>
+            </div>
+          </div>
 
-    {/* Dropdown Menu Button */}
-    <button
-      onClick={() => setShowMenu(!showMenu)}
-      className="p-1 text-white/70 hover:text-white transition -mt-12"
-    >
-      <MoreVertical size={14} />
-    </button>
+          <div className="flex flex-col items-end gap-1 ">
+           {/* Dropdown Menu Button */}
+            <div className="relative">
+              <button
+                onClick={() => setShowMenu(!showMenu)}
+                className="p-1 text-white/70 hover:text-white transition"
+              >
+                <MoreVertical size={14} />
+              </button>
 
-    {showMenu && (
-      <div className="absolute right-0 mt-2 w-32 rounded-lg bg-[#13233a] shadow-lg ring-1 ring-white/10 z-10">
-        {statuses.map((status) => (
-          <button
-            key={status}
-            className="w-full text-left px-3 py-2 text-sm text-white/70 hover:bg-white/10"
-          >
-            Move to {status}
-          </button>
-        ))}
-      </div>
-    )}
-  </div>
-</header>
+              {showMenu && (
+                <div className="absolute right-0 top-6 w-32 rounded-lg bg-[#13233a] shadow-lg ring-1 ring-white/10 z-10">
+                  {statuses.map((status) => (
+                    <button
+                      key={status}
+                      className="w-full text-left px-3 py-2 text-sm text-white/70 hover:bg-white/10"
+                    >
+                      Move to {status}
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
+             {/* ✅ Priority Badge */}
+            {task.priority && (
+              <span
+                className={`px-2 py-0.5 rounded-full text-[9px] font-medium mt ${priorityColors[task.priority]}`}
+              >
+                {task.priority}
+              </span>
+            )}
+          </div>
+        </header>
 
-        {/* Description */}
+        {/* ===== Description ===== */}
         {task.description && (
-          <p className="mt-3 text-xs text-white/80 leading-relaxed whitespace-normal b">
+          <p className="mt-3 text-[10px] text-white/80 leading-relaxed break-words">
             {task.description}
           </p>
         )}
-        {/* Approve/Reject buttons (for completed tasks) */}
- {task.status === "done" && (
-          <div className="flex items-center justify-start gap-2 mt-4">
-            <button className="px-3 py-1 text-sm rounded-md bg-green text-white hover:bg-green transition">
+
+        {/* ===== Approve / Reject Buttons ===== */}
+        {task.status === "done" && (
+          <div className="flex flex-wrap items-center gap-2 mt-4">
+            <button className="px-3 py-1 text-xs md:text-sm rounded-md bg-green hover:bg-green text-white transition">
               Approve
             </button>
-            <button className="px-3 py-1 text-sm rounded-md bg-Red text-white hover:bg-Red transition">
+            <button className="px-3 py-1 text-xs md:text-sm rounded-md bg-Red hover:bg-Red text-white transition">
               Reject
             </button>
           </div>
         )}
+
         <hr className="my-4 border-white/10" />
 
-        {/* Footer */}
-        <footer className="flex items-center justify-between">
-          <span className="text-sm italic text-white/70">
+        {/* ===== Footer ===== */}
+        <footer className="flex flex-wrap items-center justify-between gap-2">
+          <span className="text-xs md:text-xs text-white/70">
             {task.role ?? "—"}
           </span>
 
@@ -194,21 +358,19 @@ export default function TaskCard({ task }: { task: Task }) {
               className="text-Blue hover:text-Blue transition"
               title="Edit"
             >
-              <Edit size={18} />
+              <Edit size={14} />
             </button>
             <button
               className="text-Red hover:text-Red transition"
               title="Delete"
             >
-              <Trash2 size={18} />
+              <Trash2 size={14} />
             </button>
           </div>
         </footer>
-
-        
       </article>
 
-      {/* Edit Modal */}
+      {/* ===== Update Modal ===== */}
       <UpdateTaskModal
         isOpen={openEdit}
         onClose={() => setOpenEdit(false)}
