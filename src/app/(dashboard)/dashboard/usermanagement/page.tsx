@@ -252,7 +252,7 @@ export default function UserManagement() {
   >
     {user.status}
   </span>
-</div>
+
 
 
 
@@ -286,6 +286,7 @@ export default function UserManagement() {
         </button>
       </div>
     </div>
+     </div>
    
   ))}
 </div>
