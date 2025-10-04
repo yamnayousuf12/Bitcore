@@ -120,9 +120,9 @@ export default function UserManagement() {
       
       </div>
       {/* Search + Add */}
-<div className="flex gap-2 sm:gap-3 mb-6 mt-20 lg:mt-0 px-4 lg:px-0">
+<div className="flex gap-2 sm:gap-3 mb-6 -mt-16 lg:mt-0 px-4 lg:px-0 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8 max-w-xl mx-auto">
   {/* Search Bar - Responsive width */}
-  <div className="relative flex-1 max-w-[70%] sm:max-w-[72%] md:max-w-[75%] lg:max-w-[78%] xl:max-w-[80%]">
+  <div className="relative flex-1 max-w-[70%] sm:max-w-[45%] md:max-w-[50%] lg:max-w-[60%] xl:max-w-[70%]">
     <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
     <input
       type="text"
