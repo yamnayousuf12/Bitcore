@@ -119,26 +119,51 @@ export default function UserManagement() {
        
       
       </div>
-      {/* Search + Add */}
-<div className="flex gap-2 sm:gap-3 mb-6 -mt-16 lg:mt-0 px-4 lg:px-0 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-8 max-w-xl mx-auto">
-  {/* Search Bar - Responsive width */}
-  <div className="relative flex-1 max-w-[70%] sm:max-w-[45%] md:max-w-[50%] lg:max-w-[60%] xl:max-w-[70%]">
+   {/* Search + Add */}
+<div className="flex mb-6 mt-20 lg:mt-0 px-4 lg:px-0 -ml-0 lg:-ml-4">
+  {/* Search Bar - Responsive sizing for all screens */}
+  <div className="relative flex-1  bg-purple  /* Mobile (320px-639px) */
+         min-w-[200px] max-w-[75%]
+        /* Small screens (640px-767px) */
+        sm:w-full sm:max-w-[70%]
+        /* Medium screens (768px-1023px) */
+        md:w-full md:max-w-[65%]
+        /* Large screens (1024px-1279px) */
+        lg:w-full lg:max-w-[60%]
+        /* Extra large screens (1280px-1535px) */
+        xl:w-full xl:max-w-[55%]
+        /* 2XL screens (1536px+) */
+        2xl:w-full 2xl:max-w-[50%]">
     <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 text-sm" />
     <input
       type="text"
       placeholder="Search User...."
       value={search}
       onChange={(e) => setSearch(e.target.value)}
-      className="w-full px-3 py-2.5 sm:px-4 sm:py-3 pl-9 sm:pl-10 rounded-xl bg-[rgba(255,255,255,0.3)] border border-gray/40 focus:outline-none placeholder-gray-400 text-white text-sm sm:text-base"
+      className="w-full px-4 py-2 sm:py-3 pl-10 rounded-xl bg-[rgba(255,255,255,0.3)] border border-gray/40 focus:outline-none placeholder-gray-400 text-white text-sm sm:text-base
+        "
     />
   </div>
   
-  {/* Add User Button - Responsive width */}
+  {/* Add User Button - Responsive sizing */}
   <button
-    className="bg-[rgba(0,112,255,1)] px-3 py-2.5 sm:px-4 sm:py-3 rounded-xl flex-shrink-0 text-white font-medium hover:bg-blue-600 transition-colors text-sm sm:text-base min-w-[80px] sm:min-w-[100px]"
+    className="bg-[rgba(0,112,255,1)] px-2 sm:px-4 py-2 sm:py-3 rounded-xl flex-shrink-0 text-white font-medium hover:bg-blue-600 transition-colors text-xs sm:text-sm
+      /* Mobile (320px-639px) */
+      min-w-[80px] max-w-[25%]
+      /* Small screens (640px-767px) */
+      sm:min-w-[90px] sm:max-w-[30%]
+      /* Medium screens (768px-1023px) */
+      md:min-w-[100px] md:max-w-[35%]
+      /* Large screens (1024px-1279px) */
+      lg:min-w-[110px] lg:max-w-[40%]
+      /* Extra large screens (1280px-1535px) */
+      xl:min-w-[120px] xl:max-w-[45%]
+      /* 2XL screens (1536px+) */
+      2xl:min-w-[130px] 2xl:max-w-[50%]"
     onClick={() => setOpenAdd(true)}
   >
-    Add User
+    <span className="hidden sm:inline">Add User</span>
+    <span className="sm:hidden">Add</span>
   </button>
 </div>
       {/* Desktop Table */}
