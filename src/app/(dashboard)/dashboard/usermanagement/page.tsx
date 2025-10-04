@@ -120,9 +120,9 @@ export default function UserManagement() {
       
       </div>
    {/* Search + Add */}
-<div className="flex mb-6 mt-20 lg:mt-0 px-4 lg:px-0 -ml-0 lg:-ml-4">
+<div className="flex mb-6 mt-20 lg:mt-0 px-4 lg:px-0 -ml-0 lg:-ml-4 gap-2">
   {/* Search Bar - Responsive sizing for all screens */}
-  <div className="relative flex-1  bg-purple  /* Mobile (320px-639px) */
+  <div className="relative flex-1  bg-purple   /* Mobile (320px-639px) */
          min-w-[200px] max-w-[75%]
         /* Small screens (640px-767px) */
         sm:w-full sm:max-w-[70%]
