@@ -240,7 +240,7 @@ export default function UserManagement() {
   {/* Vertical line */}
   <div
     className={`w-0.5 h-5 rounded-full ${
-      user.status === "Active" ? "bg-green" : "bg-orange"
+      user.status === "Active" ? "bg-white" : "bg-white"
     }`}
   ></div>
 
