@@ -116,7 +116,7 @@ export default function UserManagement() {
         <span className="font-medium tracking-wide">Use Management</span>
       </div>
    {/* Search + Add */}
-<div className="flex mb-6 -mt-14 lg:mt-0 px-4 lg:px-0 -ml-5 lg:-ml-4 gap-2">
+<div className="flex mb-6 -mt-14 sm-mt-0 xl:mt-0 md:-mt-0 2xl:mt-0 lg:mt-0 px-4 lg:px-0 -ml-5 lg:-ml-4 gap-2">
   {/* Search Bar - Responsive sizing for all screens */}
   <div className="relative flex-1 /* Mobile (320px-639px) */
          min-w-[200px] max-w-[75%]
@@ -136,14 +136,14 @@ export default function UserManagement() {
       placeholder="Search User...."
       value={search}
       onChange={(e) => setSearch(e.target.value)}
-      className="w-full px-4 py-2 sm:py-3 pl-10 rounded-xl bg-[rgba(255,255,255,0.3)] border border-gray/40 focus:outline-none placeholder-gray-400 text-white text-sm sm:text-base
+      className="w-full px-4 py-2 sm:py-3 pl-10 rounded-xl bg-[rgba(255,255,255,0.3)] border border-gray/40 focus:outline-none placeholder-gray text-white text-sm sm:text-base
         "
     />
   </div>
   
   {/* Add User Button - Responsive sizing */}
   <button
-    className="bg-[rgba(0,112,255,1)] px-2 sm:px-4 py-2 sm:py-3 rounded-xl flex-shrink-0 text-white font-medium hover:bg-blue-600 transition-colors text-xs sm:text-sm
+    className="bg-[rgba(0,112,255,1)] px-2 sm:px-4 py-2 sm:py-3 rounded-xl flex-shrink-0 text-white font-medium hover:bg-Blue transition-colors text-xs sm:text-sm
       /* Mobile (320px-639px) */
       min-w-[80px] max-w-[25%]
       /* Small screens (640px-767px) */
@@ -257,7 +257,7 @@ export default function UserManagement() {
       
 
       {/* Actions */}
-      <div className="flex ml-32 md:ml-0 justify-end gap-3 pt-2">
+      <div className="flex ml-32 md:ml-0 justify-end items-end gap-3 pt-2">
         <button
           className="text-gray hover:text-white transition"
           onClick={() => handleViewUser(user)}
