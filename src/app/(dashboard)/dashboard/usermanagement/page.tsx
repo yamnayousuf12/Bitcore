@@ -244,7 +244,7 @@ export default function UserManagement() {
               ? "bg-white"
               : "bg-white "
           }`}
-        ></div>
+        ></div> 
 
         {/* Status text */}
         <span
