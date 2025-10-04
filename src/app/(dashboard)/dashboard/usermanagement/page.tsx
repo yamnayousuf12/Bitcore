@@ -236,11 +236,11 @@ export default function UserManagement() {
       <p className="text-xs text-gray break-all">{user.email}</p>
 
       {/* ✅ Status with Vertical Line */}
-      <div className="flex items-center gap-2 pt-3">
+     <div className="flex items-center gap-2 pt-3">
   {/* Vertical line */}
   <div
-    className={`w-1 h-5 rounded-full ${
-      user.status === "Active" ? "bg-white" : "bg-white"
+    className={`w-0.5 h-5 rounded-full ${
+      user.status === "Active" ? "bg-green" : "bg-orange"
     }`}
   ></div>
 
@@ -250,8 +250,10 @@ export default function UserManagement() {
       user.status === "Active" ? "text-green" : "text-orange"
     }`}
   >
-    {user.status === "Active" ? "Active" : "Inactive"}
+    {user.status}
   </span>
+</div>
+
 
 
 
@@ -284,7 +286,7 @@ export default function UserManagement() {
         </button>
       </div>
     </div>
-    </div>
+   
   ))}
 </div>
 
