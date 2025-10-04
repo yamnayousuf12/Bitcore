@@ -116,7 +116,7 @@ export default function UserManagement() {
         <span className="font-medium tracking-wide">Use Management</span>
       </div>
    {/* Search + Add */}
-<div className="flex mb-6 -mt-14 sm-mt-0 xl:mt-0 md:-mt-0 2xl:mt-0 lg:mt-0 px-4 lg:px-0 -ml-6 lg:-ml-4 gap-2 lg:gap-2">
+<div className="flex mb-6 -mt-14 sm-mt-0 xl:mt-0 md:-mt-0 2xl:mt-0 lg:mt-0 px-4 lg:px-0 -ml-6 lg:-ml-4 2xl:ml-2 gap-2 lg:gap-2">
   {/* Search Bar - Responsive sizing for all screens */}
   <div className="relative flex-1 /* Mobile (320px-639px) */
          min-w-[200px] max-w-[75%]
@@ -125,7 +125,7 @@ export default function UserManagement() {
         /* Medium screens (768px-1023px) */
         md:w-full md:max-w-[65%]
         /* Large screens (1024px-1279px) */
-        lg:w-full lg:max-w-[60%]
+        lg:w-full lg:max-w-[50%]
         /* Extra large screens (1280px-1535px) */
         xl:w-full xl:max-w-[55%]
         /* 2XL screens (1536px+) */
