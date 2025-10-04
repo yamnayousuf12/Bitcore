@@ -237,24 +237,23 @@ export default function UserManagement() {
 
       {/* ✅ Status with Vertical Line */}
       <div className="flex items-center gap-2 pt-3">
-        {/* Vertical line */}
-        <div
-          className={`w-0.5 h-5 rounded-full ${
-            user.status === "Active"
-              ? "bg-white"
-              : "bg-white "
-          }`}
-        ></div> 
+  {/* Vertical line */}
+  <div
+    className={`w-1 h-5 rounded-full ${
+      user.status === "Active" ? "bg-white" : "bg-white"
+    }`}
+  ></div>
 
-        {/* Status text */}
-        <span
-          className={`text-sm font-medium ${
-            user.status === "Active" ? "text-green" : "text-orange"
-          }`}
-        >
-          {user.status}
-        </span>
-      
+  {/* Status text */}
+  <span
+    className={`text-sm font-medium ${
+      user.status === "Active" ? "text-green" : "text-orange"
+    }`}
+  >
+    {user.status === "Active" ? "Active" : "Inactive"}
+  </span>
+
+
 
       {/* Actions */}
       <div className="flex ml-32 md:ml-0 justify-end items-end gap-3 pt-2">
