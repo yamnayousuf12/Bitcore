@@ -11,7 +11,7 @@ export default function DashboardPage() {
     md:w-[105.5%]  
     lg:w-[105%] 
     xl:w-[104.2%] 
-    2xl:w-[100.3%] 2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-0 -mt-11">
+    2xl:w-[101.3%] 2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-0 -mt-11">
       {/* ===== Desktop Stats Strip ===== */}
 <section className="hidden lg:block rounded-2xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 sm:p-5 relative"> 
   <div className="flex gap-3 flex-1 items-stretch divide-x divide-white/30">
@@ -156,11 +156,11 @@ export default function DashboardPage() {
       <section className="grid md:grid-cols-2 gap-6 ">
         {/* Recent Activity */}
         <div
-          className="rounded-2xl border border-white w-[113%] sm:w-[109.6%]   
+          className="rounded-2xl border border-white/30 w-[113%] sm:w-[109.6%]   
     md:w-[105%]  
     lg:w-[102%] 
     xl:w-[101%] 
-    2xl:w-[100%] 2xl:ml-2 lg:-ml-0 xl:-ml-0 md:-ml-5 sm:-ml-3 -ml-5  mx-auto  p-4 sm:p-5 "
+    2xl:w-[100%] 2xl:-ml-0 lg:-ml-0 xl:-ml-0 md:-ml-5 sm:-ml-3 -ml-5  mx-auto  p-4 sm:p-5 "
           style={{
             background:
               "linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(19, 43, 96, 0.15) 100%)",
@@ -184,7 +184,11 @@ export default function DashboardPage() {
 
         {/* Quick Actions */}
         <div
-          className="rounded-2xl border border-white/10 p-4 sm:p-5"
+          className="rounded-2xl border border-white/10 p-4 sm:p-5 w-[113%] sm:w-[109.6%]   
+    md:w-[105%]  
+    lg:w-[100%] 
+    xl:w-[100%] 
+    2xl:w-[100%] 2xl:-ml-0 lg:-ml-0 xl:-ml-0 md:-ml-5 sm:-ml-3 -ml-5 mx-auto"
           style={{
             background:
               "linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(19, 43, 96, 0.15) 100%)",
@@ -210,7 +214,11 @@ export default function DashboardPage() {
       </section>
 
       {/* ===== Team Performance ===== */}
-      <section className="rounded-2xl border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.03] p-4 sm:p-5">
+      <section className="rounded-2xl border border-white  bg-gradient-to-b from-white/[0.08] to-white/[0.03] p-4 sm:p-5 w-[113%] sm:w-[109.6%]   
+    md:w-[105%]  
+    lg:w-[100%] 
+    xl:w-[100%] 
+    2xl:w-[100%] 2xl:-ml-0 lg:-ml-0 xl:-ml-0 md:-ml-5 sm:-ml-3 -ml-5 mx-auto">
         <h3 className="text-sm text-white/70 mb-4">Team Performance Overview 
         ( Top 5 )</h3>
 
