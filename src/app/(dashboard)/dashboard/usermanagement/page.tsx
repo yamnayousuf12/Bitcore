@@ -101,7 +101,7 @@ export default function UserManagement() {
     md:w-[105.5%]  
     lg:w-[107%] 
     xl:w-[104.2%] 
-    2xl:w-[100.3%]  2xl:ml-2 lg:-ml-9 xl:-ml-4 md:-ml-9 sm:-ml-0 -ml-8" >
+    2xl:w-[101%] 2xl:ml-2 lg:-ml-9 xl:-ml-4 md:-ml-9 sm:-ml-0 -ml-8" >
       {/* Mobile Header */}
      <div
         className="
@@ -163,7 +163,7 @@ export default function UserManagement() {
   </button>
 </div>
       {/* Desktop Table */}
-      <div className="hidden md:block overflow-x-auto border border-gray/30 rounded-lg bg-[#3c315a4d] mt-10 max-w7xl sm:w-[107.8%]  
+      <div className="hidden md:block overflow-x-auto border border-gray/30 rounded-lg bg-[#3c315a4d] mt-10  sm:w-[107.8%]  
     md:w-[105.5%]  
     lg:w-[105%] 
     xl:w-[104.2%] 

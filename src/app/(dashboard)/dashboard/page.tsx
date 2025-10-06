@@ -7,11 +7,11 @@ import { MessageCircleMore } from "lucide-react";
 
 export default function DashboardPage() {
   return (
-    <div className="grid gap-6  max-w7xl sm:w-[107.8%]  
+    <div className="grid gap-6 sm:w-[107.8%]  
     md:w-[105.5%]  
     lg:w-[105%] 
     xl:w-[104.2%] 
-    2xl:w-[100.3%] 2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-0">
+    2xl:w-[100.3%] 2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-0 -mt-11">
       {/* ===== Desktop Stats Strip ===== */}
 <section className="hidden lg:block rounded-2xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 sm:p-5 relative"> 
   <div className="flex gap-3 flex-1 items-stretch divide-x divide-white/30">
@@ -72,7 +72,7 @@ export default function DashboardPage() {
     />
   </div>
 </section>
-<div className="absolute left-20 -translate-x-1/2 flex items-center -mt-16 text-base lg:hidden text-[#BAD4EF]">
+<div className="absolute left-20 -translate-x-1/2 flex items-center -mt-24 text-base lg:hidden text-[#BAD4EF]">
       <span className="font-Medium tracking-wide ">Home/Dashboard</span>
       </div>
 
@@ -81,7 +81,7 @@ export default function DashboardPage() {
     md:w-[105%]  
     lg:w-[105%] 
     xl:w-[103%] 
-    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-3 -ml-6 max-w-xl mx-auto ">
+    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-3 -ml-6 max-w-xl mx-auto -mt-16 ">
   <div className="grid grid-cols-2 gap-4   ">
     <StatItemProps
       icon={
@@ -153,10 +153,14 @@ export default function DashboardPage() {
 
 
       {/* ===== Middle Row: Recent + Quick Actions ===== */}
-      <section className="grid md:grid-cols-2 gap-6">
+      <section className="grid md:grid-cols-2 gap-6 ">
         {/* Recent Activity */}
         <div
-          className="rounded-2xl border border-white/10 p-4 sm:p-5"
+          className="rounded-2xl border border-white w-[113%] sm:w-[109.6%]   
+    md:w-[105%]  
+    lg:w-[102%] 
+    xl:w-[101%] 
+    2xl:w-[100%] 2xl:ml-2 lg:-ml-0 xl:-ml-0 md:-ml-5 sm:-ml-3 -ml-5  mx-auto  p-4 sm:p-5 "
           style={{
             background:
               "linear-gradient(180deg, rgba(255, 255, 255, 0.15) 0%, rgba(19, 43, 96, 0.15) 100%)",
