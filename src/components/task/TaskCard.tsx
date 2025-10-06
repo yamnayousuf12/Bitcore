@@ -254,7 +254,7 @@ export default function TaskCard({ task }: { task: Task }) {
   const priorityColors: Record<string, string> = {
     Low: "bg-Blue/20 text-Blue",
     Medium: "bg-yellow/20 text-yellow",
-    High: "bg-Red/20 text-Red",
+    High: "bg-Red/20 text-Red ",
   };
 
   return (
@@ -263,25 +263,34 @@ export default function TaskCard({ task }: { task: Task }) {
         className="
           relative 
           rounded-xl 
-          border border-white 
+          border border-white/10 
           bg-[#0e1b2c]/80 
-          p-2 
+          p-3
           shadow-lg 
           hover:shadow-xl 
           hover:-translate-y-1 
           transition-all 
           duration-300  
 
-          /* ✅ Width for all screens */
-          w-[315px] 
-          max-w-xs sm:max-w-sm md:max-w-[230px] lg:max-w-[250px] items-start justify-start md:-ml-2 
+          /* Mobile (320px-639px) */
+      min-w-[80px] max-w-[100%]
+      /* Small screens (640px-767px) */
+      sm:min-w-[90px] sm:max-w-[100%]
+      /* Medium screens (768px-1023px) */
+      md:min-w-[100px] md:max-w-[100%]
+      /* Large screens (1024px-1279px) */
+      lg:min-w-[120px] lg:max-w-[120%]
+      /* Extra large screens (1280px-1535px) */
+      xl:min-w-[120px] xl:max-w-[100%]
+      /* 2XL screens (1536px+) */
+      2xl:min-w-[130px] 2xl:max-w-[100%]
         "
       >
         {/* ===== Header ===== */}
-        <header className="flex items-start justify-between gap-1">
-          <div className="flex items-start gap-1">
-            <div className="h-7 w-7 rounded-full bg-white/10 flex-shrink-0" />
-            <div className="flex flex-col">
+        <header className="flex items-start justify-between gap-1 ">
+          <div className="flex items-start gap-1 ">
+            <div className="h-7 w-7 rounded-full bg-white/10 flex-shrink-0 " />
+            <div className="flex flex-col ">
               <h4 className="font-medium text-white text-xs leading-relaxed whitespace-nowrap flex-shrink-0">
                 {task.title}
               </h4>
@@ -317,7 +326,7 @@ export default function TaskCard({ task }: { task: Task }) {
              {/* ✅ Priority Badge */}
             {task.priority && (
               <span
-                className={`px-2 py-0.5 rounded-full text-[9px] font-medium mt ${priorityColors[task.priority]}`}
+                className={`px-2 py-0.5 rounded-full text-[9px] font-medium -ml-6 ${priorityColors[task.priority]}`}
               >
                 {task.priority}
               </span>
@@ -327,7 +336,7 @@ export default function TaskCard({ task }: { task: Task }) {
 
         {/* ===== Description ===== */}
         {task.description && (
-          <p className="mt-3 text-[10px] text-white/80 leading-relaxed break-words">
+          <p className="mt-3 text-[9px] text-white/80">
             {task.description}
           </p>
         )}
@@ -335,10 +344,10 @@ export default function TaskCard({ task }: { task: Task }) {
         {/* ===== Approve / Reject Buttons ===== */}
         {task.status === "done" && (
           <div className="flex flex-wrap items-center gap-2 mt-4">
-            <button className="px-3 py-1 text-xs md:text-sm rounded-md bg-green hover:bg-green text-white transition">
+            <button className="px-3 py-1 text-xs md:text-xs rounded-md bg-green hover:bg-green text-white transition">
               Approve
             </button>
-            <button className="px-3 py-1 text-xs md:text-sm rounded-md bg-Red hover:bg-Red text-white transition">
+            <button className="px-3 py-1 text-xs md:text-xs rounded-md bg-Red hover:bg-Red text-white transition">
               Reject
             </button>
           </div>

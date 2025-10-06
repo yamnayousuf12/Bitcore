@@ -119,7 +119,7 @@ export const mockTasks: Task[] = [
   {
     id: "t11",
     title: "Knowledge Setup",
-    description: "Uploaded and formatted how-to guides with visuals for new users.",
+    description: "Uploaded andformatted how-to guides with visuals for new users.",
     role: " Content Writer",
     datetime: "08/25 12:11 PM",
     status: "done",

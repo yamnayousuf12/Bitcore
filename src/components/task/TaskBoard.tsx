@@ -29,7 +29,7 @@ export default function TaskBoard() {
           {review.map((t) => <TaskCard key={t.id} task={t} />)}
         </Column>
 
-        <Column title="Completed" count={done.length} accent="text-green">
+        <Column title="Completed" count={done.length} accent="text-green ">
           {done.map((t) => <TaskCard key={t.id} task={t} />)}
         </Column>
       </div>
