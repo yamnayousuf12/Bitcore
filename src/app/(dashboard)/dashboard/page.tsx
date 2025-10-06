@@ -72,7 +72,7 @@ export default function DashboardPage() {
     />
   </div>
 </section>
-<div className="absolute left-20 -translate-x-1/2 flex items-center -mt-24 text-base lg:hidden text-[#BAD4EF]">
+<div className="absolute left-20 -translate-x-1/2 flex items-center -mt-11 text-base lg:hidden text-[#BAD4EF]">
       <span className="font-Medium tracking-wide ">Home/Dashboard</span>
       </div>
 
@@ -81,7 +81,7 @@ export default function DashboardPage() {
     md:w-[105%]  
     lg:w-[105%] 
     xl:w-[103%] 
-    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-3 -ml-6 max-w-xl mx-auto -mt-16 ">
+    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-3 -ml-6 max-w-xl mx-auto  ">
   <div className="grid grid-cols-2 gap-4   ">
     <StatItemProps
       icon={
