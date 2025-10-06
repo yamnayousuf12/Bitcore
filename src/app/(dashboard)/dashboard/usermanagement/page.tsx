@@ -119,7 +119,7 @@ export default function UserManagement() {
 <div className="flex mb-6 -mt-14 sm-mt-0 xl:mt-0 md:-mt-0 2xl:mt-0 lg:mt-0 px-4 lg:px-0 -ml-6 lg:-ml-4 2xl:ml-2 gap-2 lg:gap-2">
   {/* Search Bar - Responsive sizing for all screens */}
   <div className="relative flex-1 /* Mobile (320px-639px) */
-         min-w-[200px] max-w-[75%]npm run 
+         min-w-[200px] max-w-[75%]
         /* Small screens (640px-767px) */
         sm:w-full sm:max-w-[70%]
         /* Medium screens (768px-1023px) */

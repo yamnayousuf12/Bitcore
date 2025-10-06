@@ -7,9 +7,13 @@ import { MessageCircleMore } from "lucide-react";
 
 export default function DashboardPage() {
   return (
-    <div className="grid gap-6">
+    <div className="grid gap-6  max-w7xl sm:w-[107.8%]  
+    md:w-[105.5%]  
+    lg:w-[105%] 
+    xl:w-[104.2%] 
+    2xl:w-[100.3%] 2xl:ml-2 lg:-ml-4  xl:-ml-4 md:-ml-5 sm:-ml-7 -ml-0">
       {/* ===== Desktop Stats Strip ===== */}
-<section className="hidden lg:block rounded-2xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 SemiBold"> 
+<section className="hidden lg:block rounded-2xl border border-white/15 bg-gradient-to-b from-white/10 to-white/[0.04] p-4 sm:p-5 relative"> 
   <div className="flex gap-3 flex-1 items-stretch divide-x divide-white/30">
     <StatItem
       icon={
@@ -73,16 +77,16 @@ export default function DashboardPage() {
       </div>
 
 
-<section className="block lg:hidden">
-  <div className="grid grid-cols-2 gap-4 -mt-5">
+<section className="block lg:hidden space-y-4 w-full max-w-xl mx-auto ">
+  <div className="grid grid-cols-2 gap-4  ">
     <StatItemProps
       icon={
-        <div className="flex justify-center items-center">
+        <div className="flex justify-end items-end">
           <Image
             src={DashboardImages.firsticon}
             alt="Total Users"
-            width={120}
-            height={120}
+            width={60}
+            height={60}
             className="object-contain "
           />
         </div>
@@ -93,12 +97,12 @@ export default function DashboardPage() {
 
     <StatItemProps
       icon={
-        <div className="flex justify-center items-center">
+        <div className="flex justify-end items-end">
           <Image
             src={DashboardImages.secondicon}
             alt="Pending Tasks"
-            width={120}
-            height={120}
+            width={60}
+            height={60}
             className="object-contain "
           />
         </div>
@@ -109,12 +113,12 @@ export default function DashboardPage() {
 
     <StatItemProps
       icon={
-        <div className="flex justify-center items-center">
+        <div className="flex justify-end items-end">
           <Image
             src={DashboardImages.thirdicon}
             alt="Complete Tasks"
-            width={120}
-            height={120}
+            width={60}
+            height={60}
             className="object-contain"
           />
         </div>
@@ -125,12 +129,12 @@ export default function DashboardPage() {
 
     <StatItemProps
       icon={
-        <div className="flex justify-center items-center">
+        <div className="flex justify-end items-end">
           <Image
             src={DashboardImages.fourthicon}
             alt="Average Hours"
-            width={120}
-            height={120}
+            width={60}
+            height={60}
             className="object-contain "
           />
         </div>
