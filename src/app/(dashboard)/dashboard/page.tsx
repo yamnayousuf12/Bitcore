@@ -214,7 +214,7 @@ export default function DashboardPage() {
       </section>
 
       {/* ===== Team Performance ===== */}
-      <section className="rounded-2xl border border-white  bg-gradient-to-b from-white/[0.08] to-white/[0.03] p-4 sm:p-5 w-[113%] sm:w-[109.6%]   
+      <section className="rounded-2xl border border-white/30  bg-gradient-to-b from-white/[0.08] to-white/[0.03] p-4 sm:p-5 w-[113%] sm:w-[109.6%]   
     md:w-[105%]  
     lg:w-[100%] 
     xl:w-[100%] 
