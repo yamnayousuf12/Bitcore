@@ -72,16 +72,16 @@ export default function DashboardPage() {
     />
   </div>
 </section>
-<div className="absolute left-20 -translate-x-1/2 flex items-center -mt-11 text-base lg:hidden text-[#BAD4EF]">
+<div className="absolute left-20 -translate-x-1/2 flex items-center -mt-11 md:-mt-7 text-base lg:hidden text-[#BAD4EF]">
       <span className="font-Medium tracking-wide ">Home/Dashboard</span>
       </div>
 
 
-<section className="block lg:hidden space-y-4 w-[114%] sm:w-[109.6%]   
-    md:w-[105%]  
-    lg:w-[105%] 
-    xl:w-[103%] 
-    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-3 -ml-6 max-w-xl mx-auto  ">
+<section className="block lg:hidden space-y-4 w-[114%] sm:w-[95%]   
+    md:w-[100%]  
+    lg:w-[100%] 
+    xl:w-[100%] 
+    2xl:w-[100%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:ml-3 -ml-6 mx-auto  ">
   <div className="grid grid-cols-2 gap-4   ">
     <StatItemProps
       icon={
@@ -215,7 +215,7 @@ export default function DashboardPage() {
 
       {/* ===== Team Performance ===== */}
       <section className="rounded-2xl border border-white/30  bg-gradient-to-b from-white/[0.08] to-white/[0.03] p-4 sm:p-5 w-[113%] sm:w-[109.6%]   
-    md:w-[105%]  
+    md:w-[102%]  
     lg:w-[100%] 
     xl:w-[100%] 
     2xl:w-[100%] 2xl:-ml-0 lg:-ml-0 xl:-ml-0 md:-ml-5 sm:-ml-3 -ml-5 mx-auto">
