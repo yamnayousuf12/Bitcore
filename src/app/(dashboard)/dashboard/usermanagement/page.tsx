@@ -97,7 +97,7 @@ export default function UserManagement() {
 
   return (
     <div className="p-10 md:h-
-    [600px] h-auto sm:h-full lg:h-[600px] xl:h-[600px] 2xl:h-[600px] md:border  md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] md:-mt-3 -mt-9 sm:-mt-3 lg:-mt-12 max-w7xl sm:w-[107.8%]  
+    [600px] h-auto sm:h-full lg:h-[600px] xl:h-[600px] 2xl:h-[600px] md:border md:border-white/25 rounded-lg text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] md:-mt-3 -mt-9 sm:-mt-3 lg:-mt-12 sm:w-[107.8%]  
     md:w-[105.5%]  
     lg:w-[107%] 
     xl:w-[104.2%] 
