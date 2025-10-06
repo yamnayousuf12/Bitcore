@@ -274,7 +274,7 @@ export default function TaskCard({ task }: { task: Task }) {
 
           /* ✅ Width for all screens */
           w-[315px] 
-          max-w-xs sm:max-w-sm md:max-w-[230px] lg:max-w-[250px] items-start justify-start md:-ml-2 -ml-2
+          max-w-xs sm:max-w-sm md:max-w-[230px] lg:max-w-[250px] items-start justify-start md:-ml-2 
         "
       >
         {/* ===== Header ===== */}
