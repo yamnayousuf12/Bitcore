@@ -263,7 +263,7 @@ export default function TaskCard({ task }: { task: Task }) {
         className="
           relative 
           rounded-xl 
-          border border-white/10 
+          border border-white 
           bg-[#0e1b2c]/80 
           p-2 
           shadow-lg 
@@ -273,8 +273,8 @@ export default function TaskCard({ task }: { task: Task }) {
           duration-300  
 
           /* ✅ Width for all screens */
-          w-full 
-          max-w-xs sm:max-w-sm md:max-w-[230px] lg:max-w-[250px] items-start justify-start md:-ml-2 
+          w-[315px] 
+          max-w-xs sm:max-w-sm md:max-w-[230px] lg:max-w-[250px] items-start justify-start md:-ml-2  -ml-2
         "
       >
         {/* ===== Header ===== */}
