@@ -77,7 +77,11 @@ export default function DashboardPage() {
       </div>
 
 
-<section className="block lg:hidden space-y-4 w-full max-w-xl mx-auto ">
+<section className="block lg:hidden space-y-4 pace-y-4 w-[114%] sm:w-[109.6%]   
+    md:w-[105%]  
+    lg:w-[105%] 
+    xl:w-[103%] 
+    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-3 -ml-6 max-w-xl mx-auto ">
   <div className="grid grid-cols-2 gap-4  ">
     <StatItemProps
       icon={
