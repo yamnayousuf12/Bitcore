@@ -273,11 +273,11 @@ export default function TaskCard({ task }: { task: Task }) {
           duration-300  
 
           /* Mobile (320px-639px) */
-      min-w-[80px] max-w-[100%]
+      min-w-[100px] max-w-[100%]
       /* Small screens (640px-767px) */
-      sm:min-w-[90px] sm:max-w-[100%]
+      sm:min-w-[110px] sm:max-w-[110%]
       /* Medium screens (768px-1023px) */
-      md:min-w-[100px] md:max-w-[100%]
+      md:min-w-[115px] md:max-w-[115%]
       /* Large screens (1024px-1279px) */
       lg:min-w-[120px] lg:max-w-[120%]
       /* Extra large screens (1280px-1535px) */
