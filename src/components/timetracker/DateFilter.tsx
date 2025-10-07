@@ -63,8 +63,8 @@ export default function DateFilter() {
     md:w-[114.5%]  
     lg:w-[109%] 
     xl:w-[106%] 
-    2xl:w-[105%] 2xl:-ml-2 lg:-ml-9 xl:-ml-4 md:-ml-16 sm:-ml-0 -ml-8 ">
-        <div className="flex flex-col items-center justify-center 2xl:ml-28 xl:ml-20 lg:ml-6 md:ml-2">
+    2xl:w-[105%] 2xl:-ml-2 lg:-ml-9 xl:-ml-4 md:-ml-16 sm:-ml-0 -ml-8  ">
+        <div className="flex flex-col items-center justify-center 2xl:ml-28 xl:ml-16 lg:-ml-0 md:ml-2">
           <label className="text-sm mb-1 ">Date Range</label>
           <div className="md:flex gap-5">
             <input

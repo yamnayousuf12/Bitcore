@@ -40,7 +40,7 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
   const startIndex = page * pageSize;
 
   return (
-    <div className=" p-4 mt-7 w-[134%] -ml-11">
+    <div className=" p-4 mt-7 w-[134%] md:w-[109%] -ml-11">
       {isModalOpen && <Modal onClose={toggleModal} />}
 
       {/* ===== Mobile Cards ===== */}
@@ -95,7 +95,11 @@ export default function TaskTable({ tasks }: { tasks: Task[] }) {
       </div>
 
       {/* ===== Desktop Table ===== */}
-      <div className="md:border md:border-Blue/45 md:rounded-md">
+      <div className="md:border md:border-Blue/45 md:rounded-md  md:-mt-16  sm:-mt-3 lg:-mt-4 sm:w-[100%]  
+    md:w-[100%]  
+    lg:w-[103.8%] 
+    xl:w-[100%] 
+    2xl:w-[99%] 2xl:ml-5 lg:-ml-2 xl:ml-3 md:ml-16 sm:-ml-0 -ml-8">
       <div className="hidden lg:block overflow-x-auto ">
         <table className="w-full text-left ">
           <thead className="bg-gray3 text-Blue text-sm">
