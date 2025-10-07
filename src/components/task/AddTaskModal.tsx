@@ -493,7 +493,7 @@
 
 "use client";
 import { useEffect, useRef, useState } from "react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ChevronDown } from "lucide-react";
 import TopBar from "../dashboard/TopBar";
 
 export interface AddTaskForm {
@@ -590,6 +590,10 @@ export default function AddTaskModal({
               </option>
             ))}
           </select>
+           <ChevronDown
+                className="absolute right-6 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+                size={16}
+              />
         </div>
 
         {/* Subtasks */}
@@ -621,6 +625,10 @@ export default function AddTaskModal({
               </option>
             ))}
           </select>
+           <ChevronDown
+      className="absolute right-6 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+      size={16}
+    />
         </div>
 
         {/* Description */}
@@ -647,6 +655,10 @@ export default function AddTaskModal({
             value={form.deadline}
             onChange={(e) => update("deadline", e.target.value)}
           />
+           <ChevronDown
+      className="absolute right-6 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+      size={16}
+    />
         </div>
 
         {/* Attachment */}
@@ -703,7 +715,7 @@ export default function AddTaskModal({
             }}
           />
         </div>
-        <div className="flex items-center gap-3 p-4 border-b border-white/10 mt-[25%] md:mt-0">
+        <div className="flex items-center gap-3 p-4 border-b border-white/10 mt-[20%] md:mt-0">
           {/* <button onClick={onClose} className="text-white">
             <ArrowLeft size={22} />
           </button> */}
