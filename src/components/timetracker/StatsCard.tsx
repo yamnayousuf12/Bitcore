@@ -60,7 +60,7 @@ interface StatsCardProps {
 
 function SingleStatsCard({ title, value, icon: Icon }: StatsCardProps) {
   return (
-    <div className="relative bg-[#0f172a] text-white rounded-xl shadow-lg p-4 flex flex-col w-[100px] -ml-14 border border-white/20 -mt-12 ">
+    <div className="relative bg-[#0f172a] text-white rounded-xl shadow-lg p-4 flex flex-col w-[94px] -ml-11 border border-white/20 -mt-12 ">
       <div className="absolute top-3 right-3 bg-[#0b1f3a] p-2 rounded-full w-5 h-5 ml-4">
         <Icon size={20} className="text-white w-3 -mt-2" />
       </div>
