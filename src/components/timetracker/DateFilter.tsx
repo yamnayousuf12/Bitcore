@@ -15,7 +15,7 @@ export default function DateFilter() {
             <label className="text-sm text-white whitespace-nowrap ">Date from:</label>
             <input
               type="date"
-              className="bg-gray3 text-white p-2 rounded-lg border border-gray flex-1"
+              className="bg-gray3 text-white p-2 rounded-lg border border-gray/30 flex-1"
             />
           </div>
 
@@ -59,7 +59,7 @@ export default function DateFilter() {
       </div>
 
       {/* ✅ Desktop Layout (your existing code, only visible md+) */}
-      <div className="hidden md:flex flex-col md:flex-row gap-7 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full -mt-16 md:border md:border-white/25  text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] md:-mt-3  sm:-mt-3 lg:-mt-12 sm:w-[107.8%]  
+      <div className="hidden md:flex flex-col md:flex-row gap-7 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full -mt-16 md:border md:border-white/25  text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] md:-mt-16  sm:-mt-3 lg:-mt-12 sm:w-[107.8%]  
     md:w-[114.5%]  
     lg:w-[109%] 
     xl:w-[106%] 

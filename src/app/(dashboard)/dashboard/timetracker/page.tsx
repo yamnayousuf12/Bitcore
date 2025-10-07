@@ -6,24 +6,22 @@ import WeeklySummary from "@/components/timetracker//WeeklySummary";
 import { stats, tasks, weeklyData } from "./mockData";
 import { DynamicStatsCards, StaticStatsCard } from "@/components/timetracker/StatsCard";
 import { IconBaseProps } from "react-icons";
+import { ArrowLeft } from "lucide-react";
 
 export default function DashboardPage() {
   return (
     <div className="p-4 space-y-6 text-white">
-      <div className="absolute left-24 -translate-x-1/2 flex items-center -mt-24 text-base lg:hidden text-[#BAD4EF]">
-      <span className="font-semibold tracking-wide ">← Time Tracker</span>
-      </div>
-      <DateFilter />
-      {/* <div className=" grid grid-cols-1 md:grid-rows-1 gap-4 md:gap-0">
-        {stats.map((item, idx) => (
-          <DynamicStatsCards key={idx} {...item} />
-        ))}
-      </div>
+     
+      <div className="absolute left-24 -translate-x-1/2 flex items-center gap-2 md:-mt-20  -mt-24 text-base lg:hidden text-[#BAD4EF] flex-shrink-0 bg-r
+      ">
+  {/* Back Arrow Icon */}
+  <ArrowLeft className="h-5 w-5 cursor-pointer hover:text-white" />
 
-      <StaticStatsCard/> */}
-      {/* <DynamicStatsCard title={""} value={""} icon={function (props: IconBaseProps): React.ReactNode {
-        throw new Error("Function not implemented.");
-      } }/> */}
+  {/* Text */}
+  <span className="font-medium tracking-wide">Task Management</span>
+</div>
+      <DateFilter />
+      
 
       <div className="p-6 space-y-8">
       <StaticStatsCard />   {/* Desktop only */}

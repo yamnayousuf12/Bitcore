@@ -4,7 +4,11 @@ import type { IconType } from "react-icons";
 // ✅ Static Version (Desktop Only)
 export function StaticStatsCard() {
   return (
-    <div className="hidden md:flex bg-gradient-to-r  from-white/[0.08] to-white/[0.03]  text-white rounded-xl p-6 justify-around items-center shadow-lg max-w-4xl mx-auto border border-white/30">
+    <div className="hidden md:flex bg-gradient-to-r  from-white/[0.08] to-white/[0.03]  text-white rounded-xl p-6 justify-around items-center shadow-lg  mx-auto border border-white/30 sm:w-[107.8%]  
+    md:w-[123.5%]  
+    lg:w-[116%] 
+    xl:w-[111%] 
+    2xl:w-[110%] 2xl:-ml-8 lg:-ml-[8%] xl:-ml-9 md:-ml-[14%] sm:-ml-0 -ml-8">
       {/* Team Members */}
       <div className="flex items-center space-x-4">
         <div className="bg-gray3 p-4 rounded-full">
