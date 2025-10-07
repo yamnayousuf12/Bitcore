@@ -20,7 +20,7 @@ export default function WeeklySummary({
   domain?: [number, number] | [number, "dataMax" | `${number}`] | [number, string];
 }) {
   return (
-    <div className="bg-[#0f172a] rounded-xl p-4 md:p-6">
+    <div className="bg-[#0f172a] rounded-xl p-4 md:p-6 2xl:w-[105.3%] 2xl:-ml-3 xl:w-[106%] xl:-ml-5 lg:w-[109%] lg:-ml-9 md:w-[113%] md:-ml-14 -ml-7 w-[120%]">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-base md:text-lg font-semibold">Weekly Summary</h3>
         <select className="bg-[#0b1222] border border-white/10 rounded-md px-3 py-1.5 text-sm outline-none">
