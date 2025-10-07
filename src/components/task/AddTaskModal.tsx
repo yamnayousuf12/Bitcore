@@ -703,7 +703,7 @@ export default function AddTaskModal({
             }}
           />
         </div>
-        <div className="flex items-center gap-3 p-4 border-b border-white/10">
+        <div className="flex items-center gap-3 p-4 border-b border-white/10 mt-[25%] md:mt-0">
           {/* <button onClick={onClose} className="text-white">
             <ArrowLeft size={22} />
           </button> */}
