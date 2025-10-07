@@ -19,11 +19,7 @@ function DashboardShell({ children }: PropsWithChildren) {
 
   return (
     <div
-      className="min-h-screen text-white mt-12 lg:mt-0 mx-auto max-w-full w-[109.8%] sm:w-[108%]  
-    md:w-[105%]  
-    lg:w-[100%] 
-    xl:w-[200%] 
-    2xl:w-[102%] overflow-hidden"
+      className="min-h-screen text-white mt-12 lg:mt-0 mx-auto w-full overflow-hidden"
       style={{
         background:
           "linear-gradient(112.58deg, #1a304efa 0.58%, #080D15 51.36%, #071028 99.29%)",
@@ -32,11 +28,7 @@ function DashboardShell({ children }: PropsWithChildren) {
       
 
       {/* Shell */}
-      <div className="mx-auto max-w-full w-[109.8%] sm:w-[108%]  
-    md:w-[105%]  
-    lg:w-[100%] 
-    xl:w-[200%] 
-    2xl:w-[102%] px-3 sm:px-4 lg:px-6 ">
+      <div className="mx-auto w-full max-w-[1440px] px-3 sm:px-4 lg:px-6 ">
         <div className="relative flex">
           {/* Backdrop for mobile */}
           {open && (
@@ -54,7 +46,7 @@ function DashboardShell({ children }: PropsWithChildren) {
             {/* Mobile top bar + sticky top header */}
       <TopBar heading={heading} onOpenMenu={() => setOpen(true)} />
             {/* Content card area */}
-            <main className="md:min-h-[calc(100vh-8rem)] min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-6rem)] px-2 sm:px-0 pt-6">
+            <main className="min-h-[calc(100vh-6rem)] px-2 sm:px-0 pt-6">
               <ContentCard pathname={pathname}>{children ?? <EmptyDemo />}</ContentCard>
             </main>
           </div>
