@@ -574,27 +574,31 @@ export default function AddTaskModal({
           />
         </div>
 
-        {/* Assignee */}
-        <div>
-          <label className="block md:text-sm text-xs text-white mb-2">
-            Assign To:
-          </label>
-          <select
-            className="w-full h-11 rounded-xl bg-white/5 border border-white px-3 text-white focus:outline-none focus:border-white"
-            value={form.assignee}
-            onChange={(e) => update("assignee", e.target.value)}
-          >
-            {assignees.map((a) => (
-              <option key={a} value={a} className="bg-[#0f172a]">
-                {a}
-              </option>
-            ))}
-          </select>
-           <ChevronDown
-                className="absolute right-6 top-1/2 -translate-y-1/2 text-white pointer-events-none"
-                size={16}
-              />
-        </div>
+       <div className="relative">
+  <label className="block md:text-sm text-xs text-white mb-2">
+    Assign To:
+  </label>
+
+  <div className="relative">
+    <select
+      className="w-full h-11 rounded-xl bg-white/5 border border-white px-3 text-white focus:outline-none focus:border-white appearance-none pr-10"
+      value={form.assignee}
+      onChange={(e) => update("assignee", e.target.value)}
+    >
+      {assignees.map((a) => (
+        <option key={a} value={a} className="bg-[#0f172a]">
+          {a}
+        </option>
+      ))}
+    </select>
+
+    {/* Dropdown Icon */}
+    <ChevronDown
+      size={16}
+      className="absolute right-3 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+    />
+  </div>
+</div>
 
         {/* Subtasks */}
         <div>
@@ -610,27 +614,32 @@ export default function AddTaskModal({
         </div>
 
         {/* Status */}
-        <div>
-          <label className="block md:text-sm text-xs text-white mb-2">
-            Status:
-          </label>
-          <select
-            className="w-full h-11 rounded-xl bg-white/5 border border-white px-3 text-white focus:outline-none focus:border-white"
-            value={form.status}
-            onChange={(e) => update("status", e.target.value)}
-          >
-            {statuses.map((s) => (
-              <option key={s} value={s} className="bg-[#0f172a]">
-                {s}
-              </option>
-            ))}
-          </select>
-           <ChevronDown
-      className="absolute right-6 top-1/2 -translate-y-1/2 text-white pointer-events-none"
-      size={16}
-    />
-        </div>
+<div className="relative">
+  <label className="block md:text-sm text-xs text-white mb-2">
+    Status:
+  </label>
 
+  <div className="relative">
+    <select
+      className="w-full h-11 rounded-xl bg-white/5 border border-white px-3 text-white 
+                 focus:outline-none focus:border-white appearance-none pr-10"
+      value={form.status}
+      onChange={(e) => update("status", e.target.value)}
+    >
+      {statuses.map((s) => (
+        <option key={s} value={s} className="bg-[#0f172a]">
+          {s}
+        </option>
+      ))}
+    </select>
+
+    {/* Dropdown Icon */}
+    <ChevronDown
+      size={16}
+      className="absolute right-3 top-1/2 -translate-y-1/2 text-white pointer-events-none"
+    />
+  </div>
+</div>
         {/* Description */}
         <div className="lg:col-span-2">
           <label className="block md:text-sm text-xs text-white mb-2">
@@ -655,10 +664,6 @@ export default function AddTaskModal({
             value={form.deadline}
             onChange={(e) => update("deadline", e.target.value)}
           />
-           <ChevronDown
-      className="absolute right-6 top-1/2 -translate-y-1/2 text-white pointer-events-none"
-      size={16}
-    />
         </div>
 
         {/* Attachment */}
