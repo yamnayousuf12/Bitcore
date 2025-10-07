@@ -1,41 +1,3 @@
-// import Image from "next/image";
-
-// export default function DateFilter() {
-//   return (
-//     <div className="flex flex-col md:flex-row gap-4 md:items-end bg-[#0f172a] p-4 rounded-lg border border-gray -mt-10 md:-mt-7 w-80 md:w-[850px] ">
-//       <div className="flex flex-col ">
-//         <label className="text-sm mb-1 lg:block hidden">Date Range</label>
-//          <label className="text-sm mb-1 block lg:hidden mt-8">Date from:</label>
-//           <label className="text-sm mb-1 block lg:hidden mt-8">Date To:</label>
-         
-//         <div className="md:flex gap-2 md:ml-0 ml-36 -mt-24 md:mt-0">
-//           <input type="date" className="bg-gray2/45 p-2 rounded border border-gray/20 mb-5 md:mb-0  " />
-//           <input type="date" className="bg-gray2/45 p-2 rounded border border-gray/20 md:mb-0 mb-2" />
-//         </div>
-//       </div>
-//       <div className="md:flex flex-col   ">
-//         <label className="text-sm mb-1 ">Employee</label>
-//         <select className="bg-gray2/45 p-2.5 rounded border border-gray/20 ml-20 md:ml-0 md:m-2 -m-9 md:mt-0 mb-2 md:mb-0  w-36 md:w-full">
-//           <option>All Employee</option>
-//         </select>
-//       </div>
-//       <div className="md:flex flex-col">
-//         <label className="text-sm mb-1 ">Project</label>
-//         <select className="bg-gray2/45 p-2.5 rounded border border-gray/20 ml-24 md:ml-0 md:m-6 -m-9 md:mt-0 mb-2 md:mb-0 w-36 md:w-full">
-//           <option>All Projects</option>
-//         </select>
-//       </div>
-//      <button className="bg-Blue hover:bg-Blue/55 px-4 py-2 rounded-lg text-white flex items-center gap-2 md:self-end justify-center">
-//   <Image src="/icon.png" alt="Filter Icon" 
-//   width={20}   
-//     height={20}
-//   className="w-5 h-5" />
-//   Apply Filter
-// </button>
-
-//     </div>
-//   );
-// }
 
 
 
@@ -46,7 +8,7 @@ export default function DateFilter() {
   return (
     <div>
       {/* ✅ Mobile Layout (only visible on small screens) */}
-      <div className="bg-[#0f172a] p-4 rounded-xl border border-gray/30 w-full max-w-lg mx-auto block md:hidden -mt-20">
+      <div className="bg-[#0f172a] p-4 rounded-xl border border-gray/30 w-[125%] max-w-lg mx-auto block md:hidden -mt-20 -ml-8">
         <div className="flex flex-col gap-4">
           {/* Date From */}
           <div className="flex items-center justify-between gap-4 ">
@@ -97,10 +59,14 @@ export default function DateFilter() {
       </div>
 
       {/* ✅ Desktop Layout (your existing code, only visible md+) */}
-      <div className="hidden md:flex flex-col md:flex-row gap-4 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full -mt-16 ">
-        <div className="flex flex-col">
-          <label className="text-sm mb-1 lg:block hidden">Date Range</label>
-          <div className="md:flex gap-2">
+      <div className="hidden md:flex flex-col md:flex-row gap-7 md:items-center bg-[#0f172a] p-4 rounded-lg border border-gray/30 w-full -mt-16 md:border md:border-white/25  text-white md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] md:-mt-3  sm:-mt-3 lg:-mt-12 sm:w-[107.8%]  
+    md:w-[114.5%]  
+    lg:w-[109%] 
+    xl:w-[106%] 
+    2xl:w-[105%] 2xl:-ml-2 lg:-ml-9 xl:-ml-4 md:-ml-16 sm:-ml-0 -ml-8 ">
+        <div className="flex flex-col items-center justify-center 2xl:ml-28 xl:ml-20 lg:ml-6 md:ml-2">
+          <label className="text-sm mb-1 ">Date Range</label>
+          <div className="md:flex gap-5">
             <input
               type="date"
               className="bg-gray3 p-2 rounded border border-gray/20"
