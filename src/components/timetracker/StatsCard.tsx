@@ -60,7 +60,7 @@ interface StatsCardProps {
 
 function SingleStatsCard({ title, value, icon: Icon }: StatsCardProps) {
   return (
-    <div className="relative bg-[#0f172a] text-white rounded-xl shadow-lg p-4 flex flex-col w-[94px] -ml-11 border border-white/20 -mt-12 ">
+    <div className="relative bg-[#0f172a] text-white rounded-xl shadow-lg p-4 flex flex-col w-[99px] -ml-14 border border-white/20 -mt-12 ">
       <div className="absolute top-3 right-3 bg-[#0b1f3a] p-2 rounded-full w-5 h-5 ml-4">
         <Icon size={20} className="text-white w-3 -mt-2" />
       </div>
@@ -74,7 +74,7 @@ function SingleStatsCard({ title, value, icon: Icon }: StatsCardProps) {
 
 export function DynamicStatsCards() {
   return (
-    <div className="grid grid-cols-3 gap-24 md:hidden">
+    <div className="grid grid-cols-3 gap-24 md:hidden  w-[115%]">
       <SingleStatsCard title="Team Members" value={25} icon={FaUsers} />
       <SingleStatsCard title="Avg. Daily Hours" value={6.8} icon={FaClock} />
       <SingleStatsCard title="Active Tasks" value={12} icon={FaTasks} />
