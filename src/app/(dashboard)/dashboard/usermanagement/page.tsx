@@ -212,11 +212,7 @@ export default function UserManagement() {
       </div>
 {/* Mobile Layout */}
 
-<div className="block md:hidden space-y-4 w-[127%] sm:w-[109.6%]   
-    md:w-[105%]  
-    lg:w-[105%] 
-    xl:w-[103%] 
-    2xl:w-[102%] 2xl:ml-2 lg:-ml-4 xl:-ml-4 md:-ml-5 sm:-ml-3 -ml-5 max-w-xl mx-auto bg-Red ">
+<div className="block md:hidden space-y-4 w-[134%] -ml-7 max-w-xl mx-auto bg-darkred ">
   {filteredUsers.map((user, i) => (
     <div
       key={i}
