@@ -13,8 +13,8 @@ export default function TopBar({ heading, onOpenMenu }: TopBarProps) {
     <>
       {/* ✅ Mobile Top Bar */}
       <div
-        className="
-          fixed top-0 left-0 z-40 
+        className="sticky
+           top-0 left-0 z-40 
           w-full 
           bg-[#101B31]/95 
           backdrop-blur-md 
