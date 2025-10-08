@@ -48,12 +48,12 @@ export default function TaskCard({ task }: { task: Task }) {
           hover:shadow-xl 
           hover:-translate-y-1 
           transition-all 
-          duration-300 bg-purple 
+          duration-300  
 
           /* Mobile (320px-639px) */
-      min-w-[125px] max-w-[125%]
+      min-w-[136px] max-w-[140%]
       /* Small screens (640px-767px) */
-      sm:min-w-[120px] sm:max-w-[120%]
+      sm:min-w-[130px] sm:max-w-[130%]
       /* Medium screens (768px-1023px) */
       md:min-w-[135px] md:max-w-[135%]
       /* Large screens (1024px-1279px) */
