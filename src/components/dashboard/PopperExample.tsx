@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Popper from "popper.js";
+import { FiSettings } from "react-icons/fi";
 
 export default function PopperExample() {
   const [show, setShow] = useState(false);
@@ -23,7 +24,8 @@ export default function PopperExample() {
         onClick={() => setShow(!show)}
         className="flex items-center gap-2 rounded-full border border-gray bg-[#FFFFFF26] px-4 h-11 hover:bg-white/30 transition w-full"
       >
-        ⚙️ Settings
+        <FiSettings className="text-lg" />
+         Settings
       </button>
 
       {/* Popper Content */}
