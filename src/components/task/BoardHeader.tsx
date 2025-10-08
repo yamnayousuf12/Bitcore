@@ -27,7 +27,7 @@ export default function BoardHeader({
       <div className="flex items-center justify-center gap-3 md:gap-20 p-3 rounded-2xl md:bg-gradient-to-b from-white/5 to-white/0 md:border md:border-white w-auto sm:w-[115%]  
     md:w-[109.7%]  
     lg:w-[105.4%] 
-    xl:w-[106.6%] 
+    xl:w-[108.4%] 
     2xl:w-[107.3%] sm:-ml-12 md:-ml-12 lg:-ml-4 xl:-ml-8 2xl:-ml-7 " >
   <SearchBar value={query} onChange={setQuery} />
 
