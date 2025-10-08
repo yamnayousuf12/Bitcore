@@ -212,7 +212,7 @@ export default function UserManagement() {
       </div>
 {/* Mobile Layout */}
 
-<div className="block md:hidden space-y-4 w-[122%] sm:w-[109.6%]   
+<div className="block md:hidden space-y-4 w-[125%] sm:w-[109.6%]   
     md:w-[105%]  
     lg:w-[105%] 
     xl:w-[103%] 
