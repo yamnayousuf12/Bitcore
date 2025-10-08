@@ -16,7 +16,7 @@ export default function TaskBoard() {
     <div className="space-y-4 sm:space-y-6 md-mt-28 lg:-mt-36" >
       <BoardHeader query={query} setQuery={setQuery} />
 
-      <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-0 md:border md:border-white/10 -pt-6 sm:pt-6 md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] md:rounded-2xl md:p-4 lg:p-6 2xl:p-8  mx-auto overflow-x-auto w-[101%] sm-[100%] md:w-[115%] lg:w-[105.3%] xl:w-[106.5%] 2xl:w-[107.4%] items-start justify-start -ml-0 md:-ml-16 lg:-ml-4 2xl:-ml-7 xl:-ml-8 " >
+      <div className="grid grid-cols-1 md:grid-cols-4 xl:grid-cols-4 gap-4 sm:gap-0 md:border md:border-white/10 -pt-6 sm:pt-6 md:bg-gradient-to-b from-white/[0.08] to-white/[0.03] md:rounded-2xl md:p-4 lg:p-6 2xl:p-8  mx-auto overflow-x-auto w-[101%] sm-[100%] md:w-[115%] lg:w-[105.3%] xl:w-[106.5%] 2xl:w-[107.4%] items-start justify-start -ml-0 md:-ml-16 lg:-ml-4 2xl:-ml-7 xl:-ml-8 bg-Red" >
         <Column title="Pending" count={todo.length} accent="text-yellow">
           {todo.map((t) => <TaskCard key={t.id} task={t} />)}
         </Column>
