@@ -61,7 +61,7 @@ export default function TaskCard({ task }: { task: Task }) {
       /* Extra large screens (1280px-1535px) */
       xl:min-w-[120px] xl:max-w-[100%]
       /* 2XL screens (1536px+) */
-      2xl:min-w-[130px] 2xl:max-w-[100%]
+      2xl:min-w-[130px] 2xl:max-w-[100%] -ml-4
         "
       >
         {/* ===== Header ===== */}
