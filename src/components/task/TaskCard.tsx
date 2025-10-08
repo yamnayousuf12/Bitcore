@@ -51,7 +51,7 @@ export default function TaskCard({ task }: { task: Task }) {
           duration-300  
 
           /* Mobile (320px-639px) */
-      min-w-[148px] max-w-[148%]
+      min-w-[155px] max-w-[155%]
       /* Small screens (640px-767px) */
       sm:min-w-[130px] sm:max-w-[130%]
       /* Medium screens (768px-1023px) */
@@ -61,7 +61,7 @@ export default function TaskCard({ task }: { task: Task }) {
       /* Extra large screens (1280px-1535px) */
       xl:min-w-[120px] xl:max-w-[100%]
       /* 2XL screens (1536px+) */
-      2xl:min-w-[130px] 2xl:max-w-[100%] -ml-4
+      2xl:min-w-[130px] 2xl:max-w-[100%] -ml-3
         "
       >
         {/* ===== Header ===== */}
