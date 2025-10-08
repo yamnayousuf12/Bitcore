@@ -51,7 +51,7 @@ export default function TaskCard({ task }: { task: Task }) {
           duration-300  
 
           /* Mobile (320px-639px) */
-      min-w-[136px] max-w-[140%]
+      min-w-[148px] max-w-[148%]
       /* Small screens (640px-767px) */
       sm:min-w-[130px] sm:max-w-[130%]
       /* Medium screens (768px-1023px) */
